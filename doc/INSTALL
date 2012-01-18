@@ -9,3 +9,12 @@ SiteDesign=hwboot
 AdditionalSiteDesignList[]
 AdditionalSiteDesignList[]=ezwebin
 AdditionalSiteDesignList[]=base
+
+=== settings/siteaccess/ezwebin_site/image.ini.append.php ===
+[ImageMagick]
+Filters[]=geometry/fill=-resize %1x%2^ -gravity center -extent %1x%2
+
+[listitem]
+Reference=
+Filters[]
+Filters[]=geometry/fill=140;100

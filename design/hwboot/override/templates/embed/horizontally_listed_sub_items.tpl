@@ -19,27 +19,13 @@
                                                'sort_by', $object.main_node.sort_array ) ) }
     <h2>{$object.name|wash()}</h2>
 
-    <ul class="media-grid">
-        <li>
-            <!-- Content: START -->
-            {if is_set( $children.0 )}
-                {node_view_gui view=horizontallylistedsubitems content_node=$children.0}
-            {/if}
-            <!-- Content: END -->
-        </li>
-        <li>
-            <!-- Content: START -->
-            {if is_set( $children.2 )}
-                {node_view_gui view=horizontallylistedsubitems content_node=$children.2}
-            {/if}
-            <!-- Content: END -->
-        </li>
-        <li>
-            <!-- Content: START -->
-            {if is_set( $children.1 )}
-                {node_view_gui view=horizontallylistedsubitems content_node=$children.1}
-            {/if}
-            <!-- Content: END -->
-        </li>
-    </ul>
+    <div class="well">
+        <ul class="media-grid">
+            {foreach $children as $child}
+                <li>
+                    {node_view_gui view=horizontallylistedsubitems content_node=$child}
+                </li>
+            {/foreach}
+        </ul>
+    </div>
 </div>

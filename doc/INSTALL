@@ -1,0 +1,11 @@
+== eZPublish settings ==
+
+=== settings/siteaccess/ezwebin_site/site.ini.append.php ===
+[ExtensionSettings]
+ActiveAccessExtensions[]=hwboot
+
+[DesignSettings]
+SiteDesign=hwboot
+AdditionalSiteDesignList[]
+AdditionalSiteDesignList[]=ezwebin
+AdditionalSiteDesignList[]=base

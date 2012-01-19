@@ -4,7 +4,7 @@
 
 <div class="user-register">
 
-<form enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register">
+<form class="form-stacked" enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register">
 
 <div class="attribute-header">
     <h1 class="long">{"Register user"|i18n("design/ezwebin/user/register")}</h1>
@@ -23,13 +23,13 @@
         <h2>{"Input did not validate"|i18n("design/ezwebin/user/register")}</h2>
         <ul>
         {foreach $validation.attributes as $attribute}
-            <li>{$attribute.name}: {$attribute.description}</li>
+            <li><span class="label warning">{$attribute.name}: {$attribute.description}</span></li>
         {/foreach}
         </ul>
         </div>
     {else}
         <div class="feedback">
-        <h2>{"Input was stored successfully"|i18n("design/ezwebin/user/register")}</h2>
+        <h2><span class="label success">{"Input was stored successfully"|i18n("design/ezwebin/user/register")}</span></h2>
         </div>
     {/if}
 
@@ -55,7 +55,7 @@
     </div>
 {else}
     <div class="warning">
-         <h2>{"Unable to register new user"|i18n("design/ezwebin/user/register")}</h2>
+         <h2><span class="label warning">{"Unable to register new user"|i18n("design/ezwebin/user/register")}</span></h2>
     </div>
     <input class="button" type="submit" id="CancelButton" name="CancelButton" value="{'Back'|i18n('design/ezwebin/user/register')}" onclick="window.setTimeout( disableButtons, 1 ); return true;" />
 {/if}
@@ -78,3 +78,5 @@
 -->
 </script>
 {/literal}
+	
+

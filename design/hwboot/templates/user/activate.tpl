@@ -23,7 +23,7 @@
 </p>
 
 <div class="buttonblock">
-<form action={"/user/login"|ezurl} method="post">
+<form class="form-stacked" action={"/user/login"|ezurl} method="post">
     <input class="button" type="submit" value="{'OK'|i18n( 'design/ezwebin/user/activate' )}" />
 </form>
 </div>

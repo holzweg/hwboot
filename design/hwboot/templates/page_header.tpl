@@ -1,11 +1,11 @@
-<div class="row">
-    <div class="span5">
+<div class="container">
+    <div class="logo">
         {include uri='design:page_header_logo.tpl'}
     </div>
-    <div class="span11">
-        <ul id="usermenu" class="breadcrumb">
+    <div class="container">
+        <ul class="nav">
             {include uri='design:page_header_links.tpl'}
-            {include uri='design:page_header_languages.tpl'}
+       <!--     {include uri='design:page_header_languages.tpl'} // commented by chris to block the languages menu -->
         </ul>
     </div>
 </div>

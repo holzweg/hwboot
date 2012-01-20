@@ -32,8 +32,8 @@
             {include uri='design:page_topmenu.tpl'}
         {/if}
         {*/cache-block*}
-
         <div id="page" class="container">
+
             {if and( is_set( $pagedata.persistent_variable.extra_template_list ), $pagedata.persistent_variable.extra_template_list|count() )}
                 {foreach $pagedata.persistent_variable.extra_template_list as $extra_template}
                     {include uri=concat('design:extra/', $extra_template)}

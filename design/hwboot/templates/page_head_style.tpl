@@ -3,11 +3,18 @@
 {/if}
 
 {if $load_css_file_list}
-  {ezcss_load( array( 'bootstrap.min.css',
-                      'hwboot.css',
-                      ezini( 'StylesheetSettings', 'CSSFileList', 'design.ini' ),
-                      ezini( 'StylesheetSettings', 'FrontendCSSFileList', 'design.ini' ) ))}
+	{array( 
+		"reset.less", 
+		"variables.less",
+		"mixins.less",
+		"scaffolding.less",
+		"type.less",
+		"forms.less",
+		"tables.less",
+		"patterns.less",
+		"hwboot.less"
+			)|ezless_add()}
+	{ezless()}
 {else}
-  {ezcss_load( array( 'bootstrap.min.css',
-                      'hwboot.css' ))}
+
 {/if}

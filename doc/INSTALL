@@ -1,5 +1,8 @@
 == eZPublish settings ==
 
+@hint You might need to change your DefaultAccess to 'ezwebin_site' in settings/override/site.ini.append.php 
+For example, in my standard installation, it was 'eng'. 
+
 === settings/siteaccess/ezwebin_site/site.ini.append.php ===
 [ExtensionSettings]
 ActiveAccessExtensions[]=hwboot
@@ -18,3 +21,8 @@ Filters[]=geometry/fill=-resize %1x%2^ -gravity center -extent %1x%2
 Reference=
 Filters[]
 Filters[]=geometry/fill=140;100
+
+== eZ Less ==
+
+=== Install and activate ezless extension ===
+--> head over to http://ezless.org and follow the instructions

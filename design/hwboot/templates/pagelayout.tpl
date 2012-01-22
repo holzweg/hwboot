@@ -28,71 +28,59 @@
 
         {*cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )*}
         {if $pagedata.top_menu}
-            {include uri='design:page_topmenu.tpl'}
+			{include uri='design:page_topmenu.tpl'}
         {/if}
         {*/cache-block*}
-        <div id="page" class="container">
 
-            {if and( is_set( $pagedata.persistent_variable.extra_template_list ), $pagedata.persistent_variable.extra_template_list|count() )}
-                {foreach $pagedata.persistent_variable.extra_template_list as $extra_template}
-                    {include uri=concat('design:extra/', $extra_template)}
-                {/foreach}
-            {/if}
+		{if and( is_set( $pagedata.persistent_variable.extra_template_list ), $pagedata.persistent_variable.extra_template_list|count() )}
+			{foreach $pagedata.persistent_variable.extra_template_list as $extra_template}
+				{include uri=concat('design:extra/', $extra_template)}
+			{/foreach}
+		{/if}
 
-            {include uri='design:page_header.tpl'}
+		{cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
 
-            {cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
+		<div class="row">
 
-            {if $pagedata.show_path}
-                {include uri='design:page_toppath.tpl'}
-            {/if}
+			{* calculate span widths *}
+			{def $span_left  = 4
+				 $span_main  = 12
+				 $span_right = 4}
+			{if and($pagedata.left_menu, $pagedata.extra_menu)}
+				{set $span_main = 8}
+			{/if}
+			{if and($pagedata.left_menu|not, $pagedata.extra_menu|not)}
+				{set $span_main = 16}
+			{/if}
 
-            {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
-                {include uri='design:page_toolbar.tpl'}
-            {/if}
+			{if $pagedata.left_menu}
+				<div class="span{$span_left}">
+					{include uri='design:page_leftmenu.tpl'}
+				</div>
+			{/if}
 
-            <div class="row">
+			{/cache-block}
 
-                {* calculate span widths *}
-                {def $span_left  = 4
-                     $span_main  = 12
-                     $span_right = 4}
-                {if and($pagedata.left_menu, $pagedata.extra_menu)}
-                    {set $span_main = 8}
-                {/if}
-                {if and($pagedata.left_menu|not, $pagedata.extra_menu|not)}
-                    {set $span_main = 16}
-                {/if}
+			{/cache-block}
 
-                {if $pagedata.left_menu}
-                    <div class="span{$span_left}">
-                        {include uri='design:page_leftmenu.tpl'}
-                    </div>
-                {/if}
+			<div class="span{$span_main}">
+				{include uri='design:page_mainarea.tpl'}
+			</div>
 
-                {/cache-block}
+			{cache-block keys=array( $module_result.uri, $user_hash, $access_type.name, $extra_cache_key )}
 
-                {/cache-block}
+			{if is_unset($pagedesign)}
+				{def $pagedata   = ezpagedata()
+					 $pagedesign = $pagedata.template_look}
+			{/if}
 
-                <div class="span{$span_main}">
-                    {include uri='design:page_mainarea.tpl'}
-                </div>
+			{if $pagedata.extra_menu}
+				<div class="span{$span_right}">
+					{include uri='design:page_extramenu.tpl'}
+				</div>
+			{/if}
 
-                {cache-block keys=array( $module_result.uri, $user_hash, $access_type.name, $extra_cache_key )}
-
-                {if is_unset($pagedesign)}
-                    {def $pagedata   = ezpagedata()
-                         $pagedesign = $pagedata.template_look}
-                {/if}
-
-                {if $pagedata.extra_menu}
-                    <div class="span{$span_right}">
-                        {include uri='design:page_extramenu.tpl'}
-                    </div>
-                {/if}
-            </div>
-
-        </div>
+		</div>
 
         {include uri='design:page_footer.tpl'}
 

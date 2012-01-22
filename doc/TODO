@@ -1,5 +1,7 @@
 === Give twitter credit somewhere? (css headers)
 
+=== Make dependency on eZ Less configurable?
+
 === Nicify HTML output (tidy)
 
 === Doing a search for @todo in files will tell ya what else is still to be done. 

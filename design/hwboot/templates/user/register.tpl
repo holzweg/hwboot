@@ -1,4 +1,4 @@
-<div class="container">
+<div class="content">
 
 <form class="form-stacked" enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register">
 

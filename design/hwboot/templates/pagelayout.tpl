@@ -40,8 +40,7 @@
 
 		{cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
 
-		<div class="row" id="page">
-
+		<div class="container-fluid" id="page">
 			{* calculate span widths *}
 			{def $span_left  = 4
 				 $span_main  = 12
@@ -54,7 +53,7 @@
 			{/if}
 
 			{if $pagedata.left_menu}
-				<div class="span{$span_left}">
+				<div class="sidebar">
 					{include uri='design:page_leftmenu.tpl'}
 				</div>
 			{/if}
@@ -63,7 +62,7 @@
 
 			{/cache-block}
 
-			<div class="span{$span_main}">
+			<div class="content">
 				{include uri='design:page_mainarea.tpl'}
 			</div>
 

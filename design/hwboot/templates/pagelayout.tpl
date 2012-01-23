@@ -25,7 +25,7 @@
         {include uri='design:page_head_script.tpl'}
     </head>
     <body>
-            <div id="page">
+
         {*cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )*}
         {if $pagedata.top_menu}
 			{include uri='design:page_topmenu.tpl'}
@@ -40,7 +40,7 @@
 
 		{cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
 
-		<div class="row">
+		<div class="row" id="page">
 
 			{* calculate span widths *}
 			{def $span_left  = 4
@@ -87,7 +87,7 @@
         {include uri='design:page_footer_script.tpl'}
 
         {/cache-block}
-        <div>
+
 
         <!--DEBUG_REPORT-->
     </body>

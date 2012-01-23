@@ -1,6 +1,10 @@
-<div class="content">
+<div class="border-box">
+<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
+<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<form class="form-stacked" enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register">
+<div class="user-register">
+
+<form enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register">
 
 <div class="attribute-header">
     <h1 class="long">{"Register user"|i18n("design/ezwebin/user/register")}</h1>
@@ -19,13 +23,13 @@
         <h2>{"Input did not validate"|i18n("design/ezwebin/user/register")}</h2>
         <ul>
         {foreach $validation.attributes as $attribute}
-            <li><span class="label warning">{$attribute.name}: {$attribute.description}</span></li>
+            <li>{$attribute.name}: {$attribute.description}</li>
         {/foreach}
         </ul>
         </div>
     {else}
         <div class="feedback">
-        <h2><span class="label success">{"Input was stored successfully"|i18n("design/ezwebin/user/register")}</span></h2>
+        <h2>{"Input was stored successfully"|i18n("design/ezwebin/user/register")}</h2>
         </div>
     {/if}
 
@@ -51,12 +55,16 @@
     </div>
 {else}
     <div class="warning">
-         <h2><span class="label warning">{"Unable to register new user"|i18n("design/ezwebin/user/register")}</span></h2>
+         <h2>{"Unable to register new user"|i18n("design/ezwebin/user/register")}</h2>
     </div>
     <input class="button" type="submit" id="CancelButton" name="CancelButton" value="{'Back'|i18n('design/ezwebin/user/register')}" onclick="window.setTimeout( disableButtons, 1 ); return true;" />
 {/if}
 </form>
 
+</div>
+
+</div></div></div>
+<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>
 
 {literal}
@@ -70,5 +78,3 @@
 -->
 </script>
 {/literal}
-	
-

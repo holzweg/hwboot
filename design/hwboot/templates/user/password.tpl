@@ -1,7 +1,8 @@
-<div class="content">
+<div class="border-box">
+<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
+<div class="border-ml"><div class="border-mr"><div class="border-mc">
 
-
-<form class="form-stacked" action={concat($module.functions.password.uri,"/",$userID)|ezurl} method="post" name="Password">
+<form action={concat($module.functions.password.uri,"/",$userID)|ezurl} method="post" name="Password">
 
 <div class="attribute-header">
 <h1 class="long">{"Change password for user"|i18n("design/ezwebin/user/password")} {$userAccount.login}</h1>
@@ -11,17 +12,17 @@
 {if or( $oldPasswordNotValid, $newPasswordNotMatch, $newPasswordTooShort )}
     {if $oldPasswordNotValid}
         <div class="warning">
-            <h2><span class="label warning">{'Please retype your old password.'|i18n('design/ezwebin/user/password')}</span></h2>
+            <h2>{'Please retype your old password.'|i18n('design/ezwebin/user/password')}</h2>
         </div>
     {/if}
     {if $newPasswordNotMatch}
         <div class="warning">
-            <h2><span class="label warning">{"Password didn't match, please retype your new password."|i18n('design/ezwebin/user/password')}</span></h2>
+            <h2>{"Password didn't match, please retype your new password."|i18n('design/ezwebin/user/password')}</h2>
         </div>
     {/if}
     {if $newPasswordTooShort}
         <div class="warning">
-            <h2><span class="label warning">{"The new password must be at least %1 characters long, please retype your new password."|i18n( 'design/ezwebin/user/password','',array( ezini('UserSettings','MinPasswordLength') ) )}</span></h2>
+            <h2>{"The new password must be at least %1 characters long, please retype your new password."|i18n( 'design/ezwebin/user/password','',array( ezini('UserSettings','MinPasswordLength') ) )}</h2>
         </div>
     {/if}
 

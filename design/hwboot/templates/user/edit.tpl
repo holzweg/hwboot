@@ -1,7 +1,8 @@
-<div class="content">
+<div class="border-box">
+<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
+<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-
-<form class="form-stacked" action={concat($module.functions.edit.uri,"/",$userID)|ezurl} method="post" name="Edit">
+<form action={concat($module.functions.edit.uri,"/",$userID)|ezurl} method="post" name="Edit">
 
 <div class="user-edit">
 

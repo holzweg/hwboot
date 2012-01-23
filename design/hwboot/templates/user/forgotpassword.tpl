@@ -1,5 +1,6 @@
-<div class="content">
-
+<div class="border-box">
+<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
+<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
 <div class="user-forgotpassword">
 
@@ -10,7 +11,7 @@
 {else}
    {if $wrong_email}
    <div class="warning">
-   <h2><span class="label warning">{"There is no registered user with that email address."|i18n('design/ezwebin/user/forgotpassword')}</span></h2>
+   <h2>{"There is no registered user with that email address."|i18n('design/ezwebin/user/forgotpassword')}</h2>
    </div>
    {/if}
    {if $generated}
@@ -20,10 +21,10 @@
    {else}
       {if $wrong_key}
       <div class="warning">
-      <h2><span class="label warning">{"The key is invalid or has been used. "|i18n('design/ezwebin/user/forgotpassword')}</span></h2>
+      <h2>{"The key is invalid or has been used. "|i18n('design/ezwebin/user/forgotpassword')}</h2>
       </div>
       {else}
-      <form class="form-stacked" method="post" name="forgotpassword" action={"/user/forgotpassword/"|ezurl}>
+      <form method="post" name="forgotpassword" action={"/user/forgotpassword/"|ezurl}>
 
       <div class="attribute-header">
       <h1 class="long">{"Have you forgotten your password?"|i18n('design/ezwebin/user/forgotpassword')}</h1>

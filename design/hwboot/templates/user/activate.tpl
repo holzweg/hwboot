@@ -1,5 +1,6 @@
-<div class="content">
-
+<div class="border-box">
+<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
+<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
 <div class="user-activate">
 
@@ -22,7 +23,7 @@
 </p>
 
 <div class="buttonblock">
-<form class="form-stacked" action={"/user/login"|ezurl} method="post">
+<form action={"/user/login"|ezurl} method="post">
     <input class="button" type="submit" value="{'OK'|i18n( 'design/ezwebin/user/activate' )}" />
 </form>
 </div>

@@ -18,7 +18,7 @@
     {/if}
 {/if}
 
-<div class="content-view-full container">
+<div class="content-view-full">
     <div class="class-frontpage {$frontpagestyle}">
 
     {if $node.object.data_map.billboard.has_content}

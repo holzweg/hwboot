@@ -23,14 +23,14 @@
 
 <div class="shop-basket">
 
-<form class="form-stacked" method="post" action={"/shop/basket/"|ezurl}>
+<form method="post" action={"/shop/basket/"|ezurl}>
 
 <div class="attribute-header">
     <h1 class="long">{"Basket"|i18n("design/ezwebin/shop/basket")}</h1>
 </div>
 {section show=$removed_items}
 <div class="warning">
-    <h2><span class="label warning">{"The following items were removed from your basket because the products were changed."|i18n("design/ezwebin/shop/basket",,)}</span></h2>
+    <h2>{"The following items were removed from your basket because the products were changed."|i18n("design/ezwebin/shop/basket",,)}</h2>
     <ul>
     {section name=RemovedItem loop=$removed_items}
         <li> <a href={concat("/content/view/full/",$RemovedItem:item.contentobject.main_node_id,"/")|ezurl}>{$RemovedItem:item.contentobject.name|wash}</a></li>
@@ -41,7 +41,7 @@
 
 {if not( $vat_is_known )}
 <div class="message-warning">
-<h2><span class="label warning">{'VAT is unknown'|i18n( 'design/ezwebin/shop/basket' )}</span></h2>
+<h2>{'VAT is unknown'|i18n( 'design/ezwebin/shop/basket' )}</h2>
 {'VAT percentage is not yet known for some of the items being purchased.'|i18n( 'design/ezwebin/shop/basket' )}<br/>
 {'This probably means that some information about you is not yet available and will be obtained during checkout.'|i18n( 'design/ezwebin/shop/basket' )}
 </div>
@@ -50,7 +50,7 @@
 {section show=$error}
 <div class="error">
 {section show=$error|eq(1)}
-<h2><span class="label important">{"Attempted to add object without price to basket."|i18n("design/ezwebin/shop/basket",,)}</span></h2>
+<h2>{"Attempted to add object without price to basket."|i18n("design/ezwebin/shop/basket",,)}</h2>
 {/section}
 </div>
 {/section}
@@ -58,7 +58,7 @@
 {section show=$error}
 <div class="error">
 {section show=eq($error, "aborted")}
-<h2><span class="label important">{"Your payment was aborted."|i18n("design/ezwebin/shop/basket",,)}</span></h2>
+<h2>{"Your payment was aborted."|i18n("design/ezwebin/shop/basket",,)}</h2>
 {/section}
 </div>
 {/section}

@@ -10,7 +10,7 @@
 </form>
 
 <!--
-  <form  action={"/content/search"|ezurl}>
+  <form action={"/content/search"|ezurl}>
     {if $pagedata.is_edit}
         <input id="searchtext" name="SearchText" type="text" value="" size="12" disabled="disabled" />
         <input id="searchbutton" class="button-disabled" type="submit" value="{'Search'|i18n('design/ezwebin/pagelayout')}" title="{'Search'|i18n('design/ezwebin/pagelayout')}" disabled="disabled" />

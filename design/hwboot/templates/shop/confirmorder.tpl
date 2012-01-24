@@ -23,7 +23,7 @@
 
 <div class="shop-confirmorder">
 
-<form method="post" action={"/shop/confirmorder/"|ezurl}>
+<form class="form-stacked" method="post" action={"/shop/confirmorder/"|ezurl}>
 
 <div class="attribute-header">
     <h1 class="long">{"Confirm order"|i18n("design/ezwebin/shop/confirmorder")}</h1>

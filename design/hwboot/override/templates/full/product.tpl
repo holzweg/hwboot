@@ -4,7 +4,7 @@
 <div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
 <div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<form method="post" action={"content/action"|ezurl}>
+<form class="form-stacked" method="post" action={"content/action"|ezurl}>
 <div class="content-view-full">
     <div class="class-product">
 

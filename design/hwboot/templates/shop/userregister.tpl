@@ -30,12 +30,14 @@
 {section show=$input_error}
 <div class="warning">
 <p>
+<span class="label warning">
 {"Input did not validate. All fields marked with * must be filled in."|i18n("design/ezwebin/shop/userregister")}
+</spam>
 </p>
 </div>
 
 {/section}
-<form method="post" action={"/shop/userregister/"|ezurl}>
+<form class="form-stacked" method="post" action={"/shop/userregister/"|ezurl}>
 
 <div class="block">
     <div class="element">
@@ -121,7 +123,9 @@
 </form>
 
 <p>
+<span class="label important">
 {"All fields marked with * must be filled in."|i18n("design/ezwebin/shop/userregister")}
+</span>
 </p>
 
 </div>

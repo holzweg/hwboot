@@ -1,4 +1,5 @@
 {let search=false()}
+
 {section show=$use_template_search}
     {set page_limit=10}
     {set search=fetch(content,search,
@@ -20,7 +21,7 @@
 
 <div class="content-search">
 
-<form action={"/content/search/"|ezurl} method="get">
+<form action={"/content/search/"|ezurl} method="get" class="form-stacked">
 
 <div class="attribute-header">
     <h1 class="long">{"Search"|i18n("design/ezwebin/content/search")}</h1>

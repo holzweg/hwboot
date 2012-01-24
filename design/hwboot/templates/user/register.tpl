@@ -1,4 +1,5 @@
 <div class="border-box">
+
 <div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
 <div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
@@ -20,7 +21,7 @@
 
     {if $validation.attributes|count|gt(0)}
         <div class="warning">
-        <h2><span class="label warning">{"Input did not validate"|i18n("design/ezwebin/user/register")}</span></h2>
+        <h2>{"Input did not validate"|i18n("design/ezwebin/user/register")}</h2>
         <ul>
         {foreach $validation.attributes as $attribute}
             <li>{$attribute.name}: {$attribute.description}</li>
@@ -55,7 +56,7 @@
     </div>
 {else}
     <div class="warning">
-         <h2><span class="label warning">{"Unable to register new user"|i18n("design/ezwebin/user/register")}</span></h2>
+         <h2>{"Unable to register new user"|i18n("design/ezwebin/user/register")}</h2>
     </div>
     <input class="button" type="submit" id="CancelButton" name="CancelButton" value="{'Back'|i18n('design/ezwebin/user/register')}" onclick="window.setTimeout( disableButtons, 1 ); return true;" />
 {/if}

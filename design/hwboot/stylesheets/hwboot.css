@@ -1,0 +1,36 @@
+div#page {
+    margin-top: 125px;
+}
+
+.footer p {
+    color:#555555;
+}
+
+.footer {
+    text-shadow:0 1px 0 #FFFFFF;
+}
+
+.footer {
+    background-color:#EEEEEE;
+    border-top:1px solid #E5E5E5;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.024) inset;
+    min-width:940px;
+    padding:30px 0;
+    text-shadow:0 1px 0 #FFFFFF;
+}
+
+ul#usermenu {
+    background:none repeat scroll 0 0 transparent;
+    border:medium none;
+    border-radius:0 0 0 0;
+    box-shadow:none;
+    text-align:right;
+}
+
+ul#usermenu a {
+    color:#AAAAAA;
+}
+
+ul#usermenu a:hover {
+    color:#000000;
+}

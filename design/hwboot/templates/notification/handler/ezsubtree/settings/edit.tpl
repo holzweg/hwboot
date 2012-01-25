@@ -59,7 +59,7 @@
 
 <div class="buttonblock">
 {if $subscribed_nodes_count}
-<input class="button" type="submit" name="RemoveRule_{$handler.id_string}" value="{'Remove selected'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" /> 
+<input class="btn" type="submit" name="RemoveRule_{$handler.id_string}" value="{'Remove selected'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" /> 
 {/if}
-<input class="button" type="submit" name="NewRule_{$handler.id_string}" value="{'Add items'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" />
+<input class="btn" type="submit" name="NewRule_{$handler.id_string}" value="{'Add items'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" />
 </div>

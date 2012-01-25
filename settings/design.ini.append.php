@@ -15,4 +15,10 @@ JavaScriptList[]=bootstrap-twipsy.js
 JavaScriptList[]=bootstrap-popover.js
 JavaScriptList[]=hwboot.js
 
+[StylesheetSettings]
+FrontendCSSFileList[]
+FrontendCSSFileList[]=bootstrap.min.css
+FrontendCSSFileList[]=websitetoolbar.css
+FrontendCSSFileList[]=hwboot.css
+
 */ ?>

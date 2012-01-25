@@ -1,6 +1,55 @@
-div#page {
-    margin-top: 40px;
+/*----------------------------------------------------------------------------
+	Header
+-----------------------------------------------------------------------------*/
+
+.jumbotron {
+    min-width: 940px;
+    padding-top: 40px;
 }
+.jumbotron .inner {
+    background: url("../images/grid-18px.png") repeat scroll center top transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) inset;
+    padding: 45px 0;
+}
+.jumbotron h1, .jumbotron p {
+    color: #FFFFFF;
+    margin-bottom: 9px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.jumbotron h1 {
+    font-size: 54px;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.jumbotron p {
+    font-weight: 300;
+}
+.jumbotron .lead {
+    font-size: 20px;
+    line-height: 27px;
+}
+.jumbotron p a {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.masthead {
+    background-color: #049CD9;
+    background-image: -moz-linear-gradient(#004D9F, #049CD9);
+    background-repeat: no-repeat;
+}
+
+ul#usermenu a {
+    color:#AAAAAA;
+}
+
+ul#usermenu a:hover {
+    color:#000000;
+}
+
+/*----------------------------------------------------------------------------
+	Footer
+-----------------------------------------------------------------------------*/
 
 .footer p {
     color:#555555;
@@ -27,10 +76,3 @@ ul#usermenu {
     text-align:right;
 }
 
-ul#usermenu a {
-    color:#AAAAAA;
-}
-
-ul#usermenu a:hover {
-    color:#000000;
-}

@@ -1,7 +1,9 @@
 === Give twitter credit somewhere? (css headers)
 
-=== Make dependency on eZ Less configurable?
+=== Integrate eZ Less?
 
 === Nicify HTML output (tidy)
+
+=== Lots of configurability (see @todo tags for ideas)
 
 === Doing a search for @todo in files will tell ya what else is still to be done. 

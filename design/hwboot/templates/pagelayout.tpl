@@ -25,7 +25,20 @@
         {include uri='design:page_head_style.tpl'}
         {include uri='design:page_head_script.tpl'}
     </head>
+
     <body>
+
+		{* Calculate top padding for our fixed top bars *}
+		{* @todo make heights of top nav bar and website toolbar configurable! *}
+		{* @todo whether bars are fixed or not could be made configurable too *}
+		{def	$navbar_height = 40
+				$toolbar_height = 34
+				$top_padding = $navbar_height}
+
+		{if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
+			{include uri='design:page_toolbar.tpl'}
+			{set $top_padding = sum( $top_padding, $toolbar_height )}	
+		{/if}
 
         {*cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )*}
         {if $pagedata.top_menu}
@@ -33,14 +46,14 @@
         {/if}
         {*/cache-block*}
 
-        <div id="page" class="container">
+		{include uri='design:page_header.tpl'}
+
+        <div id="page" class="container" style="padding-top: {$top_padding}px;">
             {if and( is_set( $pagedata.persistent_variable.extra_template_list ), $pagedata.persistent_variable.extra_template_list|count() )}
                 {foreach $pagedata.persistent_variable.extra_template_list as $extra_template}
                     {include uri=concat('design:extra/', $extra_template)}
                 {/foreach}
             {/if}
-
-            {include uri='design:page_header.tpl'}
 
             {cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
 
@@ -48,12 +61,9 @@
                 {include uri='design:page_toppath.tpl'}
             {/if}
 
-            {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
-                {include uri='design:page_toolbar.tpl'}
-            {/if}
-
             <div class="row">
 
+				{* @todo make columns configurable! *}
                 {* calculate span widths *}
                 {def $span_left  = 4
                      $span_main  = 12

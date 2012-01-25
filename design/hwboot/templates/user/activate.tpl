@@ -18,7 +18,7 @@
 {elseif $already_active}
     {'Your account is already active.'|i18n('design/standard/user')}
 {else}
-    <span class="label warning">{'Sorry, the key submitted was not a valid key. Account was not activated.'|i18n('design/standard/user')}</span>
+    {'Sorry, the key submitted was not a valid key. Account was not activated.'|i18n('design/standard/user')}
 {/if}
 </p>
 

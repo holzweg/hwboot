@@ -14,15 +14,10 @@ limit,$page_limit))}
 {set search_data=$search}
 {/section}
 
-
-
-
-
-<div class="page-header">
-    <h1 class="long">{"Search"|i18n("design/ezwebin/content/search")}</h1>
-</div>
 <div class="hero-unit">
-
+<div class="page-header">
+    <h2>{"Search"|i18n("design/ezwebin/content/search")}</h1>
+</div>
     <form class="form-stacked" action={"/content/search/"|ezurl} method="get">
 
 
@@ -80,8 +75,6 @@ limit,$page_limit))}
     </form>
 
 </div>
-
-
 
 
 {/let}

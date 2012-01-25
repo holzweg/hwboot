@@ -10,11 +10,11 @@
 
 </div>
 
-<div class="page-header">
-    <h2 class="long">{"Basket"|i18n("design/ezwebin/shop/basket")}</h1>
-</div>
 <div class="hero-unit">
 
+<div class="page-header">
+    <h2>{"Basket"|i18n("design/ezwebin/shop/basket")}</h1>
+</div>
     <form  class="form-stacked" method="post" action={"/shop/basket/"|ezurl}>
 
           {section show=$removed_items}

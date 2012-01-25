@@ -1,22 +1,19 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
-
-<form action={"rss/edit_import"|ezurl} method="post" name="RSSImport">
+<div class="hero-unit">
+<form class="form-stacked" action={"rss/edit_import"|ezurl} method="post" name="RSSImport">
 
 <h2>{'Edit <%rss_import_name> [RSS Import]'|i18n( 'design/ezwebin/rss/edit_import',, hash( '%rss_import_name', $rss_import.name ) )|wash}</h2>
 
     {* Title. *}
-    <div class="block">
+    <div class="clearfix">
         <label>{"Name"|i18n( 'design/ezwebin/rss/edit_import' )}:</label>
         <input class="halfbox" id="importName" type="text" name="name" value="{$rss_import.name|wash}" title="{'Name of the RSS import. This name is used in the Administration Interface only, to distinguish the different imports from each other.'|i18n('design/ezwebin/rss/edit_import')}" />
     </div>
 
     {* URL. *}
-    <div class="block">
+    <div class="clearfix">
     <label>{"Source URL"|i18n( 'design/ezwebin/rss/edit_import' )}:</label>
     <input class="halfbox" type="text" name="url" value="{$rss_import.url|wash}" title="{'Use this field to enter the source URL of the RSS feed to import.'|i18n('design/ezwebin/rss/edit_import')}" />
-    <input class="button" type="submit" name="AnalyzeFeedButton" value="{'Update'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to proceed and analyze the import feed.'|i18n('design/ezwebin/rss/edit_import')}" />
+    <input class="btn" type="submit" name="AnalyzeFeedButton" value="{'Update'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to proceed and analyze the import feed.'|i18n('design/ezwebin/rss/edit_import')}" />
     </div>
     {if and( is_set( $rss_import.import_description_array.rss_version ), $rss_import.import_description_array.rss_version )}
     <label>{"RSS Version"|i18n( 'design/ezwebin/rss/edit_import' )}:</label>
@@ -24,23 +21,23 @@
     {/if}
 
     {* Destination path. *}
-    <div class="block">
+    <div class="clearfix">
     <label>{"Destination path"|i18n( 'design/ezwebin/rss/edit_import' )}:</label>
     <input type="text" readonly="readonly" size="45" value="{$rss_import.destination_path|wash}" />
-    <input class="button" type="submit" name="DestinationBrowse" value="{'Browse'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to select the destination node where objects created by the import are located.'|i18n('design/ezwebin/rss/edit_import')}" />
+    <input class="btn" type="submit" name="DestinationBrowse" value="{'Browse'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to select the destination node where objects created by the import are located.'|i18n('design/ezwebin/rss/edit_import')}" />
     </div>
 
     {if and( is_set( $rss_import.import_description_array.rss_version ), $rss_import.import_description_array.rss_version )}
 
     {* Imported objects owner. *}
-    <div class="block">
+    <div class="clearfix">
     <label>{"Imported objects will be owned by"|i18n( 'design/ezwebin/rss/edit_import' )}:</label>
     <p>{$rss_import.object_owner.contentobject.name|wash}</p>
-    <input class="button" type="submit" name="UserBrowse" value="{'Change user'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to select the user who should own the objects created by the import.'|i18n('design/ezwebin/rss/edit_import')}" />
+    <input class="btn" type="submit" name="UserBrowse" value="{'Change user'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to select the user who should own the objects created by the import.'|i18n('design/ezwebin/rss/edit_import')}" />
     </div>
 
     {* Class. *}
-    <div class="block">
+    <div class="clearfix">
     <label>{"Class"|i18n( 'design/ezwebin/rss/edit_import' )}:</label>
     <select name="Class_ID" title="{'Use this drop-down to select the type of object the import should create. Click the "Set" button to load the attribute types for the remaining fields.'|i18n('design/ezwebin/rss/edit_import')|wash}">
     {section name=ContentClass loop=$rss_class_array }
@@ -51,7 +48,7 @@
     </option>
     {/section}
     </select>
-    <input class="button" type="submit" name="Update_Class" value="{'Set'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.'|i18n('design/ezwebin/rss/edit_import')}" />
+    <input class="btn" type="submit" name="Update_Class" value="{'Set'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.'|i18n('design/ezwebin/rss/edit_import')}" />
     </div>
 
     {if $rss_import.class_id|gt(0)}
@@ -61,7 +58,7 @@
     <fieldset>
     <legend>{'Class attributes'|i18n( 'design/ezwebin/rss/edit_import' )}</legend>
     {foreach $rss_import.class_attributes as $class_attribute}
-        <div class="block">
+        <div class="clearfix">
         <label>{$class_attribute.name|wash}:</label>
             <select name="Class_Attribute_{$class_attribute.id}" title="{'Use this drop-down menu to select the attribute that should bet set as information from the RSS stream.'|i18n('design/ezwebin/rss/edit_import')}">
             <option value="-1">{"Ignore"|i18n( 'design/ezwebin/rss/edit_import' )}</option>
@@ -79,7 +76,7 @@
     <fieldset>
     <legend>{'Object attributes'|i18n( 'design/ezwebin/rss/edit_import' )}</legend>
     {foreach $rss_import.object_attribute_list as $key => $object_attribute}
-        <div class="block">
+        <div class="clearfix">
         <label>{$object_attribute|wash}:</label>
             <select name="Object_Attribute_{$key|wash}" title="{'Use this drop-down menu to select the attribute that should bet set as information from the RSS stream.'|i18n('design/ezwebin/rss/edit_import')}">
             <option value="-1">{"Ignore"|i18n( 'design/ezwebin/rss/edit_import' )}</option>
@@ -94,7 +91,7 @@
     </fieldset>
 
     {* Active. *}
-    <div class="block">
+    <div class="clearfix">
     <label>{"Active"|i18n( 'design/ezwebin/rss/edit_import' )}:</label>
     <input type="checkbox" name="active" {section show=$rss_import.active|eq(1)}checked="checked"{/section} title="{'Use this checkbox to control if the RSS feed is active or not. An inactive feed will not be automatically updated.'|i18n('design/ezwebin/rss/edit_import')}" />
     </div>
@@ -104,15 +101,15 @@
 
 
     {* Buttons. *}
-    <div class="controlbar">
-    <div class="block">
+    <div class="clearfix">
+    <div class="actions">
     <input type="hidden" name="RSSImport_ID" value={$rss_import.id} />
-    <input class="button" type="submit" name="StoreButton" value="{'OK'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Apply the changes and return to the RSS overview.'|i18n('design/ezwebin/rss/edit_import')}" />
-    <input class="button" type="submit" name="RemoveButton" value="{'Cancel'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Cancel the changes and return to the RSS overview.'|i18n('design/ezwebin/rss/edit_import')}" />
+    <input class="btn" type="submit" name="StoreButton" value="{'OK'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Apply the changes and return to the RSS overview.'|i18n('design/ezwebin/rss/edit_import')}" />
+    <input class="btn" type="submit" name="RemoveButton" value="{'Cancel'|i18n( 'design/ezwebin/rss/edit_import' )}" title="{'Cancel the changes and return to the RSS overview.'|i18n('design/ezwebin/rss/edit_import')}" />
     </div>
     </div>
 </form>
-
+</div>
 {literal}
 <script type="text/javascript">
 <!--
@@ -124,6 +121,3 @@
 -->
 </script>
 {/literal}
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>

@@ -1,11 +1,12 @@
 {* Folder - Full view *}
 {def $rss_export = fetch( 'rss', 'export_by_node', hash( 'node_id', $node.node_id ) )}
 
-<div class="page-header">
-    <h1>{attribute_view_gui attribute=$node.data_map.name}</h1>
-</div>
+
 <div class="hero-unit">
 
+<div class="page-header">
+    <h2>{attribute_view_gui attribute=$node.data_map.name}</h1>
+</div>
     {if $rss_export}
     <div class="attribute-rss-icon">
         <a href="{concat( '/rss/feed/', $rss_export.access_url )|ezurl( 'no' )}" title="{$rss_export.title|wash()}"><img src="{'rss-icon.gif'|ezimage( 'no' )}" alt="{$rss_export.title|wash()}" /></a>

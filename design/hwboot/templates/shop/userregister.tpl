@@ -12,11 +12,11 @@
 </div>
 
 
-<div class="page-header">
-    <h2 class="long">{"Your account information"|i18n("design/ezwebin/shop/userregister")}</h1>
-</div>
-<div class="hero-unit">
 
+<div class="hero-unit">
+<div class="page-header">
+    <h2>{"Your account information"|i18n("design/ezwebin/shop/userregister")}</h1>
+</div>
 
     {section show=$input_error}
     <div class="alert-message warning">

@@ -1,17 +1,14 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="shop-customerorderview">
-    <div class="attribute-header">
-        <h1 class="long">{"Customer information"|i18n("design/ezwebin/shop/customerorderview")}</h1>
+<div class="hero-unit">
+    <div class="page-header">
+        <h2>{"Customer information"|i18n("design/ezwebin/shop/customerorderview")}</h2>
     </div>
     
 {shop_account_view_gui view=html order=$order_list[0]}
 
 
-<div class="attribute-header">
-    <h1>{"Order list"|i18n("design/ezwebin/shop/customerorderview")}</h1>
+<div class="page-header">
+    <h2>{"Order list"|i18n("design/ezwebin/shop/customerorderview")}</h2>
 </div>
 
 {def $currency = false()
@@ -20,7 +17,7 @@
      $product_info_count = false()}
 
 {section show=$order_list}
-<table class="list" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <th>
     {"ID"|i18n("design/ezwebin/shop/customerorderview")}
@@ -69,12 +66,12 @@
 {/section}
 
 
-<div class="attribute-header">
-  <h1>{"Purchase list"|i18n("design/ezwebin/shop/customerorderview")}</h1>
+<div class="page-header">
+  <h2>{"Purchase list"|i18n("design/ezwebin/shop/customerorderview")}</h2>
 </div>
 
 {section show=$product_list}
-<table class="list" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <th>
     {"Product"|i18n("design/ezwebin/shop/customerorderview")}
@@ -138,8 +135,4 @@
 {/section}
 {undef}
 
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

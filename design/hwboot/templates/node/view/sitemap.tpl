@@ -4,13 +4,13 @@
      $children=fetch('content','list',hash('parent_node_id', $node.node_id,
                                            'limit', $page_limit,
                                            'offset', $view_parameters.offset,
-                                           'sort_by', $node.sort_array))}
+ 
+<div class="hero-unit">
+                                          'sort_by', $node.sort_array))}
 
 <div class="page-header">
-    <h1>{"Site map"|i18n("design/ezwebin/view/sitemap")} {$node.name|wash}</h1>
+    <h2>{"Site map"|i18n("design/ezwebin/view/sitemap")} {$node.name|wash}</h1>
 </div>
-<div class="hero-unit">
-
     <table width="100%" cellspacing="0" cellpadding="4" class="zebra-striped">
         <tr>
             {foreach $children as $key => $child}

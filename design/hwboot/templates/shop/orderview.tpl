@@ -1,13 +1,11 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="shop-orderview">
+<div class="hero-unit">
 
-<div class="attribute-header">
-  <h1 class="long">{'Order %order_id [%order_status]'|i18n( 'design/ezwebin/shop/orderview',,
+<div class="page-header">
+  <h2>{'Order %order_id [%order_status]'|i18n( 'design/ezwebin/shop/orderview',,
        hash( '%order_id', $order.order_nr,
-             '%order_status', $order.status_name ) )}</h1>
+             '%order_status', $order.status_name ) )}
+  </h2>
 </div>
 
 {shop_account_view_gui view=html order=$order}
@@ -24,7 +22,7 @@
 <br />
 
 <h3>{'Product items'|i18n( 'design/ezwebin/shop/orderview' )}</h3>
-<table class="list" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <th>
     {'Product'|i18n( 'design/ezwebin/shop/orderview' )}
@@ -78,7 +76,7 @@
 </table>
 
 <h3>{'Order summary'|i18n( 'design/ezwebin/shop/orderview' )}:</h3>
-<table class="list" cellspacing="0" cellpadding="0" border="0">
+<table class="zebra-striped" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <th>
     {'Summary'|i18n( 'design/ezwebin/shop/orderview' )}:
@@ -131,7 +129,7 @@
 
 
 <h3>{'Order history'|i18n( 'design/ezwebin/shop/orderview' )}:</h3>
-<table class="list" cellspacing="0" cellpadding="0" border="0">
+<table class="zebra-striped" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <th>{'Date'|i18n( 'design/ezwebin/shop/orderview' )}</th>
     <th>{'Order status'|i18n( 'design/ezwebin/shop/orderview' )}</th>
@@ -147,8 +145,4 @@
 {/if}
 </table>
 
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

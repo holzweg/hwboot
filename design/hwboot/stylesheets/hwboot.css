@@ -11,7 +11,7 @@
     padding: 45px 0;
 }
 .jumbotron h1, .jumbotron p {
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 9px;
     text-align: center;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -29,12 +29,12 @@
     line-height: 27px;
 }
 .jumbotron p a {
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: bold;
 }
 .masthead {
-    background-color: #049CD9;
-    background-image: -moz-linear-gradient(#004D9F, #049CD9);
+    background-color: #049cd9;
+    background-image: -moz-linear-gradient(#004d9f, #049cd9);
     background-repeat: no-repeat;
 }
 
@@ -42,13 +42,19 @@
 	Meta Navigation
 -----------------------------------------------------------------------------*/
 #metanav {
-	background-color: #f5f5f5;
+	min-width: 940px;
+    background-color: #eee;
+    border-top: 1px solid #e5e5e5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.024) inset;
+    text-shadow: 0 1px 0 #fff;
 	height: 20px;
 	overflow: hidden; /* Clearing floats */
 }
 
 #metanav ul {
 	float: left;
+	padding-left: 5px;
+	margin-left: 0;
 }
 
 #metanav ul li {
@@ -100,27 +106,27 @@ ul.breadcrumb li a:after {
 -----------------------------------------------------------------------------*/
 
 .footer p {
-    color:#555555;
+    color: #555;
 }
 
 .footer {
-    text-shadow:0 1px 0 #FFFFFF;
+    text-shadow: 0 1px 0 #fff;
 }
 
 .footer {
-    background-color:#EEEEEE;
-    border-top:1px solid #E5E5E5;
-    box-shadow:0 5px 15px rgba(0, 0, 0, 0.024) inset;
-    min-width:940px;
-    padding:30px 0;
-    text-shadow:0 1px 0 #FFFFFF;
+    background-color: #eee;
+    border-top: 1px solid #e5e5e5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.024) inset;
+    min-width: 940px;
+    padding: 30px 0;
+    text-shadow: 0 1px 0 #fff;
 }
 
 ul#usermenu {
-    background:none repeat scroll 0 0 transparent;
-    border:medium none;
-    border-radius:0 0 0 0;
-    box-shadow:none;
-    text-align:right;
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    text-align: right;
 }
 

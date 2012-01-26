@@ -77,7 +77,7 @@
 
                 {if $pagedata.left_menu}
                     <div class="span{$span_left}">
-                        {include uri='design:page_leftmenu.tpl'}
+                        {include uri='design:primary_sidebar.tpl'}
                     </div>
                 {/if}
 
@@ -98,7 +98,7 @@
 
                 {if $pagedata.extra_menu}
                     <div class="span{$span_right}">
-                        {include uri='design:page_extramenu.tpl'}
+                        {include uri='design:secondary_sidebar.tpl'}
                     </div>
                 {/if}
             </div>

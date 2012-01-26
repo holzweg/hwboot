@@ -1,7 +1,7 @@
 {if $pagedesign.data_map.footer_script.has_content}
 <script type="text/javascript">
 <!--
-    {$pagedesign.data_map.footer_script.content}
+{$pagedesign.data_map.footer_script.content}
 -->
 </script>
 {/if}

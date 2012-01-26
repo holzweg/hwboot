@@ -2,6 +2,8 @@
 
 === Integrate eZ Less?
 
+=== Clean all (ezwebin) html classes we never use!
+
 === Nicify HTML output (tidy)
 
 === Lots of configurability (see @todo tags for ideas)

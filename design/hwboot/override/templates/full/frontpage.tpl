@@ -27,18 +27,30 @@
         </div>
     {/if}
 
+	{* @todo make columns configurable! *}
+	{* calculate span widths *}
+	{def $span_left  = 4
+		 $span_main  = 12
+		 $span_right = 4}
+	{if and($node.object.data_map.left_column.content.is_empty, $node.object.data_map.right_column.content.is_empty)}
+		{set $span_main = 16}
+	{/if}
+	{if and($node.object.data_map.left_column.content.is_empty|not, $node.object.data_map.right_column.content.is_empty|not)}
+		{set $span_main = 8}
+	{/if}
+
     <div class="row">
-        <div class="left-column span4">
+        <div id="primary-sidebar" class="span{$span_left}">
             <!-- Content: START -->
             {attribute_view_gui attribute=$node.object.data_map.left_column}
             <!-- Content: END -->
         </div>
-        <div class="center-column span12">
+        <div class="span{$span_main}">
             <!-- Content: START -->
             {attribute_view_gui attribute=$node.object.data_map.center_column}
             <!-- Content: END -->
         </div>
-        <div class="right-column span4">
+        <div id="secondary-sidebar" class="span{$span_right}">
             <!-- Content: START -->
                   {attribute_view_gui attribute=$node.object.data_map.right_column}
             <!-- Content: END -->

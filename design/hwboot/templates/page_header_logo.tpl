@@ -1,8 +1,8 @@
 <!-- Masthead (blueprinty thing)
 ================================================== -->
-<header class="jumbotron masthead" id="overview">
+<header class="jumbotron masthead" id="overview" >
   <div class="inner">
-	<div class="container">
+	<div class="container" style="padding-top: {$top_padding}px">
 	  <h1>Bootstrap, from Twitter, running on {ezini('SiteSettings','SiteName')|wash}</h1>
 	  <p class="lead">
 		Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.<br />

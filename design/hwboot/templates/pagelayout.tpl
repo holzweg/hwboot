@@ -28,7 +28,7 @@
 
     <body>
 
-		{* Calculate top padding for our fixed top bars *}
+		{* Calculate top padding to accomodate our fixed top bars - this will most often be needed in page_header_logo.tpl*}
 		{* @todo make heights of top nav bar and website toolbar configurable! *}
 		{* @todo whether bars are fixed or not could be made configurable too *}
 		{def	$navbar_height = 40
@@ -48,7 +48,7 @@
 
 		{include uri='design:page_header.tpl'}
 
-        <div id="page" class="container" style="padding-top: {$top_padding}px;">
+        <div id="page" class="container">
             {if and( is_set( $pagedata.persistent_variable.extra_template_list ), $pagedata.persistent_variable.extra_template_list|count() )}
                 {foreach $pagedata.persistent_variable.extra_template_list as $extra_template}
                     {include uri=concat('design:extra/', $extra_template)}

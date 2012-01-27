@@ -9,16 +9,13 @@
     {/section}
 {/section}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="content-edit-draft">
+<div class="hero-unit">
 
-<form method="post" action={concat('content/edit/',$object.id,'/',$edit_language,'/',$from_language)|ezurl}>
+<form class="form-stacked" method="post" action={concat('content/edit/',$object.id,'/',$edit_language,'/',$from_language)|ezurl}>
 
-<div class="attribute-header">
-    <h1 class="long">{$object.name|wash}</h1>
+<div class="page-header">
+    <h2>{$object.name|wash}</h1>
 </div>
 
 <div class="object">
@@ -55,7 +52,7 @@
 
 <h2>{'Current drafts'|i18n('design/ezwebin/content/edit_draft')}</h2>
 
-<table class="list" width="100%" cellspacing="0" cellpadding="0">
+<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0">
 <tr>
     {section show=$has_own_drafts}
         <th>&nbsp;
@@ -111,23 +108,19 @@
 </table>
 
 {section show=and($has_own_drafts,$has_other_drafts)}
-    <input class="defaultbutton" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/content/edit_draft')}" />
-    <input class="button" type="submit" name="NewDraftButton" value="{'New draft'|i18n('design/ezwebin/content/edit_draft')}" />
+    <input class="btn" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/content/edit_draft')}" />
+    <input class="btn" type="submit" name="NewDraftButton" value="{'New draft'|i18n('design/ezwebin/content/edit_draft')}" />
 {section-else}
     {section show=$has_own_drafts}
-        <input class="defaultbutton" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/content/edit_draft')}" />
-        <input class="button" type="submit" name="NewDraftButton" value="{'New draft'|i18n('design/ezwebin/content/edit_draft')}" />
+        <input class="btn" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/content/edit_draft')}" />
+        <input class="btn" type="submit" name="NewDraftButton" value="{'New draft'|i18n('design/ezwebin/content/edit_draft')}" />
     {/section}
     {section show=$has_other_drafts}
-        <input class="defaultbutton" type="submit" name="NewDraftButton" value="{'New draft'|i18n('design/ezwebin/content/edit_draft')}" />
+        <input class="btn" type="submit" name="NewDraftButton" value="{'New draft'|i18n('design/ezwebin/content/edit_draft')}" />
     {/section}
 {/section}
 
 </form>
 {/let}
 
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

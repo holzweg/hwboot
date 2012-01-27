@@ -33,27 +33,25 @@
     {set $search_data=$search}
 {/if}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="content-advancedsearch">
+
+<div class="hero-unit">
 
 <form action={"/content/advancedsearch/"|ezurl} method="get">
-<div class="attribute-header">
-    <h1 class="long">{'Advanced search'|i18n( 'design/ezwebin/content/advancedsearch' )}</h1>
+<div class="page-header">
+    <h2>{'Advanced search'|i18n( 'design/ezwebin/content/advancedsearch' )}</h2>
 </div>
 
-<div class="block">
+<div class="clearfix">
 <label>{'Search all the words'|i18n( 'design/ezwebin/content/advancedsearch' )}</label><div class="labelbreak"></div>
 <input class="box" type="text" size="40" name="SearchText" value="{$full_search_text|wash}" />
 </div>
-<div class="block">
+<div class="clearfix">
 <label>{'Search the exact phrase'|i18n( 'design/ezwebin/content/advancedsearch' )}</label><div class="labelbreak"></div>
 <input class="box" type="text" size="40" name="PhraseSearchText" value="{$phrase_search_text|wash}" />
 </div>
 
-<div class="block">
+<div class="clearfix">
 
 <div class="element">
 
@@ -90,19 +88,19 @@
 </div>
 
 <div class="buttonblock">
-<input class="button" type="submit" name="SearchButton" value="{'Search'|i18n('design/ezwebin/content/advancedsearch')}" />
+<input class="btn" type="submit" name="SearchButton" value="{'Search'|i18n('design/ezwebin/content/advancedsearch')}" />
 </div>
 
 {if or( $search_text, eq( ezini( 'SearchSettings', 'AllowEmptySearch', 'site.ini'), 'enabled' ) )}
 <br/>
 {switch name=Sw match=$search_count}
   {case match=0}
-<div class="warning">
+<div class="alert-message warning">
 <h2>{'No results were found when searching for "%1"'|i18n( 'design/ezwebin/content/advancedsearch', , array( $search_text|wash ) )}</h2>
 </div>
   {/case}
   {case}
-<div class="feedback">
+<div class="alert-message warning">
 <h2>{'Search for "%1" returned %2 matches'|i18n( 'design/ezwebin/content/advancedsearch',,array( $search_text|wash, $search_count ) )}</h2>
 </div>
   {/case}
@@ -126,8 +124,4 @@
 
 </form>
 
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

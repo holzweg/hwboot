@@ -1,12 +1,10 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+<div class="hero-unit">
 
 {def $languages=fetch('content', 'prioritized_languages')
      $object_language_codes=$object.language_codes
      $can_edit=true()}
 
-<form action={concat('content/edit/',$object.id)|ezurl} method="post">
+<form class="form-stacked" action={concat('content/edit/',$object.id)|ezurl} method="post">
 
 {if $show_existing_languages}
     {* Translation a user is able to edit *}
@@ -108,15 +106,12 @@
     {/if}
 {/if}
 
-<div class="block">
+<div class="actions">
     {if $can_edit}
-        <input class="button" type="submit" name="LanguageSelection" value="{'Edit'|i18n('design/ezwebin/content/edit_languages')}" />
+        <input class="btn" type="submit" name="LanguageSelection" value="{'Edit'|i18n('design/ezwebin/content/edit_languages')}" />
     {/if}
-    <input class="button" type="submit" name="CancelDraftButton" value="{'Cancel'|i18n('design/ezwebin/content/edit_languages')}" />
+    <input class="btn" type="submit" name="CancelDraftButton" value="{'Cancel'|i18n('design/ezwebin/content/edit_languages')}" />
 </div>
 
 </form>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

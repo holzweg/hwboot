@@ -1,18 +1,17 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc">
+<div class="container">
+    <div class="hero-unit">
 
 <form enctype="multipart/form-data" method="post" action={"/ezodf/import"|ezurl}>
 {section show=$error.number|ne(0)}
-   <div class="message-warning"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span>{$error.number}) {$error.message} </h2></div>
+   <div class="alert-message warning"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span>{$error.number}) {$error.message} </h2></div>
 {/section}
 
 {section show=eq($oo_mode,'imported')}
-<div class="message-feedback"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {"Document is now imported"|i18n("design/ezwebin/ezodf/import")}</h2></div>
+<div class="alert-message success"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {"Document is now imported"|i18n("design/ezwebin/ezodf/import")}</h2></div>
 {/section}
 
-<div class="attribute-header">
-<h1 class="long">{"OpenOffice.org import"|i18n("design/ezwebin/ezodf/import")}</h1>
+<div class="page-header">
+<h2>{"OpenOffice.org import"|i18n("design/ezwebin/ezodf/import")}</h2>
 </div>
 
 <div class="object-right">
@@ -29,8 +28,8 @@
   <li><a href={"/ezodf/import"|ezurl}>{"Import another document"|i18n("design/ezwebin/ezodf/import")}</a></li>
 </ul>
 
-<div class="block">
-    <input class="button" type="submit" name="StoreButton" value="{'Upload file'|i18n('design/ezwebin/ezodf/import')}" />
+<div class="clearfix">
+    <input class="btn" type="submit" name="StoreButton" value="{'Upload file'|i18n('design/ezwebin/ezodf/import')}" />
 </div>
 
 {section-else}
@@ -55,14 +54,13 @@ Images are placed in the media library so you can re-use them in other articles.
 <input type="hidden" name="MAX_FILE_SIZE" value="40000000"/>
 <input class="box" name="oo_file" type="file" />
 
-<div class="block">
-    <input class="button" type="submit" name="StoreButton" value="{'Upload file'|i18n('design/ezwebin/ezodf/import')}" />
+<div class="clearfix">
+    <input class="btn" type="submit" name="StoreButton" value="{'Upload file'|i18n('design/ezwebin/ezodf/import')}" />
 </div>
 
 {/section}
 
 </form>
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
+</div>
 </div>

@@ -1,5 +1,5 @@
-<div class="attribute-header">
-    <h1 class="long">{'Choose document placement'|i18n('design/ezwebin/ezodf/browse_place')}</h1>
+<div class="page-header">
+    <h2>{'Choose document placement'|i18n('design/ezwebin/ezodf/browse_place')}</h2>
 </div>
 
 <p>

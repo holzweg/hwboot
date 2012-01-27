@@ -275,7 +275,7 @@ a.menu:after,.dropdown-toggle:after{width:0;height:0;display:inline-block;conten
 .breadcrumb .divider{padding:0 5px;color:#bfbfbf;}
 .breadcrumb .active a{color:#404040;}
 .hero-unit{background-color:#f5f5f5;margin-bottom:30px;padding:60px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}.hero-unit h1{margin-bottom:0;font-size:60px;line-height:1;letter-spacing:-1px;}
-.hero-unit p{font-size:18px;font-weight:200;line-height:27px;}
+.hero-unit p{font-size:13px;font-weight:200;line-height:27px;}
 footer{margin-top:17px;padding-top:17px;border-top:1px solid #eee;}
 .page-header{margin-bottom:17px;border-bottom:1px solid #ddd;-webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);-moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}.page-header h1{margin-bottom:8px;}
 .btn.danger,.alert-message.danger,.btn.danger:hover,.alert-message.danger:hover,.btn.error,.alert-message.error,.btn.error:hover,.alert-message.error:hover,.btn.success,.alert-message.success,.btn.success:hover,.alert-message.success:hover,.btn.info,.alert-message.info,.btn.info:hover,.alert-message.info:hover{color:#ffffff;}

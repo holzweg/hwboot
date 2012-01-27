@@ -1,11 +1,10 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc">
+<div class="container">
+    <div class="hero-unit">
 
-<form enctype="multipart/form-data" method="post" action={"/ezodf/export"|ezurl}>
+<form class="form-stacked" enctype="multipart/form-data" method="post" action={"/ezodf/export"|ezurl}>
 
-<div class="attribute-header">
-    <h1 class="long">{"OpenOffice.org export"|i18n("design/ezwebin/ezodf/export")}</h1>
+<div class="page-header">
+    <h2>{"OpenOffice.org export"|i18n("design/ezwebin/ezodf/export")}</h2>
 </div>
 
 <div class="object-right">
@@ -22,12 +21,11 @@
 {"Here you can export any eZ publish content object to an OpenOffice.org Writer document format."|i18n("design/ezwebin/ezodf/export")}
 </p>
 
-<div class="block">
-    <input class="button" type="submit" name="ExportButton" value="{'Export Object'|i18n('design/ezwebin/ezodf/export')}" />
+<div class="clearfix">
+    <input class="btn" type="submit" name="ExportButton" value="{'Export Object'|i18n('design/ezwebin/ezodf/export')}" />
 </div>
 
 </form>
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
+</div>
 </div>

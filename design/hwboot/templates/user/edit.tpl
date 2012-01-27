@@ -1,11 +1,8 @@
-<div class="container">
+<div class="hero-unit">
 
     <form class="form-stacked" action={concat($module.functions.edit.uri,"/",$userID)|ezurl} method="post" name="Edit">
 
-        <div class="hero-unit">
 
-            <div class="row">
-                <div class="span-one-third">
                       <h2>{"User profile"|i18n("design/ezwebin/user/edit")}</h2>
 
                       <label>{"Username"|i18n("design/ezwebin/user/edit")}</label>
@@ -43,9 +40,8 @@
                         <input class="btn" type="submit" name="EditButton" value="{'Edit profile'|i18n('design/ezwebin/user/edit')}" />
                         <input class="btn" type="submit" name="ChangePasswordButton" value="{'Change password'|i18n('design/ezwebin/user/edit')}" />
 
-                </div>
-            </div>
-        </div>
+
+
     </form>
 
 

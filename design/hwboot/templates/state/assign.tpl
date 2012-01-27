@@ -1,13 +1,12 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+<div class="container">
+    <div class="hero-unit">
 
-<form name="locationsform" method="post" action={'state/assign'|ezurl}>
+<form class="form-stacked" name="locationsform" method="post" action={'state/assign'|ezurl}>
 <input type="hidden" name="ObjectID" value="{$node.object.id}" />
 <input type="hidden" name="RedirectRelativeURI" value="{$node.url_alias}" />
 
-<div class="attribute-header">
-    <h1 class="long">{'Object states for object'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}&nbsp;: <a href={$node.url_alias|ezurl}>{$node.name}</a></h1>
+<div class="page-header">
+    <h2>{'Object states for object'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}&nbsp;: <a href={$node.url_alias|ezurl}>{$node.name}</a></h2>
 </div>
 
 
@@ -32,7 +31,7 @@
 	    {/foreach}
 	</table>
 {else}
-	<div class="block">
+	<div class="clearfix">
 	    <p>
 		{'No content object state is configured. This can be done %urlstart here %urlend.'|i18n( 'design/ezwebin/websitetoolbar/objectstates', '', hash( '%urlstart', concat( '<a href=', 'state/groups'|ezurl, '>' ), 
 		                                                                                                                                  '%urlend', '</a>' ) )}
@@ -42,12 +41,12 @@
 
 {* DESIGN : Control START *}
 <div class="controlbar">
-<div class="block">
+<div class="clearfix">
 <div class="left">
     {if $node.object.allowed_assign_state_list|count}
-    <input type="submit" value="{'Set states'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}" name="AssignButton" class="button" title="{'Apply states from the list above.'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}" />
+    <input class="btn" type="submit" value="{'Set states'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}" name="AssignButton" class="button" title="{'Apply states from the list above.'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}" />
     {else}
-    <input type="submit" value="{'Set states'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}" name="AssignButton" class="button-disabled" title="{'No state to be applied to this content object. You might need to be assigned a more permissive access policy.'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}"/>
+    <input class="btn" type="submit" value="{'Set states'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}" name="AssignButton" class="button-disabled" title="{'No state to be applied to this content object. You might need to be assigned a more permissive access policy.'|i18n( 'design/ezwebin/websitetoolbar/objectstates' )}"/>
     {/if}
 </div>
 <div class="break"></div>
@@ -59,6 +58,5 @@
 
 {undef}
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
+</div>
 </div>

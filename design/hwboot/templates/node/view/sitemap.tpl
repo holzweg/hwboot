@@ -5,9 +5,9 @@
                                            'limit', $page_limit,
                                            'offset', $view_parameters.offset,
  
-<div class="hero-unit">
-                                          'sort_by', $node.sort_array))}
 
+                                          'sort_by', $node.sort_array))}
+<div class="hero-unit">
 <div class="page-header">
     <h2>{"Site map"|i18n("design/ezwebin/view/sitemap")} {$node.name|wash}</h1>
 </div>

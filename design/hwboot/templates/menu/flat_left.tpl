@@ -9,7 +9,7 @@
 {if ne( $pagedata.class_identifier, 'documentation_page' )}
     {def $root_node=fetch( 'content', 'node', hash( 'node_id', $pagedata.path_array[$left_menu_depth].node_id ) )
          $left_menu_items = fetch( 'content', 'list', hash( 'parent_node_id', $root_node.node_id,
-                                                            'sort_by', $root_node.sort_array,
+                                                            'sort_by', array( 'priority', true ),
                                                             'load_data_map', false(),
                                                             'class_filter_type', 'include',
                                                             'class_filter_array', ezini( 'MenuContentSettings', 'LeftIdentifierList', 'menu.ini' ) ) )
@@ -39,7 +39,7 @@
 
             {if eq( $current_node_in_path_2, $item.node_id )}
                 {def $sub_menu_items = fetch( 'content', 'list', hash( 'parent_node_id', $item.node_id,
-                                                                      'sort_by', $item.sort_array,
+                                                                      'sort_by', array( 'priority', true ),
                                                                       'load_data_map', false(),
                                                                       'class_filter_type', 'include',
                                                                       'class_filter_array', ezini( 'MenuContentSettings', 'LeftIdentifierList', 'menu.ini' ) ) )

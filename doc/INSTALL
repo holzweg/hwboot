@@ -22,7 +22,22 @@ Reference=
 Filters[]
 Filters[]=geometry/fill=140;100
 
-== eZ Less ==
+== Activate Bootstrap Demo Package (Experimental) ==
+
+=== extension/hwboot/packages/* ===
+Install packages
+
+=== settings/siteaccess/ezwebin_site/menu.ini.append.php ===
+[MenuContentSettings]
+TopIdentifierList[]=hwboot_demo_folder
+LeftIdentifierList[]=hwboot_demo_content
+
+=== settings/siteaccess/ezwebin_site_admin/icon.ini.append.php ===
+[ClassIcons]
+ClassMap[hwboot_demo_folder]=filesystems/folder.png
+
+
+== @future eZ Less ==
 
 === Install and activate ezless extension ===
 --> head over to http://ezless.org and follow the instructions under INSTALLATION. That's it, you're set.

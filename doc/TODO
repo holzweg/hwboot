@@ -1,23 +1,24 @@
-=== Debug Cache issues! (e.g. christin found when loading a node using pagelayout.tpl we get NULL for values of $span_x)
+++ Debug Cache issues! (e.g. christin found when loading a node using pagelayout.tpl we get NULL for values of $span_x)
 
-=== Print Layout and Accessibility
+++ Clean all (ezwebin) html classes we never use!
 
-=== SEO
+++ Print Layout and Accessibility + Selenium
 
-=== Give twitter credit somewhere? (css headers)
+++ Nicify HTML output (tidy)
 
-=== Integrate eZ Less?
+++ SEO
 
-=== Clean all (ezwebin) html classes we never use!
+++ Give twitter credit somewhere? (css headers)
 
-=== Nicify HTML output (tidy)
+++ Make a nice language menu?
 
-=== Lots of configurability (see @todo tags for ideas)
+++ Bootstrap Demo Package: find out if we can simplify or even automatize the installation 
 
-=== Make a nice language menu?
+++ Mail obfuscation in general and in bootstrap demo content
 
-=== Find out if we can simplify or even automatize the installation of our custom content classes and bootstrap showreel content.
+++ Integrate eZ Less?
 
-=== Mail obfuscation in general and in bootstrap demo content
+++ Lots of configurability (see @todo tags for ideas)
 
-=== Doing a search for @todo in files will tell ya what else is still to be done. 
+=== Doing a search for @todo in files will tell ya what else is still to be done. === 
+

@@ -1,13 +1,11 @@
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="attribute-header">
-    <h1>{"Message preview"|i18n("design/ezwebin/full/forum_reply")}</h1>
+
+<div class="page-header">
+    <h2>{"Message preview"|i18n("design/ezwebin/full/forum_reply")}</h2>
 </div>
 
-<div class="forum_level4">
-<table class="forum" cellspacing="0">
+<div class="forum_level4 hero-unit">
+<table class="forum zebra-striped" cellspacing="0">
 <tr>
     <th class="author">
     {"Author"|i18n("design/ezwebin/full/forum_reply")}
@@ -25,7 +23,7 @@
             <br />{$owner_map.title.content|wash}
         {/if}</p>
         {if $owner_map.image.has_content}
-        <div class="authorimage">
+        <div class="authorimage media-grid">
             {attribute_view_gui attribute=$owner_map.image image_class=small}
         </div>
         {/if}
@@ -43,12 +41,12 @@
         </p>
 
         {if $node.object.can_edit}
-        <form method="post" action={"content/action/"|ezurl}>
+        <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
 
         <br/>
 
         <input type="hidden" name="ContentObjectID" value="{$node.object.id}" />
-        <input class="button forum-edit-reply" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/full/forum_reply')}" />
+        <input class="btn forum-edit-reply" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/full/forum_reply')}" />
         <input type="hidden" name="ContentObjectLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
         </form>
         {/if}
@@ -68,8 +66,4 @@
     </td>
 </tr>
 </table>
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

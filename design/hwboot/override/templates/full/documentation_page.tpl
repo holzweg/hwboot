@@ -1,14 +1,10 @@
 {* Documentation page - Full view *}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+<div class="content">
+    <div class="class-documentation-page hero-unit">
 
-<div class="content-view-full">
-    <div class="class-documentation-page">
-
-        <div class="attribute-header">
-            <h1>{attribute_view_gui attribute=$node.object.data_map.title}</h1>
+        <div class="attribute-header page-header">
+            <h2>{attribute_view_gui attribute=$node.object.data_map.title}</h2>
         </div>
 
         {if eztoc( $node.object.data_map.body )}
@@ -22,7 +18,7 @@
             {attribute_view_gui attribute=$node.object.data_map.body}
         </div>
         
-        <div class="attribute-byline">
+        <div class="attribute-byline alert-message info">
             <p class="published">{'Created:'|i18n( 'design/ezwebin/full/documentation_page' )} {$node.object.published|l10n(shortdatetime)}</p>
             <p class="modified">{'Modified:'|i18n( 'design/ezwebin/full/documentation_page' )} {$node.object.modified|l10n(shortdatetime)}</p>
         </div>
@@ -55,8 +51,4 @@
 
         {/if}
     </div>
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

@@ -43,8 +43,7 @@
 
     {if $node.data_map.body.content.is_empty|not}
     <div class="attribute-long">
- helloooss
-        {attribute_view_gui attribute=$node.data_map.body}
+   {attribute_view_gui attribute=$node.data_map.body}
     </div>
     {/if}
 
@@ -66,7 +65,7 @@
     {if fetch( 'content', 'access', hash( 'access', 'create',
     'contentobject', $node,
     'contentclass_id', 'comment' ) )}
-    <form method="post" action={"content/action"|ezurl}>
+    <form class="form-stacked" method="post" action={"content/action"|ezurl}>
           <input type="hidden" name="ClassIdentifier" value="comment" />
         <input type="hidden" name="NodeID" value="{$node.object.main_node.node_id}" />
         <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />

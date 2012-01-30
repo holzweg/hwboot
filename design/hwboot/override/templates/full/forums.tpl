@@ -1,14 +1,11 @@
 {* Forums - Full view *}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="content-view-full">
-    <div class="class-forums">
+<div class="content">
+    <div class="class-forums hero-unit">
 
-        <div class="attribute-header">
-            <h1>{$node.name|wash()}</h1>
+        <div class="page-header">
+            <h2>{$node.name|wash()}</h2>
         </div>
 
         {if $node.object.data_map.description.has_content}
@@ -23,7 +20,7 @@
                                                              class_filter_type, include,
                                                              class_filter_array, array( 'forum' ),
                                                              limit, $page_limit ) )}
-        <table class="list forum" cellspacing="0">
+        <table class="zebra-striped forum" cellspacing="0">
             <tr>
                 <th>{"Forum"|i18n( "design/ezwebin/full/forums" )}</th>
                 <th class="topic">{"Topics"|i18n( "design/ezwebin/full/forums" )}</th>
@@ -48,8 +45,4 @@
              {/foreach}
         </table>
     </div>
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

@@ -1,13 +1,10 @@
 {* Poll - Full view *}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="content-view-full">
-    <div class="class-poll">
+<div class="content">
+    <div class="class-poll hero-unit">
 
-        <div class="attribute-header">
+        <div class="page-header">
             <h1>{$node.name|wash()}</h1>
         </div>
 
@@ -15,7 +12,7 @@
         {attribute_view_gui attribute=$node.data_map.description}
         </div>
 
-        <form method="post" action={"content/action"|ezurl}>
+        <form class="form-stacked" method="post" action={"content/action"|ezurl}>
         <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
         <input type="hidden" name="ContentObjectID" value="{$node.object.id}" />
         <input type="hidden" name="ViewMode" value="full" />
@@ -25,7 +22,7 @@
         </div>
 
         {if is_unset( $versionview_mode )}
-        <input class="button" type="submit" name="ActionCollectInformation" value="{"Vote"|i18n("design/ezwebin/full/poll")}" />
+        <input class="btn" type="submit" name="ActionCollectInformation" value="{"Vote"|i18n("design/ezwebin/full/poll")}" />
         {/if}
 
         </form>
@@ -37,8 +34,4 @@
         </div>
 
     </div>
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

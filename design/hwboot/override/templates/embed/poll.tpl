@@ -1,10 +1,10 @@
 {* Poll - Embed view *}
-<div class="content-view-embed">
-    <div class="class-poll">
+<div class="content-view-embed content">
+    <div class="class-poll hero-unit">
         <h2>{$object.name|wash}</h2>
 
        <div class="content-body">
-        <form method="post" action={"content/action"|ezurl}>
+        <form class="form-stacked" method="post" action={"content/action"|ezurl}>
         <input type="hidden" name="ContentNodeID" value="{$object.main_node_id}" />
         <input type="hidden" name="ContentObjectID" value="{$object.id}" />
         <input type="hidden" name="ViewMode" value="full" />
@@ -22,7 +22,7 @@
         {/section}
 
         {/let}
-        <input class="button" type="submit" name="ActionCollectInformation" value="{"Vote"|i18n("design/ezwebin/embed/poll")}" />
+        <input class="btn" type="submit" name="ActionCollectInformation" value="{"Vote"|i18n("design/ezwebin/embed/poll")}" />
 
         </form>
         </div>

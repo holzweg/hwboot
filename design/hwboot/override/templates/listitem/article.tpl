@@ -1,7 +1,7 @@
 {*?template charset=utf-8?*}
 {* Article - List item view *}
-<div class="content-view-listitem">
-    <div class="class-article">
+<div class="content">
+    <div class="class-article hero-unit">
 
      <h3><a href={$node.url_alias|ezurl}>{$node.data_map.title.content|wash}</a></h3>
 

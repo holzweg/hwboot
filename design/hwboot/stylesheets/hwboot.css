@@ -42,33 +42,28 @@
 	Meta Navigation
 -----------------------------------------------------------------------------*/
 #metanav {
-	min-width: 940px;
-    background-color: #eee;
-    border-top: 1px solid #e5e5e5;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.024) inset;
-    text-shadow: 0 1px 0 #fff;
-	height: 20px;
-	overflow: hidden; /* Clearing floats */
+
 }
 
 #metanav ul {
 	float: left;
 	padding-left: 5px;
 	margin-left: 0;
+	margin-bottom: 0px;
 }
 
 #metanav ul li {
 	display: block;
 	float: left;
 }
-		 
+
 #metanav ul:last-child {
 	float: right;
 }
 
 #metanav ul:last-child li {
-	padding: 0 3px;
-	border-right: 2px solid #fff;
+    border-right:1px solid rgba(0, 0, 0, 0.06);
+    padding:0 5px;
 }
 
 #metanav ul:last-child li:last-child {

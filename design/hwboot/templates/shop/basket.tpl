@@ -1,6 +1,6 @@
 
 <div class="hero-unit">
-
+<div class="alert-message info">
     <ul>
         <li class="selected">1. {"Shopping basket"|i18n("design/ezwebin/shop/basket")}</li>
         <li>2. {"Account information"|i18n("design/ezwebin/shop/basket")}
@@ -9,8 +9,6 @@
     </ul>
 
 </div>
-
-<div class="hero-unit">
 
 <div class="page-header">
     <h2>{"Basket"|i18n("design/ezwebin/shop/basket")}</h1>
@@ -64,7 +62,7 @@
         {section name=Basket show=$basket.items}
 
 
-        <table class="class="zebra-striped""  width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="zebra-striped"  width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
                 <th>
                     {"Count"|i18n("design/ezwebin/shop/basket")}
@@ -199,7 +197,7 @@
 
         </table>
 
-        <div class="buttonblock">
+        <div class="clearfix">
             <input class="btn" type="submit" name="ContinueShoppingButton" value="{'Continue shopping'|i18n('design/ezwebin/shop/basket')}" />
             <input class="btn" type="submit" name="CheckoutButton" value="{'Checkout'|i18n('design/ezwebin/shop/basket')}" /> &nbsp;
         </div>
@@ -208,7 +206,7 @@
 
         {section-else}
 
-        <div class="feedback">
+        <div class="alert-message info">
             <h2>{"You have no products in your basket."|i18n("design/ezwebin/shop/basket")}</h2>
         </div>
 

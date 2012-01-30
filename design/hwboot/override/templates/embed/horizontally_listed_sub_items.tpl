@@ -1,4 +1,4 @@
-<div class="content-view-embed">
+<div class="content">
     {def $children = array()
          $limit = 3
          $offset = 0}
@@ -19,7 +19,7 @@
                                                'sort_by', $object.main_node.sort_array ) ) }
     <h2>{$object.name|wash()}</h2>
 
-    <div class="well">
+
         <ul class="media-grid">
             {foreach $children as $child}
                 <li>
@@ -27,5 +27,5 @@
                 </li>
             {/foreach}
         </ul>
-    </div>
+
 </div>

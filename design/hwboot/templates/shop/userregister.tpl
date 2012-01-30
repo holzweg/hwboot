@@ -1,6 +1,7 @@
 
 
 <div class="hero-unit">
+<div class="alert-message info">
 
     <ul>
         <li>1. {"Shopping basket"|i18n("design/ezwebin/shop/userregister")}</li>
@@ -13,7 +14,6 @@
 
 
 
-<div class="hero-unit">
 <div class="page-header">
     <h2>{"Your account information"|i18n("design/ezwebin/shop/userregister")}</h1>
 </div>
@@ -110,7 +110,7 @@
         </div>
 
     </form>
- <div class="alert-message warning">
+ <div class="alert-message info">
     <p>
         {"All fields marked with * must be filled in."|i18n("design/ezwebin/shop/userregister")}
     </p>

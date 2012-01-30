@@ -1,14 +1,13 @@
 {* Gallery - Full view *}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+<div class="hero-unit">
+
 
 <div class="content-view-full">
     <div class="class-gallery">
 
-        <div class="attribute-header">
-            <h1>{$node.name|wash()}</h1>
+        <div class="page-header">
+            <h2>{$node.name|wash()}</h2>
         </div>
 
         {if $node.data_map.image.content}
@@ -44,7 +43,7 @@
                 </p>
             </div>
 
-            <div class="content-view-children">
+            <div class="media-grid">
                 {def $filters = ezini( 'gallerythumbnail', 'Filters', 'image.ini' )}
 
                     {foreach $filters as $filter}
@@ -56,7 +55,7 @@
                     {/foreach}
 
                 {foreach $children as $child}
-                    {node_view_gui view=galleryline content_node=$child}
+                {node_view_gui view=galleryline content_node=$child}
                 {/foreach}
 
             </div>
@@ -71,6 +70,4 @@
     </div>
 </div>
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

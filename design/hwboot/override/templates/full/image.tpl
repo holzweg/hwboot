@@ -4,16 +4,11 @@
      $previous_item = false()
      $next_item     = false()}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+<div class="hero-unit">
 
-<div class="content-view-full">
-    <div class="class-image parent-class-{$parent.class_identifier|wash}">
 
-        <div class="attribute-header">
-            <h1>{$node.name|wash()}</h1>
-        </div>
+            <h2>{$node.name|wash()}</h2>
+
 
     {if is_unset( $versionview_mode )}
         {* Generate next and previous links if parent is gallery *}
@@ -44,48 +39,46 @@
              {/while}
              {undef $siblings $index $node_id}
         {/if}
-        <div class="content-navigator">
+        <div class="clearfix">
             {if $previous_item}
-                <div class="content-navigator-previous">
-                    <div class="content-navigator-arrow">&laquo;&nbsp;</div><a href={$previous_item.url_alias|ezurl} title="{$previous_item.name|wash}">{'Previous image'|i18n( 'design/ezwebin/full/image' )}</a>
-                </div>
-                <div class="content-navigator-separator">|</div>
+               
+                    &laquo;&nbsp;<a href={$previous_item.url_alias|ezurl} title="{$previous_item.name|wash}">{'Previous image'|i18n( 'design/ezwebin/full/image' )}</a>
+               
+                |
             {else}
-                <div class="content-navigator-previous-disabled">
-                    <div class="content-navigator-arrow">&laquo;&nbsp;</div>{'Previous image'|i18n( 'design/ezwebin/full/image' )}
-                </div>
-                <div class="content-navigator-separator-disabled">|</div>
+              
+                    &laquo;&nbsp;{'Previous image'|i18n( 'design/ezwebin/full/image' )}
+                
+                |
             {/if}
 
-            <div class="content-navigator-forum-link"><a href={$parent.url_alias|ezurl}>{$parent.name|wash}</a></div>
+            <a href={$parent.url_alias|ezurl}>{$parent.name|wash}</a>
 
             {if $next_item}
-                <div class="content-navigator-separator">|</div>
-                <div class="content-navigator-next">
-                    <a href={$next_item.url_alias|ezurl} title="{$next_item.name|wash}">{'Next image'|i18n( 'design/ezwebin/full/image' )}</a><div class="content-navigator-arrow">&nbsp;&raquo;</div>
-                </div>
+                |
+      
+                    <a href={$next_item.url_alias|ezurl} title="{$next_item.name|wash}">{'Next image'|i18n( 'design/ezwebin/full/image' )}</a>&nbsp;&raquo;
+               
             {else}
-                <div class="content-navigator-separator-disabled">|</div>
-                <div class="content-navigator-next-disabled">
-                    {'Next image'|i18n( 'design/ezwebin/full/image' )}<div class="content-navigator-arrow">&nbsp;&raquo;</div>
-                </div>
+           |
+               
+                    {'Next image'|i18n( 'design/ezwebin/full/image' )}&nbsp;&raquo;
+               
             {/if}
         </div>
     {/if}
 
-        <div class="attribute-image">
-            <p>{attribute_view_gui attribute=$node.data_map.image image_class=imagelarge}</p>
+        <div class="media-grid">
+           <a href="#"> <p>{attribute_view_gui attribute=$node.data_map.image image_class=imagelarge}</p></a>
         </div>
 
-        <div class="attribute-caption">
+        <div class="clearfix">
             {attribute_view_gui attribute=$node.data_map.caption}
         </div>
 
         {include uri='design:parts/image/related_content.tpl'}
 
-    </div>
-</div>
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
+
+
 </div>

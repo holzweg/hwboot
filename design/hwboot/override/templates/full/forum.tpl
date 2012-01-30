@@ -1,15 +1,11 @@
 {def $page_limit = 20
      $topic_count = fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id ) )}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+<div class="content">
+    <div class="hero-unit">
 
-<div class="content-view-full">
-    <div class="class-forum">
-
-    <div class="attribute-header">
-        <h1>{$node.name|wash}</h1>
+    <div class="page-header">
+        <h2>{$node.name|wash}</h2>
     </div>
 
     <div class="attribute-short">
@@ -20,13 +16,13 @@
     {if is_unset( $versionview_mode )}
     {if $node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'addtonotification' ) )}
-        <form method="post" action={"content/action/"|ezurl}>
-            <input class="button forum-new-topic" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ezwebin/full/forum' )}" />
+        <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+            <input class="btn forum-new-topic" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ezwebin/full/forum' )}" />
             <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />
             <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
             {if $notification_access }
-                <input class="button forum-keep-me-updated" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum' )}" />
+                <input class="btn forum-keep-me-updated" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum' )}" />
             {/if}
             <input type="hidden" name="NodeID" value="{$node.node_id}" />
             <input type="hidden" name="ClassIdentifier" value="forum_topic" />
@@ -42,7 +38,7 @@
 
     <div class="content-view-children">
 
-        <table class="list forum" cellspacing="0">
+        <table class="zebra-striped forum" cellspacing="0">
         <tr>
             <th class="topic">
                 {"Topic"|i18n( "design/ezwebin/full/forum" )}
@@ -133,6 +129,6 @@
          view_parameters=$view_parameters
          item_limit=$page_limit}
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>
+
+
+

@@ -1,17 +1,15 @@
 {* Geo Article - Full view *}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-    <div class="content-view-full">
-        <div class="class-geo-article">
 
-        <div class="attribute-header">
-            <h1>{$node.data_map.title.content|wash()}</h1>
+    <div class="content">
+        <div class="hero-unit">
+
+        <div class="page-header">
+            <h2>{$node.data_map.title.content|wash()}</h2>
         </div>
 
-        <div class="attribute-byline">
+        <div class="attribute-byline alert-message info">
         {if $node.data_map.author.content.is_empty|not()}
         <p class="author">
              {attribute_view_gui attribute=$node.data_map.author}
@@ -24,7 +22,7 @@
 
         {if eq( ezini( 'article', 'ImageInFullView', 'content.ini' ), 'enabled' )}
             {if $node.data_map.image.has_content}
-                <div class="attribute-image">
+                <div class="attribute-image media-grid">
                     {attribute_view_gui attribute=$node.data_map.image image_class=medium}
 
                     {if $node.data_map.caption.has_content}
@@ -81,11 +79,11 @@
                 {if fetch( 'content', 'access', hash( 'access', 'create',
                                                       'contentobject', $node,
                                                       'contentclass_id', 'comment' ) )}
-                    <form method="post" action={"content/action"|ezurl}>
+                    <form class="form-stacked" method="post" action={"content/action"|ezurl}>
                     <input type="hidden" name="ClassIdentifier" value="comment" />
                     <input type="hidden" name="NodeID" value="{$node.object.main_node.node_id}" />
                     <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
-                    <input class="button new_comment" type="submit" name="NewButton" value="{'New comment'|i18n( 'design/ezwebin/full/article' )}" />
+                    <input class="btn new_comment" type="submit" name="NewButton" value="{'New comment'|i18n( 'design/ezwebin/full/article' )}" />
                     </form>
                 {else}
                     {if ezmodule( 'user/register' )}
@@ -107,7 +105,3 @@
 
         </div>
     </div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>

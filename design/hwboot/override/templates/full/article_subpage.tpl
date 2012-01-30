@@ -1,17 +1,12 @@
 {* Article (sub-page) - Full view *}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+    <div class="hero-unit">
 
-<div class="content-view-full">
-    <div class="class-article-mainpage">
-
-        <div class="attribute-header">
-            <h1>{$node.data_map.title.content|wash()}</h1>
+        <div class="page-header">
+            <h2>{$node.data_map.title.content|wash()}</h2>
         </div>
 
-        <div class="attribute-byline">
+        <div class="attribute-byline alert-message info">
         {if $node.parent.data_map.author.content.is_empty|not()}
         <p class="author">
              {attribute_view_gui attribute=$node.parent.data_map.author}
@@ -43,8 +38,3 @@
         {/if}
 
     </div>
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>

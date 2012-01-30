@@ -4,14 +4,12 @@
      $previous_item = false()
      $next_item     = false()}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="content-view-full">
+
+<div class="hero-unit">
     <div class="class-flash parent-class-{$parent.class_identifier|wash}">
 
-    <div class="attribute-header">
+    <div class="page-header">
         <h1>{$node.name|wash()}</h1>
     </div>
 
@@ -46,29 +44,29 @@
         {/if}
         <div class="content-navigator">
             {if $previous_item}
-                <div class="content-navigator-previous">
-                    <div class="content-navigator-arrow">&laquo;&nbsp;</div><a href={$previous_item.url_alias|ezurl} title="{$previous_item.name|wash}">{'Previous image'|i18n( 'design/ezwebin/full/image' )}</a>
-                </div>
-                <div class="content-navigator-separator">|</div>
+              
+                  &laquo;&nbsp;<a href={$previous_item.url_alias|ezurl} title="{$previous_item.name|wash}">{'Previous image'|i18n( 'design/ezwebin/full/image' )}</a>
+               
+               |
             {else}
-                <div class="content-navigator-previous-disabled">
-                    <div class="content-navigator-arrow">&laquo;&nbsp;</div>{'Previous image'|i18n( 'design/ezwebin/full/image' )}
-                </div>
-                <div class="content-navigator-separator-disabled">|</div>
+               
+                &laquo;&nbsp;{'Previous image'|i18n( 'design/ezwebin/full/image' )}
+              
+                |
             {/if}
 
-            <div class="content-navigator-forum-link"><a href={$parent.url_alias|ezurl}>{$parent.name|wash}</a></div>
+          <a href={$parent.url_alias|ezurl}>{$parent.name|wash}</a>
 
             {if $next_item}
-                <div class="content-navigator-separator">|</div>
-                <div class="content-navigator-next">
-                    <a href={$next_item.url_alias|ezurl} title="{$next_item.name|wash}">{'Next image'|i18n( 'design/ezwebin/full/image' )}</a><div class="content-navigator-arrow">&nbsp;&raquo;</div>
-                </div>
+             |
+              
+                    <a href={$next_item.url_alias|ezurl} title="{$next_item.name|wash}">{'Next image'|i18n( 'design/ezwebin/full/image' )}</a>&nbsp;&raquo;
+              
             {else}
-                <div class="content-navigator-separator-disabled">|</div>
-                <div class="content-navigator-next-disabled">
-                    {'Next image'|i18n( 'design/ezwebin/full/image' )}<div class="content-navigator-arrow">&nbsp;&raquo;</div>
-                </div>
+             |
+              
+                    {'Next image'|i18n( 'design/ezwebin/full/image' )}&nbsp;&raquo;
+               
             {/if}
         </div>
     {/if}
@@ -98,6 +96,3 @@
     </div>
 </div>
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>

@@ -1,14 +1,11 @@
 {* Real video - Full view *}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="content-view-full">
-    <div class="class-real_video">
+<div class="content">
+    <div class="hero-unit">
 
-    <div class="attribute-header">
-    <h1>{$node.name|wash()}</h1>
+    <div class="page-header">
+    <h2>{$node.name|wash()}</h2>
     </div>
     
     <div class="attribute-short">
@@ -33,8 +30,4 @@
     </div>
 
     </div>
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>

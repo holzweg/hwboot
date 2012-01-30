@@ -2,13 +2,11 @@
 {set scope=global persistent_variable=hash('left_menu', false(),
                                            'extra_menu', false())}
 
-<div class="class-blog extrainfo">
+<div class="content">
     <div class="columns-blog float-break">
-        <div class="main-column-position">
-            <div class="main-column float-break">
-                <div class="border-box">
-                <div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-                <div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+        <div class="hero-unit">
+           
+           
 
 {def $page_limit = 10
      $blogs_count = 0
@@ -73,22 +71,14 @@
                      view_parameters=$view_parameters
                      item_limit=$page_limit}
 
-                </div></div></div>
-                <div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-                </div>
-            </div>
         </div>
 
-        <div class="extrainfo-column-position">
-            <div class="extrainfo-column">
-                <div class="border-box">
-                <div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-                <div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+      
+            <div class="hero-unit pull-right">
+               
                         {include uri='design:parts/blog/extra_info.tpl' used_node=$node}
-                </div></div></div>
-                <div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-                </div>
+              
             </div>
-        </div>
+       
     </div>
 </div>

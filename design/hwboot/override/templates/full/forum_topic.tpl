@@ -18,64 +18,61 @@
                                             'sort_by', array( array( 'modified_subnode', true() ), array( 'node_id', true() ) ) ) ) }
 
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<div class="content-view-full">
-    <div class="class-forum-topic">
+<div class="content">
+    <div class="hero-unit">
 
-        <div class="attribute-header">
-            <h1>{$node.name|wash}</h1>
+        <div class="page-header">
+            <h2>{$node.name|wash}</h2>
         </div>
         
         {section show=is_unset( $versionview_mode )}
         <div class="content-navigator">
             {section show=$previous_topic}
-                <div class="content-navigator-previous">
-                    <div class="content-navigator-arrow">&laquo;&nbsp;</div><a href={$previous_topic[0].url_alias|ezurl} title="{$previous_topic[0].name|wash}">{'Previous topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a>
-                </div>
+               
+                    &laquo;&nbsp;<a href={$previous_topic[0].url_alias|ezurl} title="{$previous_topic[0].name|wash}">{'Previous topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a>
+               
             {section-else}
-                <div class="content-navigator-previous-disabled">
-                    <div class="content-navigator-arrow">&laquo;&nbsp;</div>{'Previous topic'|i18n( 'design/ezwebin/full/forum_topic' )}
-                </div>
+              
+                   &laquo;&nbsp;{'Previous topic'|i18n( 'design/ezwebin/full/forum_topic' )}
+               
             {/section}
 
             {section show=$previous_topic}
-                <div class="content-navigator-separator">|</div>
+            |
             {section-else}
-                <div class="content-navigator-separator-disabled">|</div>
+              |
             {/section}
 
             {let forum=$node.parent}
-                <div class="content-navigator-forum-link"><a href={$forum.url_alias|ezurl}>{$forum.name|wash}</a></div>
+              <a href={$forum.url_alias|ezurl}>{$forum.name|wash}</a>
             {/let}
 
             {section show=$next_topic}
-                <div class="content-navigator-separator">|</div>
+               |
             {section-else}
-                <div class="content-navigator-separator-disabled">|</div>
+             |
             {/section}
 
             {section show=$next_topic}
-                <div class="content-navigator-next">
-                    <a href={$next_topic[0].url_alias|ezurl} title="{$next_topic[0].name|wash}">{'Next topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a><div class="content-navigator-arrow">&nbsp;&raquo;</div>
-                </div>
+              
+                    <a href={$next_topic[0].url_alias|ezurl} title="{$next_topic[0].name|wash}">{'Next topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a>&nbsp;&raquo;
+                
             {section-else}
-                <div class="content-navigator-next-disabled">
-                    {'Next topic'|i18n( 'design/ezwebin/full/forum_topic' )}<div class="content-navigator-arrow">&nbsp;&raquo;</div>
-                </div>
+             
+                    {'Next topic'|i18n( 'design/ezwebin/full/forum_topic' )}&nbsp;&raquo;
+              
             {/section}
         </div>
 
         {section show=$node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'use' ) )}
-        <form method="post" action={"content/action/"|ezurl}>
-            <input class="button forum-new-reply" type="submit" name="NewButton" value="{'New reply'|i18n( 'design/ezwebin/full/forum_topic' )}" />
+        <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+            <input class="btn forum-new-reply" type="submit" name="NewButton" value="{'New reply'|i18n( 'design/ezwebin/full/forum_topic' )}" />
             <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />
             {if $notification_access}
-                <input class="button forum-keep-me-updated" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum_topic' )}" />
+                <input class="btn forum-keep-me-updated" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum_topic' )}" />
             {/if}
             <input type="hidden" name="NodeID" value="{$node.node_id}" />
             <input type="hidden" name="ClassIdentifier" value="forum_reply" />
@@ -89,7 +86,7 @@
         {/section}
         {/section}
 
-            <table class="list forum" cellspacing="0">
+            <table class="zebra-striped forum" cellspacing="0">
             <tr>
                 <th class="author">
                     {"Author"|i18n("design/ezwebin/full/forum_topic")}
@@ -239,7 +236,4 @@
     </div>
 </div>
 
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>
 {/let}

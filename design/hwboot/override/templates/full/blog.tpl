@@ -4,7 +4,7 @@
 
 <div class="content">
     <div class="columns-blog float-break">
-        <div class="hero-unit">
+        <div class="span7 hero-unit" style="float:left">
            
            
 
@@ -74,7 +74,7 @@
         </div>
 
       
-            <div class="hero-unit pull-right">
+            <div class="span5 hero-unit" style="float:left;margin-left:20px">
                
                         {include uri='design:parts/blog/extra_info.tpl' used_node=$node}
               

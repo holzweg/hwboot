@@ -3,6 +3,7 @@
                                            'extra_menu', false())}
 
 <div class="content">
+
     <div class="columns-blog float-break">
         <div class="span7 hero-unit" style="float:left">
            

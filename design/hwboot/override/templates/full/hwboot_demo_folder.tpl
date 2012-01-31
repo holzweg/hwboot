@@ -49,9 +49,9 @@
         'offset', $view_parameters.offset,
         'sort_by', array( 'priority', true ),
         'class_filter_type', 'exclude',
-        'class_filter_array', $classes,
+        'class_filter_array', array(),
         'limit', $page_limit ) ) as $child }
-        {node_view_gui view='line' content_node=$child}
+        {node_view_gui view='line' content_node=$child large_green_buttons=true()}
         {/foreach}
         {/if}
     </div>

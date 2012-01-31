@@ -1,4 +1,4 @@
-<div class="span5">
+<div class="content-view-embed">
     <div class="class-article float-break">
 
         <h2><a href={$object.main_node.url_alias|ezurl}>{$object.data_map.title.content|wash}</a></h2>

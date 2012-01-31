@@ -20,12 +20,19 @@
     <h2>{$object.name|wash()}</h2>
 
 
-        <ul class="media-grid">
+
+        <table class="zebra-striped">
             {foreach $children as $child}
-                <li>
+            <tr>
+                <td>
+
+     
                     {node_view_gui view=horizontallylistedsubitems content_node=$child}
-                </li>
+
+
+                </td>
+            </tr>
             {/foreach}
-        </ul>
+        </table>
 
 </div>

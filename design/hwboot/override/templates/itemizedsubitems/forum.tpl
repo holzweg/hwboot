@@ -1,11 +1,9 @@
-<div class="content-view-embed">
-    <div class="class-forum">
+<div class="content">
+
 
     <h2><a href={$object.main_node.url_alias|ezurl}>{$object.name|wash()}</a></h2>
 
-    <div class="border-box">
-    <div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-    <div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+    <div class="alert-message block-message info">
 
     {def $children = array()
          $limit = 5
@@ -40,9 +38,7 @@
     
     {/if}
 
-    </div></div></div>
-    <div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
     </div>
 
-    </div>
+
 </div>

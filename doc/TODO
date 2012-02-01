@@ -20,5 +20,7 @@
 
 ++ Lots of configurability (see @todo tags for ideas)
 
+++ Have a look at bootstrap v2 (when it's out) for PDA support
+
 === Doing a search for @todo in files will tell ya what else is still to be done. === 
 

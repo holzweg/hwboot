@@ -23,19 +23,19 @@
    
 
         {def $i=0}
-        <table class="zebra-striped">
-            <tr>
+
+
             {foreach $children as $child}
             {if eq($i, 3)} {break} {/if}
-                <td>
-                    <div class="media-grid">
+
+                    
                     {node_view_gui view=horizontallylistedsubitems content_node=$child}
-                    </div>
-                </td>
+                   
+                    
             {set $i=inc( $i )}
             {/foreach}
-            </tr>
-        </table>
+
+
 
 
 </div>

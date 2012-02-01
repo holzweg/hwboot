@@ -22,6 +22,11 @@ Reference=
 Filters[]
 Filters[]=geometry/fill=140;100
 
+== eZ Less ==
+
+=== Install and activate ezless extension ===
+--> head over to http://ezless.org and follow the instructions under INSTALLATION. That's it, you're set.
+
 == Activate Bootstrap Demo Package (Experimental) ==
 
 === extension/hwboot/packages/* ===
@@ -37,7 +42,3 @@ LeftIdentifierList[]=hwboot_demo_content
 ClassMap[hwboot_demo_folder]=filesystems/folder.png
 
 
-== @future eZ Less ==
-
-=== Install and activate ezless extension ===
---> head over to http://ezless.org and follow the instructions under INSTALLATION. That's it, you're set.

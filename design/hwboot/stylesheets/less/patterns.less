@@ -1,7 +1,5 @@
 /* Patterns.less
  * Repeatable UI elements outside the base styles provided from the scaffolding
- *
- * @todo @workflow fix line @fixme or enable the awesome eZ Less Parser to handle the hack correctly.
  * ---------------------------------------------------------------------------- */
 
 
@@ -482,7 +480,7 @@ a.menu:after,
     letter-spacing: -1px;
   }
   p {
-    font-size: 18px;
+    font-size: @basefont;
     font-weight: 200;
     line-height: @baseline * 1.5;
   }
@@ -617,12 +615,11 @@ footer {
   }
 }
 // Super jank hack for removing border-radius from IE9 so we can keep filter gradients on alerts and buttons
-// @workflow @fixme
 //
-//:root .alert-message,
-//:root .btn {
-//  border-radius: 0 \0;
-//}
+:root .alert-message,
+:root .btn {
+  border-radius: 0 \0;
+}
 
 // Help Firefox not be a jerk about adding extra padding to buttons
 button.btn,

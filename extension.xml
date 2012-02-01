@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<software>
+    <metadata>
+        <name>HW Boot</name>
+        <version>0.1.0</version>
+        <copyright>Copyright (C) 1999-2012 Holzweg e-commerce Solutions</copyright>
+        <license>GNU General Public License v2.0</license>
+    </metadata>
+
+    <dependencies>
+        <requires>
+            <extension name="ezless" />
+        </requires>
+        <extends>
+            <extension name="ezwebin" />
+        </extends>
+    </dependencies>
+
+</software>

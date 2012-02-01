@@ -1,10 +1,5 @@
 {* eZ Less dependent implementation *}
-{array(
-"less/bootstrap.less",
-"less/prettify.less",
-"less/websitetoolbar.less",
-"less/hwboot.less"
-						)|ezless_add()}
+{"bootstrap.less"|ezless_add()}
 {ezless()}
 
 {* @todo Implement a fallback to default CSS? *}

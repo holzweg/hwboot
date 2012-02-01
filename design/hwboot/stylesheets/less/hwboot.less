@@ -3,15 +3,15 @@
 -----------------------------------------------------------------------------*/
 
 .jumbotron {
-    min-width: 940px;
+    min-width: @siteWidth;
 }
 .jumbotron .inner {
-    background: url("../images/grid-18px.png") repeat scroll center top transparent;
+    background: url(@{imagedir}grid-18px.png) repeat scroll center top transparent;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) inset;
     padding: 45px 0;
 }
 .jumbotron h1, .jumbotron p {
-    color: #ffffff;
+    color: @white;
     margin-bottom: 9px;
     text-align: center;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -29,7 +29,7 @@
     line-height: 27px;
 }
 .jumbotron p a {
-    color: #ffffff;
+    color: @white;
     font-weight: bold;
 }
 .masthead {
@@ -124,7 +124,7 @@ input[type="image"] {
 }
 
 .footer {
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 @white;
 }
 
 .footer {

@@ -24,18 +24,18 @@
 
         {def $i=0}
 
-
+<ul class="media-grid">
             {foreach $children as $child}
             {if eq($i, 3)} {break} {/if}
 
-                    
+               <li>     
                     {node_view_gui view=horizontallylistedsubitems content_node=$child}
-                   
+                 </li>  
                     
             {set $i=inc( $i )}
             {/foreach}
 
-
+</ul>
 
 
 </div>

@@ -5,7 +5,7 @@
 
 {switch match=$edit_warning}
 {case match=1}
-<div class="alert-message warning">
+<div class="alert warning">
 <h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {'Version not a draft'|i18n( 'design/ezwebin/content/history' )}</h2>
 <ul>
     <li>{'Version %1 is not available for editing anymore. Only drafts can be edited.'|i18n( 'design/ezwebin/content/history',, array( $edit_version ) )}</li>
@@ -14,7 +14,7 @@
 </div>
 {/case}
 {case match=2}
-<div class="alert-message warning">
+<div class="alert warning">
 <h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {'Version not yours'|i18n( 'design/ezwebin/content/history' )}</h2>
 <ul>
     <li>{'Version %1 was not created by you. Only your own drafts can be edited.'|i18n( 'design/ezwebin/content/history',, array( $edit_version ) )}</li>
@@ -23,7 +23,7 @@
 </div>
 {/case}
 {case match=3}
-<div class="alert-message warning">
+<div class="alert warning">
 <h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {'Unable to create new version'|i18n( 'design/ezwebin/content/history' )}</h2>
 <ul>
     <li>{'Version history limit has been exceeded and no archived version can be removed by the system.'|i18n( 'design/ezwebin/content/history' )}</li>
@@ -41,14 +41,14 @@
      $current_user = fetch( 'user', 'current_user' )}
 
 
-<form class="form-stacked" name="versionsform" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
+<form  name="versionsform" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 
 <div class="page-header">
     <h2>{'Versions for <%object_name> [%version_count]'|i18n( 'design/ezwebin/content/history',, hash( '%object_name', $object.name, '%version_count', $list_count ) )|wash}</h2>
 </div>
 
 {if $list_count}
-<table class="zebra-striped" cellspacing="0">
+<table class="table-striped" cellspacing="0">
 <tr>
     <th class="tight"><img src={'toggle-button-16x16.gif'|ezimage} alt="{'Toggle selection'|i18n( 'design/ezwebin/content/history' )}" onclick="ezjs_toggleCheckboxes( document.versionsform, 'DeleteIDArray[]' ); return false;" /></th>
     <th>{'Version'|i18n( 'design/ezwebin/content/history' )}</th>
@@ -136,12 +136,12 @@
 {/foreach}
 </table>
 {else}
-<div class="clearfix">
+<div class="control-group">
 <p>{'This object does not have any versions.'|i18n( 'design/ezwebin/content/history' )}</p>
 </div>
 {/if}
 
-<div class="clearfix">
+<div class="control-group">
 {include name=navigator
          uri='design:navigator/google.tpl'
          page_uri=concat( '/content/history/', $object.id, '///' )
@@ -150,7 +150,7 @@
          item_limit=$page_limit}
 </div>
 
-<div class="clearfix">
+<div class="control-group">
 
 <div class="actions">
 <input class="btn" type="submit" name="RemoveButton" value="{'Remove selected'|i18n( 'design/ezwebin/content/history' )}" title="{'Remove the selected versions from the object.'|i18n( 'design/ezwebin/content/history' )}" />
@@ -165,7 +165,7 @@
 
 <div class="right">
 
-<form class="form-stacked" action={concat( $module.functions.history.uri, '/', $object.id, '/' )|ezurl} method="post">
+<form  action={concat( $module.functions.history.uri, '/', $object.id, '/' )|ezurl} method="post">
         <select name="Language">
             {foreach $languages as $lang}
                 <option value="{$lang.locale}">{$lang.name|wash}</option>
@@ -194,9 +194,9 @@
 <div class="break"></div>
 
 
-<div class="clearfix">
+<div class="control-group">
 <div class="left">
-<form class="form-stacked" name="versionsback" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
+<form name="versionsback" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 {if is_set( $redirect_uri )}
 <input class="text" type="hidden" name="RedirectURI" value="{$redirect_uri}" />
 {/if}
@@ -215,7 +215,7 @@
     <h2>{'Published version'|i18n( 'design/ezwebin/content/history' )}</h2>
 </div>
 
-<table class="zebra-striped" cellspacing="0">
+<table class="table-striped" cellspacing="0">
 <tr>
     <th>{'Version'|i18n( 'design/ezwebin/content/history' )}</th>
     <th>{"Translations"|i18n("design/ezwebin/content/history")}</th>
@@ -351,7 +351,7 @@
 {/foreach}
 </table>
 {else}
-<div class="clearfix">
+<div class="control-group">
 <p>{'This object does not have any drafts.'|i18n( 'design/ezwebin/content/history' )}</p>
 </div>
 {/if}
@@ -388,8 +388,8 @@ document.write('<div class="context-toolbar"><div class="block"><ul><li><a href=
 </div>
 
 
-<div class="clearfix">
-<div class="left">
+<div class="control-group">
+<div class="pull-left">
 <form action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 <input class="btn" type="submit" value="{'Back to history'|i18n( 'design/ezwebin/content/history' )}" />
 </form>

@@ -18,10 +18,8 @@ limit,$page_limit))}
 <div class="page-header">
     <h2>{"Search"|i18n("design/ezwebin/content/search")}</h1>
 </div>
-    <form class="form-stacked" action={"/content/search/"|ezurl} method="get">
-
-
-          <p>
+    <form action={"/content/search/"|ezurl} method="get">
+    <p>
             <input class="halfbox" type="text" size="20" name="SearchText" id="Search" value="{$search_text|wash}" />
             <input class="btn" name="SearchButton" type="submit" value="{'Search'|i18n('design/ezwebin/content/search')}" />
         </p>

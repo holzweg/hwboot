@@ -4,7 +4,7 @@ $list_count=fetch( 'content', 'pending_count' )}
 
 <div class="hero-unit">
 
-    <form class="form-stacked" name="pendinglistaction" action={concat("/content/pendinglist")|ezurl} method="post" >
+    <form  name="pendinglistaction" action={concat("/content/pendinglist")|ezurl} method="post" >
 
           <div class="page-header">
             <h2>{'My pending items [%pending_count]'|i18n( 'design/ezwebin/content/pendinglist',, hash( '%pending_count', $list_count ) )}</h2>
@@ -12,7 +12,7 @@ $list_count=fetch( 'content', 'pending_count' )}
 
         {if $list_count}
 
-        <table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="table-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
                 <th>{"Name"|i18n("design/ezwebin/content/pendinglist")}</th>
                 <th>{"Class"|i18n("design/ezwebin/content/pendinglist")}</th>

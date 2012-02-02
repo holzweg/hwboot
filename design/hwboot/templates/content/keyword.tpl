@@ -13,7 +13,7 @@
 hash( '%keyword', $alphabet ) )|wash()}</h2>
 </div>
 
-<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="table-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <th>{'Link'|i18n( 'design/ezwebin/content/keyword' )}</th>
     <th>{'Type'|i18n( 'design/ezwebin/content/keyword' )}</th>

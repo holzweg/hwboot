@@ -4,7 +4,7 @@
      $object_language_codes=$object.language_codes
      $can_edit=true()}
 
-<form class="form-stacked" action={concat('content/edit/',$object.id)|ezurl} method="post">
+<form  action={concat('content/edit/',$object.id)|ezurl} method="post">
 
 {if $show_existing_languages}
     {* Translation a user is able to edit *}
@@ -106,7 +106,7 @@
     {/if}
 {/if}
 
-<div class="actions">
+<div class="form-actions">
     {if $can_edit}
         <input class="btn" type="submit" name="LanguageSelection" value="{'Edit'|i18n('design/ezwebin/content/edit_languages')}" />
     {/if}

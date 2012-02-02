@@ -12,7 +12,7 @@
 
 <div class="hero-unit">
 
-<form class="form-stacked" method="post" action={concat('content/edit/',$object.id,'/',$edit_language,'/',$from_language)|ezurl}>
+<form  method="post" action={concat('content/edit/',$object.id,'/',$edit_language,'/',$from_language)|ezurl}>
 
 <div class="page-header">
     <h2>{$object.name|wash}</h1>
@@ -52,7 +52,7 @@
 
 <h2>{'Current drafts'|i18n('design/ezwebin/content/edit_draft')}</h2>
 
-<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0">
+<table class="table-striped" width="100%" cellspacing="0" cellpadding="0">
 <tr>
     {section show=$has_own_drafts}
         <th>&nbsp;

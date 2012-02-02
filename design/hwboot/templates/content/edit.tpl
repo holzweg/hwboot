@@ -1,4 +1,4 @@
-<form class="form-stacked" name="editform" id="editform" enctype="multipart/form-data" method="post" action={concat( '/content/edit/', $object.id, '/', $edit_version, '/', $edit_language|not|choose( concat( $edit_language, '/' ), '/' ), $is_translating_content|not|choose( concat( $from_language, '/' ), '' ) )|ezurl}>
+<form name="editform" id="editform" enctype="multipart/form-data" method="post" action={concat( '/content/edit/', $object.id, '/', $edit_version, '/', $edit_language|not|choose( concat( $edit_language, '/' ), '/' ), $is_translating_content|not|choose( concat( $from_language, '/' ), '' ) )|ezurl}>
 
 {include uri='design:parts/website_toolbar_edit.tpl'}
 
@@ -11,10 +11,10 @@
         <h2>{'Edit <%object_name> (%class_name)'|i18n( 'design/ezwebin/content/edit', , hash( '%object_name', $object.name, '%class_name', first_set( $class.nameList[$content_language], $class.name ) ) )|wash}</h1>
     </div>
 
-    <div class="context-information">
+    <div class="control-group">
 
     {if $object.content_class.description}
-    <p class="left class-description">
+    <p class="left class-description pull-left">
         {first_set( $class.descriptionList[$content_language], $class.description )|wash}
     </p>
     {/if}
@@ -50,10 +50,10 @@
     {include uri='design:content/edit_validation.tpl'}
 
     {if $is_translating_content}
-    <div class="content-translation">
+    <div class="control-group">
     {/if}
 
-    <div class="context-attributes">
+    <div class="control-group">
     {include uri='design:content/edit_attribute.tpl' view_parameters=$view_parameters}
     </div>
 
@@ -61,7 +61,7 @@
     </div>
     {/if}
 
-    <div class="actions">
+    <div class="form-actions">
     <input class="btn" type="submit" name="PublishButton" value="{'Send for publishing'|i18n( 'design/ezwebin/content/edit' )}" title="{'Publish the contents of the draft that is being edited. The draft will become the published version of the object.'|i18n( 'design/ezwebin/content/edit' )}" />
     <input class="btn" type="submit" name="StoreButton" value="{'Store draft'|i18n( 'design/ezwebin/content/edit' )}" title="{'Store the contents of the draft that is being edited and continue editing. Use this button to periodically save your work while editing.'|i18n( 'design/ezwebin/content/edit' )}" />
     <input class="btn" type="submit" name="StoreExitButton" value="{'Store draft and exit'|i18n( 'design/ezwebin/content/edit' )}" title="{'Store the draft that is being edited and exit from edit mode. Use when you need to exit your work and return later to continue.'|i18n( 'design/ezwebin/content/edit' )}" />

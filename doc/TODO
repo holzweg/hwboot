@@ -14,13 +14,11 @@
 
 ++ Make a nice language menu?
 
-++ Bootstrap Demo Package: find out if we can simplify or even automatize the installation 
+++ Bootstrap Demo Package: find out if we can simplify or even automatize the installation (in branch: demo_content_fu)
 
 ++ Mail obfuscation in general and in bootstrap demo content
 
 ++ Lots of configurability (see @todo tags for ideas)
-
-++ Have a look at bootstrap v2 (when it's out) for PDA support
 
 === Doing a search for @todo in files will tell ya what else is still to be done. === 
 

@@ -135,7 +135,7 @@ $url_forward=concat( $blog_node.url_alias, "/(month)/", sum($temp_month, 1), "/(
                                     {set $col_counter=inc( $col_counter )}
                                     {/while}
                                     {/if}
-                                    <td class="{if eq($counter, $temp_today)}currentselected alert-message warning{/if} {if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}today{/if}{$css_col_class}">
+                                    <td class="{if eq($counter, $temp_today)}currentselected alert{/if} {if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}today{/if}{$css_col_class}">
                                         {if $day_array|contains(concat(' ', $counter, ',')) }
                                         <em><a href={concat( $blog_node.url_alias, "/(day)/", $counter, "/(month)/", $temp_month, "/(year)/", $temp_year)|ezurl}>{$counter}</a></em>
                                         {else}

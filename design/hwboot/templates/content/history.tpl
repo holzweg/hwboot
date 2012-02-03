@@ -5,7 +5,7 @@
 
 {switch match=$edit_warning}
 {case match=1}
-<div class="alert-message warning">
+<div class="alert">
 <h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {'Version not a draft'|i18n( 'design/ezwebin/content/history' )}</h2>
 <ul>
     <li>{'Version %1 is not available for editing anymore. Only drafts can be edited.'|i18n( 'design/ezwebin/content/history',, array( $edit_version ) )}</li>
@@ -14,7 +14,7 @@
 </div>
 {/case}
 {case match=2}
-<div class="alert-message warning">
+<div class="alert">
 <h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {'Version not yours'|i18n( 'design/ezwebin/content/history' )}</h2>
 <ul>
     <li>{'Version %1 was not created by you. Only your own drafts can be edited.'|i18n( 'design/ezwebin/content/history',, array( $edit_version ) )}</li>
@@ -23,7 +23,7 @@
 </div>
 {/case}
 {case match=3}
-<div class="alert-message warning">
+<div class="alert">
 <h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {'Unable to create new version'|i18n( 'design/ezwebin/content/history' )}</h2>
 <ul>
     <li>{'Version history limit has been exceeded and no archived version can be removed by the system.'|i18n( 'design/ezwebin/content/history' )}</li>

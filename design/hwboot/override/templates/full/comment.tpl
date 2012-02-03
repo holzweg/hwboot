@@ -8,7 +8,7 @@
         <h1>{$node.name|wash()}</h1>
     </div>
 
-    <div class="attribute-byline alert-message info">
+    <div class="alert alert-info">
         <p class="author">{$node.data_map.author.content|wash}</p>
         <p class="date">({$node.object.published|l10n(shortdatetime)})</p>
     </div>

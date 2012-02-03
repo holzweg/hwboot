@@ -8,7 +8,7 @@
 </p>
 {else}
    {if $wrong_email}
-   <div class="alert-message warning">
+   <div class="alert">
    <h2>{"There is no registered user with that email address."|i18n('design/ezwebin/user/forgotpassword')}</h2>
    </div>
    {/if}
@@ -18,7 +18,7 @@
    </p>
    {else}
       {if $wrong_key}
-      <div class="alert-message warning">
+      <div class="alert">
       <h2>{"The key is invalid or has been used. "|i18n('design/ezwebin/user/forgotpassword')}</h2>
       </div>
       {else}

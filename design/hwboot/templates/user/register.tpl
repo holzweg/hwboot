@@ -6,7 +6,7 @@
             <h2>{"Register user"|i18n("design/ezwebin/user/register")}</h2>
 
             {if and( and( is_set( $checkErrNodeId ), $checkErrNodeId ), eq( $checkErrNodeId, true() ) )}
-                <div class="alert-message error">
+                <div class="alert alert-error">
                     <h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {$errMsg}</h2>
                 </div>
             {/if}
@@ -14,7 +14,7 @@
             {if $validation.processed}
 
                 {if $validation.attributes|count|gt(0)}
-            <div class="alert-message warning">
+            <div class="alert">
                     <h2>{"Input did not validate"|i18n("design/ezwebin/user/register")}</h2>
                     <ul>
                     {foreach $validation.attributes as $attribute}
@@ -23,7 +23,7 @@
                     </ul>
             </div>
                 {else}
-                    <div class="alert-message success">
+                    <div class="alert alert-success">
                     <h2>{"Input was stored successfully"|i18n("design/ezwebin/user/register")}</h2>
                     </div>
                 {/if}
@@ -50,7 +50,7 @@
                 </div>
             {else}
 
-                     <h2><span class="label warning">{"Unable to register new user"|i18n("design/ezwebin/user/register")}</span></h2>
+                     <h2><span class="label label-warning">{"Unable to register new user"|i18n("design/ezwebin/user/register")}</span></h2>
 
                 <input class="btn" type="submit" id="CancelButton" name="CancelButton" value="{'Back'|i18n('design/ezwebin/user/register')}" onclick="window.setTimeout( disableButtons, 1 ); return true;" />
             {/if}

@@ -1,7 +1,7 @@
 
 
 <div class="hero-unit">
-<div class="alert-message info">
+<div class="alert alert-info">
 
     <ul>
         <li>1. {"Shopping basket"|i18n("design/ezwebin/shop/userregister")}</li>
@@ -19,7 +19,7 @@
 </div>
 
     {section show=$input_error}
-    <div class="alert-message warning">
+    <div class="alert">
         <p>
             {"Input did not validate. All fields marked with * must be filled in."|i18n("design/ezwebin/shop/userregister")}
         </p>
@@ -110,7 +110,7 @@
         </div>
 
     </form>
- <div class="alert-message info">
+ <div class="alert alert-info">
     <p>
         {"All fields marked with * must be filled in."|i18n("design/ezwebin/shop/userregister")}
     </p>

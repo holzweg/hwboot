@@ -7,13 +7,13 @@
 
 {switch name=Sw match=$action}
   {case match="confirm"}
-    <div class="alert-message info">
+    <div class="alert alert-info">
       <h2>{"The message was sent."|i18n("design/ezwebin/content/tipafriend")}</h2>
       <p><a href={concat("/content/view/full/",$node_id)|ezurl}>{"Click here to return to the original page."|i18n("design/ezwebin/content/tipafriend")}</a></p>
     </div>
   {/case}
   {case match="error"}
-    <div class="alert-message warning">
+    <div class="alert">
       <h2>{"The message was not sent."|i18n("design/ezwebin/content/tipafriend")}</h2>
       <p>{"The message was not sent due to an unknown error. Please notify the site administrator about this error."|i18n("design/ezwebin/content/tipafriend")}</p>
       <p><a href={concat("/content/view/full/",$node_id)|ezurl}>{"Click here to return to the original page."|i18n("design/ezwebin/content/tipafriend")}</a></p>
@@ -22,7 +22,7 @@
   {case}
 
 {section show=$error_strings}
-<div class="alert-message warning">
+<div class="alert">
 <h2>{"Please correct the following errors:"|i18n("design/ezwebin/content/tipafriend")}:</h2>
 {section loop=$error_strings}
 <p>{$:item}</p>

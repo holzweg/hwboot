@@ -3,11 +3,11 @@
 
 <form class="well" enctype="multipart/form-data" method="post" action={"/ezodf/import"|ezurl}>
 {section show=$error.number|ne(0)}
-   <div class="alert-message warning"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span>{$error.number}) {$error.message} </h2></div>
+   <div class="alert"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span>{$error.number}) {$error.message} </h2></div>
 {/section}
 
 {section show=eq($oo_mode,'imported')}
-<div class="alert-message success"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {"Document is now imported"|i18n("design/ezwebin/ezodf/import")}</h2></div>
+<div class="alert alert-success"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span> {"Document is now imported"|i18n("design/ezwebin/ezodf/import")}</h2></div>
 {/section}
 
 <div class="page-header">

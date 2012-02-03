@@ -7,7 +7,7 @@
     </div>
 
     {section show=not($valid)}
-    <div class="alert-message warning">
+    <div class="alert">
         <h2>{'Invalid input'|i18n( 'design/ezwebin/rss/edit_export' )}</h2>
         <ul>
             {section var=Errors loop=$validation_errors}

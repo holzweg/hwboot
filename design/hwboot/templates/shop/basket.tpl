@@ -1,6 +1,6 @@
 
 <div class="hero-unit">
-<div class="alert-message info">
+<div class="alert alert-info">
     <ul>
         <li class="selected">1. {"Shopping basket"|i18n("design/ezwebin/shop/basket")}</li>
         <li>2. {"Account information"|i18n("design/ezwebin/shop/basket")}
@@ -16,7 +16,7 @@
     <form class="well"   method="post" action={"/shop/basket/"|ezurl}>
 
           {section show=$removed_items}
-          <div class="alert-message warning">
+          <div class="alert">
             <h2>{"The following items were removed from your basket because the products were changed."|i18n("design/ezwebin/shop/basket",,)}</h2>
             <ul>
                 {section name=RemovedItem loop=$removed_items}
@@ -27,7 +27,7 @@
         {/section}
 
         {if not( $vat_is_known )}
-        <div class="alert-message warning">
+        <div class="alert">
             <h2>{'VAT is unknown'|i18n( 'design/ezwebin/shop/basket' )}</h2>
             {'VAT percentage is not yet known for some of the items being purchased.'|i18n( 'design/ezwebin/shop/basket' )}<br/>
             {'This probably means that some information about you is not yet available and will be obtained during checkout.'|i18n( 'design/ezwebin/shop/basket' )}
@@ -35,7 +35,7 @@
         {/if}
 
         {section show=$error}
-        <div class="alert-message warning error">
+        <div class="alert alert-error">
             {section show=$error|eq(1)}
             <h2>{"Attempted to add object without price to basket."|i18n("design/ezwebin/shop/basket",,)}</h2>
             {/section}
@@ -43,7 +43,7 @@
         {/section}
 
         {section show=$error}
-        <div class="alert-message warning error">
+        <div class="alert alert-error">
             {section show=eq($error, "aborted")}
             <h2>{"Your payment was aborted."|i18n("design/ezwebin/shop/basket",,)}</h2>
             {/section}
@@ -206,7 +206,7 @@
 
         {section-else}
 
-        <div class="alert-message info">
+        <div class="alert alert-info">
             <h2>{"You have no products in your basket."|i18n("design/ezwebin/shop/basket")}</h2>
         </div>
 

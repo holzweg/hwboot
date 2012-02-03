@@ -6,7 +6,7 @@
             <h2>{$node.data_map.title.content|wash()}</h2>
         </div>
 
-        <div class="attribute-byline alert-message info">
+        <div class="alert alert-info">
         {if $node.parent.data_map.author.content.is_empty|not()}
         <p class="author">
              {attribute_view_gui attribute=$node.parent.data_map.author}

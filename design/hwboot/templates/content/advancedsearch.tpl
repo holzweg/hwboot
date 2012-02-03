@@ -95,12 +95,12 @@
 <br/>
 {switch name=Sw match=$search_count}
   {case match=0}
-<div class="alert-message warning">
+<div class="alert">
 <h2>{'No results were found when searching for "%1"'|i18n( 'design/ezwebin/content/advancedsearch', , array( $search_text|wash ) )}</h2>
 </div>
   {/case}
   {case}
-<div class="alert-message warning">
+<div class="alert">
 <h2>{'Search for "%1" returned %2 matches'|i18n( 'design/ezwebin/content/advancedsearch',,array( $search_text|wash, $search_count ) )}</h2>
 </div>
   {/case}

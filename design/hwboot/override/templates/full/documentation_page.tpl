@@ -18,7 +18,7 @@
             {attribute_view_gui attribute=$node.object.data_map.body}
         </div>
         
-        <div class="attribute-byline alert-message info">
+        <div class="alert alert-info">
             <p class="published">{'Created:'|i18n( 'design/ezwebin/full/documentation_page' )} {$node.object.published|l10n(shortdatetime)}</p>
             <p class="modified">{'Modified:'|i18n( 'design/ezwebin/full/documentation_page' )} {$node.object.modified|l10n(shortdatetime)}</p>
         </div>

@@ -3,7 +3,7 @@
 
     <h2><a href={$object.main_node.url_alias|ezurl}>{$object.name|wash()}</a></h2>
 
-    <div class="alert-message block-message info">
+    <div class="alert alert-block alert-info">
 
     {def $children = array()
          $limit = 5

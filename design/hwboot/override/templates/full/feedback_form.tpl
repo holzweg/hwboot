@@ -8,13 +8,13 @@
         </div>
 
         {include name=Validation uri='design:content/collectedinfo_validation.tpl'
-                 class='alert-message warning'
+                 class='alert'
                  validation=$validation collection_attributes=$collection_attributes}
 
         <div class="attribute-short">
                 {attribute_view_gui attribute=$node.data_map.description}
         </div>
-        <form class="well"  method="post" action={"content/action"|ezurl}>
+        <form class="well" method="post" action={"content/action"|ezurl}>
 
         <h4>{$node.data_map.sender_name.contentclass_attribute.name}</h4>
         <div class="clearfix">

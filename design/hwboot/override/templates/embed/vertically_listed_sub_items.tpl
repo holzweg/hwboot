@@ -23,7 +23,7 @@
     {if $children|count()}
     
     {foreach $children as $child}
-        <div class="alert-message block-message info">
+        <div class="alert alert-block alert-info">
          {node_view_gui view=line content_node=$child}
          {delimiter}
              {include uri='design:content/datatype/view/ezxmltags/separator.tpl'}

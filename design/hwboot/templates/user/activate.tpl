@@ -3,7 +3,7 @@
     <div class="hero-unit">
         <div class="row">
         <h2>{"Activate account"|i18n("design/ezwebin/user/activate")}</h2>
-            <div class="alert-message warning">
+            <div class="alert">
                 <p>
                 {if $account_activated}
                     {if $is_pending}

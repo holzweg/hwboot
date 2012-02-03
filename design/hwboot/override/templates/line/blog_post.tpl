@@ -6,7 +6,7 @@
         <h2><a href={$node.url_alias|ezurl} title="{$node.data_map.title.content|wash}">{$node.data_map.title.content|wash}</a></h2>
      </div>
 
-    <div class="attribute-byline alert-message info">
+    <div class="alert alert-info">
         <p class="date">{$node.data_map.publication_date.content.timestamp|l10n(shortdatetime)}</p>
         <p class="author">{$node.object.owner.name}</p>
         <p class="tags"> {"Tags:"|i18n("design/ezwebin/line/blog_post")} {foreach $node.data_map.tags.content.keywords as $keyword}

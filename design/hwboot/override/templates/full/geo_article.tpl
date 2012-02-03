@@ -83,7 +83,7 @@
                     <input type="hidden" name="ClassIdentifier" value="comment" />
                     <input type="hidden" name="NodeID" value="{$node.object.main_node.node_id}" />
                     <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
-                    <input class="btn new_comment" type="submit" name="NewButton" value="{'New comment'|i18n( 'design/ezwebin/full/article' )}" />
+                    <input class="btn" type="submit" name="NewButton" value="{'New comment'|i18n( 'design/ezwebin/full/article' )}" />
                     </form>
                 {else}
                     {if ezmodule( 'user/register' )}

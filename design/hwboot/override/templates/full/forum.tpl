@@ -18,12 +18,12 @@
     {if $node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'addtonotification' ) )}
         <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
-            <input class="btn forum-new-topic" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ezwebin/full/forum' )}" />
+            <input class="btn" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ezwebin/full/forum' )}" />
             <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />
             <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
             {if $notification_access }
-                <input class="btn forum-keep-me-updated" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum' )}" />
+                <input class="btn" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum' )}" />
             {/if}
             <input type="hidden" name="NodeID" value="{$node.node_id}" />
             <input type="hidden" name="ClassIdentifier" value="forum_topic" />

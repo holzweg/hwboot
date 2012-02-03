@@ -101,7 +101,7 @@ $url_forward=concat( $blog_node.url_alias, "/(month)/", sum($temp_month, 1), "/(
                         </div>
 
                         <div class="table">
-                            <table class="zebra-striped bordered-table"  cellspacing="0" border="0" summary="{'Calendar'|i18n('design/ezwebin/blog/calendar')}">
+                            <table class="table table-striped table-bordered" summary="{'Calendar'|i18n('design/ezwebin/blog/calendar')}">
                                 <tr class="top">
                                     <th class="left">{"Mon"|i18n("design/ezwebin/blog/calendar")}</th>
                                     <th>{"Tue"|i18n("design/ezwebin/blog/calendar")}</th>

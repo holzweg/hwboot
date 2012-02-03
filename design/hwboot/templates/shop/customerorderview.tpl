@@ -17,7 +17,7 @@
      $product_info_count = false()}
 
 {section show=$order_list}
-<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th>
     {"ID"|i18n("design/ezwebin/shop/customerorderview")}
@@ -71,7 +71,7 @@
 </div>
 
 {section show=$product_list}
-<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th>
     {"Product"|i18n("design/ezwebin/shop/customerorderview")}

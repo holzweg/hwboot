@@ -12,7 +12,7 @@ $list_count=fetch( 'content', 'pending_count' )}
 
         {if $list_count}
 
-        <table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="table table-striped table-bordered">
             <tr>
                 <th>{"Name"|i18n("design/ezwebin/content/pendinglist")}</th>
                 <th>{"Class"|i18n("design/ezwebin/content/pendinglist")}</th>

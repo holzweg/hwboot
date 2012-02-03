@@ -21,7 +21,7 @@
                                                                           'class_filter_array', array( 'event' ),
                                                                            'sort_by', array( 'attribute', true(), 'event/from_time' ) ) )}
             <h2><a href="{$related_node.url_alias|ezurl(no)}">{$related_node.name}</a></h2>
-            <table class="zebra-striped" border="0" cellspacing="0" cellpadding="0">
+            <table class="table table-striped table-bordered">
             <tr>
                 <th>{'Event'|i18n( 'design/ezwebin/full/multicalendar' )}</th>
                 <th>{'Start date'|i18n( 'design/ezwebin/full/multicalendar' )}</th>

@@ -86,7 +86,7 @@
         {/section}
         {/section}
 
-            <table class="zebra-striped forum" cellspacing="0">
+            <table class="table table-striped table-bordered">
             <tr>
                 <th class="author">
                     {"Author"|i18n("design/ezwebin/full/forum_topic")}

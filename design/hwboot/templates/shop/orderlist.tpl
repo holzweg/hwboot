@@ -17,7 +17,7 @@
 {include uri="design:gui/button.tpl" class="btn" name=Sort id_name=SortButton value="Sort"|i18n("design/ezwebin/shop/orderlist")}
 <br><br>
 {section show=$order_list}
-<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th width="1">&nbsp;
     

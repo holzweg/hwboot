@@ -14,6 +14,8 @@
 
 ++ Make a nice language menu?
 
+++ Add mobile support --> uncomment the responsive line in bootstrap.less for a start
+
 ++ Bootstrap Demo Package: find out if we can simplify or even automatize the installation (in branch: demo_content_fu)
 
 ++ Mail obfuscation in general and in bootstrap demo content

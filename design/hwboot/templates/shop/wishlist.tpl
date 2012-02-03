@@ -8,7 +8,7 @@
 
         {if $wish_list.items|count}
 
-        <table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="table table-striped table-bordered">
             <tr>
                 <th>
                     {"Product"|i18n("design/ezwebin/shop/wishlist")}
@@ -40,7 +40,7 @@
             {section show=$ProductItem:item.item_object.option_list}
             <tr>
                 <td colspan='3'>
-                    <table class="zebra-striped">
+                    <table class="table table-striped table-bordered">
                         <tr>
                             <td colspan='3'>
                                 {"Selected options"|i18n("design/ezwebin/shop/wishlist")}

@@ -52,7 +52,7 @@
 
 <h2>{'Current drafts'|i18n('design/ezwebin/content/edit_draft')}</h2>
 
-<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0">
+<table class="table table-striped table-bordered">
 <tr>
     {section show=$has_own_drafts}
         <th>&nbsp;

@@ -65,14 +65,14 @@
 
 				{* @todo make columns configurable! *}
                 {* calculate span widths *}
-                {def $span_left  = 4
-                     $span_main  = 12
-                     $span_right = 4}
+                {def $span_left  = 3
+                     $span_main  = 9
+                     $span_right = 3}
                 {if and($pagedata.left_menu, $pagedata.extra_menu)}
-                    {set $span_main = 8}
+                    {set $span_main = 6}
                 {/if}
                 {if and($pagedata.left_menu|not, $pagedata.extra_menu|not)}
-                    {set $span_main = 16}
+                    {set $span_main = 12}
                 {/if}
 
                 {if $pagedata.left_menu}

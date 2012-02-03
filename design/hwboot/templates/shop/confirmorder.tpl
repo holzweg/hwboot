@@ -31,7 +31,7 @@
 
 
         <h3>{"Product items"|i18n("design/ezwebin/shop/confirmorder")}</h3>
-        <table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="table table-striped table-bordered">
             <tr>
                 <th>
                     {"Count"|i18n("design/ezwebin/shop/confirmorder")}
@@ -80,7 +80,7 @@
             {section show=$ProductItem:item.item_object.option_list}
             <tr>
                 <td colspan="6" style="padding: 0;">
-                    <table class="zebra-striped" width="100%" cellpadding="0" cellspacing="0">
+                    <table class="table table-striped table-bordered">
                         <tr>
                             <td colspan="3">
                                 {"Selected options"|i18n("design/ezwebin/shop/confirmorder")}
@@ -104,7 +104,7 @@
 
 
         <h3>{"Order summary"|i18n("design/ezwebin/shop/confirmorder")}:</h3>
-        <table class="zebra-striped" cellspacing="0" cellpadding="0" border="0">
+        <table class="table table-striped table-bordered">
             <tr>
                 <th>{"Summary"|i18n("design/ezwebin/shop/confirmorder")}</th>
                 <th>{"Total ex. VAT"|i18n("design/ezwebin/shop/confirmorder")}</th>

@@ -20,7 +20,7 @@
                                                              class_filter_type, include,
                                                              class_filter_array, array( 'forum' ),
                                                              limit, $page_limit ) )}
-        <table class="zebra-striped forum" cellspacing="0">
+        <table class="table table-striped table-bordered">
             <tr>
                 <th>{"Forum"|i18n( "design/ezwebin/full/forums" )}</th>
                 <th class="topic">{"Topics"|i18n( "design/ezwebin/full/forums" )}</th>

@@ -48,7 +48,7 @@
 </div>
 
 {if $list_count}
-<table class="zebra-striped" cellspacing="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th class="tight"><img src={'toggle-button-16x16.gif'|ezimage} alt="{'Toggle selection'|i18n( 'design/ezwebin/content/history' )}" onclick="ezjs_toggleCheckboxes( document.versionsform, 'DeleteIDArray[]' ); return false;" /></th>
     <th>{'Version'|i18n( 'design/ezwebin/content/history' )}</th>
@@ -215,7 +215,7 @@
     <h2>{'Published version'|i18n( 'design/ezwebin/content/history' )}</h2>
 </div>
 
-<table class="zebra-striped" cellspacing="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th>{'Version'|i18n( 'design/ezwebin/content/history' )}</th>
     <th>{"Translations"|i18n("design/ezwebin/content/history")}</th>
@@ -286,7 +286,7 @@
 </div>
 
 {if $newerDraftVersionList|count|ge(1)}
-<table class="zebra-striped" cellspacing="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th>{'Version'|i18n( 'design/ezwebin/content/history' )}</th>
     <th>{'Modified translation'|i18n( 'design/ezwebin/content/history' )}</th>

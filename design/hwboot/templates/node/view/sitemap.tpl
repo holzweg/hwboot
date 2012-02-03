@@ -11,7 +11,7 @@
 <div class="page-header">
     <h2>{"Site map"|i18n("design/ezwebin/view/sitemap")} {$node.name|wash}</h1>
 </div>
-    <table width="100%" cellspacing="0" cellpadding="4" class="zebra-striped">
+    <table class="table table-striped table-bordered">
         <tr>
             {foreach $children as $key => $child}
             <td>

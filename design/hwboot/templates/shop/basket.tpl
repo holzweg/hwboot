@@ -62,7 +62,7 @@
         {section name=Basket show=$basket.items}
 
 
-        <table class="zebra-striped"  width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="table table-striped table-bordered">
             <tr>
                 <th>
                     {"Count"|i18n("design/ezwebin/shop/basket")}

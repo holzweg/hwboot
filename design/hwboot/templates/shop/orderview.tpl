@@ -22,7 +22,7 @@
 <br />
 
 <h3>{'Product items'|i18n( 'design/ezwebin/shop/orderview' )}</h3>
-<table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th>
     {'Product'|i18n( 'design/ezwebin/shop/orderview' )}
@@ -76,7 +76,7 @@
 </table>
 
 <h3>{'Order summary'|i18n( 'design/ezwebin/shop/orderview' )}:</h3>
-<table class="zebra-striped" cellspacing="0" cellpadding="0" border="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th>
     {'Summary'|i18n( 'design/ezwebin/shop/orderview' )}:
@@ -129,7 +129,7 @@
 
 
 <h3>{'Order history'|i18n( 'design/ezwebin/shop/orderview' )}:</h3>
-<table class="zebra-striped" cellspacing="0" cellpadding="0" border="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th>{'Date'|i18n( 'design/ezwebin/shop/orderview' )}</th>
     <th>{'Order status'|i18n( 'design/ezwebin/shop/orderview' )}</th>

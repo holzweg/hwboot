@@ -5,7 +5,7 @@
 </div>
 
 <div class="forum_level4 hero-unit">
-<table class="forum zebra-striped" cellspacing="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th class="author">
     {"Author"|i18n("design/ezwebin/full/forum_reply")}

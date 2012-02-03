@@ -61,7 +61,7 @@ function checkAll()
               You can either edit the drafts or remove them if you don't need them any more."|i18n("design/ezwebin/content/draft")|nl2br}
         </p>
 
-        <table class="zebra-striped" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="table table-striped table-bordered">
 
         <tr>
             <th></th>

@@ -39,7 +39,7 @@
 
     <div class="content-view-children">
 
-        <table class="zebra-striped forum" cellspacing="0">
+        <table class="table table-striped table-bordered">
         <tr>
             <th class="topic">
                 {"Topic"|i18n( "design/ezwebin/full/forum" )}

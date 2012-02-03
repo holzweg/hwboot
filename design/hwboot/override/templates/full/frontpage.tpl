@@ -29,14 +29,14 @@
 
 	{* @todo make columns configurable! *}
 	{* calculate span widths *}
-	{def $span_left  = 4
-		 $span_main  = 12
-		 $span_right = 4}
+	{def $span_left  = 3
+		 $span_main  = 9
+		 $span_right = 3}
 	{if and($node.object.data_map.left_column.content.is_empty, $node.object.data_map.right_column.content.is_empty)}
-		{set $span_main = 16}
+		{set $span_main = 12}
 	{/if}
 	{if and($node.object.data_map.left_column.content.is_empty|not, $node.object.data_map.right_column.content.is_empty|not)}
-		{set $span_main = 8}
+		{set $span_main = 6}
 	{/if}
 
     <div class="row">

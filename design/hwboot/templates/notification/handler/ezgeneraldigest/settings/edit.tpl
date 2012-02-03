@@ -7,7 +7,7 @@
 <div>
 <fieldset>
 <legend>{'Receive digests'|i18n( 'design/ezwebin/notification/handler/ezgeneraldigest/settings/edit' )}</legend>
-<table class="zebra-striped" cellspacing="4">
+<table class="table table-striped table-bordered">
 <tr>
 <td>
 <input type="radio" name="DigestType_{$handler.id_string}" value="3" {eq($settings.digest_type,3)|choose('',checked)} />

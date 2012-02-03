@@ -1,5 +1,5 @@
 {ezscript_require( 'tools/ezjsselection.js' )}
-<table class="zebra-striped" class="list" cellspacing="0">
+<table class="table table-striped table-bordered">
 <tr>
     <th class="tight">
     {section show=eq( $select_type, 'checkbox' )}

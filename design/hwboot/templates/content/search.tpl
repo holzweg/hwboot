@@ -18,7 +18,7 @@ limit,$page_limit))}
 <div class="page-header">
     <h2>{"Search"|i18n("design/ezwebin/content/search")}</h1>
 </div>
-    <form class="form-stacked" action={"/content/search/"|ezurl} method="get">
+    <form class="well"  action={"/content/search/"|ezurl} method="get">
 
 
           <p>

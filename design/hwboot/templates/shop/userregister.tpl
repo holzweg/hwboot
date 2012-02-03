@@ -26,7 +26,7 @@
     </div>
 
     {/section}
-    <form class="form-stacked" method="post" action={"/shop/userregister/"|ezurl}>
+    <form class="well"  method="post" action={"/shop/userregister/"|ezurl}>
 
           <div class="clearfix">
 

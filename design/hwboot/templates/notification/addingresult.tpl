@@ -21,7 +21,7 @@
         </p>
 
 
-            <form class="form-stacked" method="post" action={$redirect_url|ezurl}>
+            <form class="well"  method="post" action={$redirect_url|ezurl}>
                 <input class="btn" type="submit" name="OK" value="{'OK'|i18n('design/ezwebin/notification/addingresult')}" />
             </form>
 

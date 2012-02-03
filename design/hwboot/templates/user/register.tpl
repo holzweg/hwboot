@@ -1,7 +1,7 @@
 <div class="container">
     <div class="hero-unit">
         <div class="row">
-            <form class="form-stacked" enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register">
+            <form class="well"  enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register">
 
             <h2>{"Register user"|i18n("design/ezwebin/user/register")}</h2>
 

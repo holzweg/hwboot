@@ -13,7 +13,7 @@
 <div class="page-header">
     <h2>{"Basket"|i18n("design/ezwebin/shop/basket")}</h1>
 </div>
-    <form  class="form-stacked" method="post" action={"/shop/basket/"|ezurl}>
+    <form class="well"   method="post" action={"/shop/basket/"|ezurl}>
 
           {section show=$removed_items}
           <div class="alert-message warning">

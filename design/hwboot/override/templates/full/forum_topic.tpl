@@ -67,7 +67,7 @@
 
         {section show=$node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'use' ) )}
-        <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+        <form class="well"  method="post" action={"content/action/"|ezurl}>
             <input class="btn" type="submit" name="NewButton" value="{'New reply'|i18n( 'design/ezwebin/full/forum_topic' )}" />
             <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />
@@ -123,14 +123,14 @@
                    </p>
 
                   {section show=$node.object.can_edit}
-                      <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+                      <form class="well"  method="post" action={"content/action/"|ezurl}>
                           <input type="hidden" name="ContentObjectID" value="{$node.object.id}" />
                           <input class="btn" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/full/forum_topic')}" />
                           <input type="hidden" name="ContentObjectLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
                       </form>
                   {/section}
                   {section show=$node.object.can_remove}
-                      <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+                      <form class="well"  method="post" action={"content/action/"|ezurl}>
                           <input type="hidden" name="ContentObjectID" value="{$node.object.id}" />
                           <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
                           <input class="btn" type="submit" name="ActionRemove" value="{'Remove'|i18n( 'design/ezwebin/full/forum_topic' )}" title="{'Remove this item.'|i18n( 'design/ezwebin/full/forum_topic' )}" />                      </form>
@@ -187,7 +187,7 @@
 
                         {switch match=$reply.object.can_edit}
                         {case match=1}
-                            <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+                            <form class="well"  method="post" action={"content/action/"|ezurl}>
                             <input type="hidden" name="ContentObjectID" value="{$reply.object.id}" />
                             <input class="btn" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/full/forum_topic')}" />
                             <input type="hidden" name="ContentObjectLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
@@ -197,7 +197,7 @@
                         {/case}
                         {/switch}
                         {section show=$node.object.can_remove}
-                            <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+                            <form class="well"  method="post" action={"content/action/"|ezurl}>
                                 <input type="hidden" name="ContentObjectID" value="{$reply.object.id}" />
                                 <input type="hidden" name="ContentNodeID" value="{$reply.node_id}" />
                                 <input class="btn" type="submit" name="ActionRemove" value="{'Remove'|i18n( 'design/ezwebin/full/forum_topic' )}" title="{'Remove this item.'|i18n( 'design/ezwebin/full/forum_topic' )}" />

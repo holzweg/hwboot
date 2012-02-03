@@ -41,7 +41,7 @@
      $current_user = fetch( 'user', 'current_user' )}
 
 
-<form class="form-stacked" name="versionsform" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
+<form class="well"  name="versionsform" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 
 <div class="page-header">
     <h2>{'Versions for <%object_name> [%version_count]'|i18n( 'design/ezwebin/content/history',, hash( '%object_name', $object.name, '%version_count', $list_count ) )|wash}</h2>
@@ -165,7 +165,7 @@
 
 <div class="right">
 
-<form class="form-stacked" action={concat( $module.functions.history.uri, '/', $object.id, '/' )|ezurl} method="post">
+<form class="well"  action={concat( $module.functions.history.uri, '/', $object.id, '/' )|ezurl} method="post">
         <select name="Language">
             {foreach $languages as $lang}
                 <option value="{$lang.locale}">{$lang.name|wash}</option>
@@ -196,7 +196,7 @@
 
 <div class="clearfix">
 <div class="left">
-<form class="form-stacked" name="versionsback" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
+<form class="well"  name="versionsback" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 {if is_set( $redirect_uri )}
 <input class="text" type="hidden" name="RedirectURI" value="{$redirect_uri}" />
 {/if}
@@ -390,7 +390,7 @@ document.write('<div class="context-toolbar"><div class="block"><ul><li><a href=
 
 <div class="clearfix">
 <div class="left">
-<form action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
+<form class="well" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 <input class="btn" type="submit" value="{'Back to history'|i18n( 'design/ezwebin/content/history' )}" />
 </form>
 </div>

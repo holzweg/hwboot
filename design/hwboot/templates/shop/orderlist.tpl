@@ -2,7 +2,7 @@
 
 <div class="hero-unit">
 
-<form class="form-stacked" action={concat("/shop/orderlist")|ezurl} method="post" name="Orderlist">
+<form class="well"  action={concat("/shop/orderlist")|ezurl} method="post" name="Orderlist">
 <div class="page-header">
   <h2>{"Order list"|i18n("design/ezwebin/shop/orderlist")}</h2>
 </div>

@@ -45,7 +45,7 @@ function checkAll()
 {def $page_limit=30
      $list_count=fetch('content','draft_count')}
 
-        <form class="form-stacked" name="draftaction" action={concat("content/draft/")|ezurl} method="post" >
+        <form class="well"  name="draftaction" action={concat("content/draft/")|ezurl} method="post" >
 
             <h2>{"My drafts"|i18n("design/ezwebin/content/draft")}</h2>
 

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="hero-unit">
 
-<form enctype="multipart/form-data" method="post" action={"/ezodf/import"|ezurl}>
+<form class="well" enctype="multipart/form-data" method="post" action={"/ezodf/import"|ezurl}>
 {section show=$error.number|ne(0)}
    <div class="alert-message warning"><h2><span class="time">[{currentdate()|l10n( shortdatetime )}]</span>{$error.number}) {$error.message} </h2></div>
 {/section}

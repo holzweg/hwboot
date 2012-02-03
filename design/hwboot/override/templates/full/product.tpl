@@ -1,7 +1,7 @@
 {* Product - Full view *}
 
 
-<form class="form-stacked" method="post" action={"content/action"|ezurl}>
+<form class="well"  method="post" action={"content/action"|ezurl}>
 <div class="content">
     <div class="hero-unit">
 

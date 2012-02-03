@@ -2,7 +2,7 @@
 <div class="content">
     <div class="class-file hero-unit">
 
-    <form class="form-stacked" enctype="multipart/form-data" method="post" action={concat( "/content/edit/", $object.id, "/", $edit_version, "/", $edit_language|not|choose( concat( $edit_language, "/" ), '' ) )|ezurl}>
+    <form class="well"  enctype="multipart/form-data" method="post" action={concat( "/content/edit/", $object.id, "/", $edit_version, "/", $edit_language|not|choose( concat( $edit_language, "/" ), '' ) )|ezurl}>
 
 
     {include uri='design:parts/website_toolbar_edit.tpl'}

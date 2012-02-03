@@ -14,7 +14,7 @@
         <div class="attribute-short">
                 {attribute_view_gui attribute=$node.data_map.description}
         </div>
-        <form class="form-stacked" method="post" action={"content/action"|ezurl}>
+        <form class="well"  method="post" action={"content/action"|ezurl}>
 
         <h4>{$node.data_map.sender_name.contentclass_attribute.name}</h4>
         <div class="clearfix">

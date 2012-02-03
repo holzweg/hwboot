@@ -12,7 +12,7 @@
 
 <div class="hero-unit">
 
-    <form class="form-stacked" method="post" action={"/shop/confirmorder/"|ezurl}>
+    <form class="well"  method="post" action={"/shop/confirmorder/"|ezurl}>
 
           <div class="page-header">
             <h2>{"Confirm order"|i18n("design/ezwebin/shop/confirmorder")}</h1>

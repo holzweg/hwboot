@@ -1,6 +1,6 @@
 
 <div class="hero-unit">
-    <form class="form-stacked" method="post" action={"/shop/wishlist/"|ezurl}>
+    <form class="well"  method="post" action={"/shop/wishlist/"|ezurl}>
 
           <div class="page-header">
             <h2>{"Wish list"|i18n("design/ezwebin/shop/wishlist")}</h1>

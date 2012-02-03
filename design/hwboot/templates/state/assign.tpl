@@ -1,7 +1,7 @@
 <div class="container">
     <div class="hero-unit">
 
-<form class="form-stacked" name="locationsform" method="post" action={'state/assign'|ezurl}>
+<form class="well"  name="locationsform" method="post" action={'state/assign'|ezurl}>
 <input type="hidden" name="ObjectID" value="{$node.object.id}" />
 <input type="hidden" name="RedirectRelativeURI" value="{$node.url_alias}" />
 

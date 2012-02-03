@@ -3,7 +3,7 @@
 {* Export window. *}
 <div class="container">
 <div class="hero-unit">
-<form class="form-stacked" name="rssexportslist" method="post" action={'rss/list'|ezurl}>
+<form class="well"  name="rssexportslist" method="post" action={'rss/list'|ezurl}>
 
       <h2>{'RSS exports [%exports_count]'|i18n( 'design/ezwebin/rss/list',, hash( '%exports_count', $rssexport_list|count ) )}</h2>
 
@@ -60,7 +60,7 @@
 </form>
 
 {* Import window. *}
-<form class="form-stacked"  name="rssimportslist" method="post" action={'rss/list'|ezurl}>
+<form class="well"   name="rssimportslist" method="post" action={'rss/list'|ezurl}>
 
       <h2>{'RSS imports [%imports_count]'|i18n( 'design/ezwebin/rss/list',, hash( '%imports_count', $rssimport_list|count ) )}</h2>
 

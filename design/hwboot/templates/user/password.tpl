@@ -1,7 +1,7 @@
 <div class="container">
     <div class="hero-unit">
         <div class="row">
-<form class="form-stacked" action={concat($module.functions.password.uri,"/",$userID)|ezurl} method="post" name="Password">
+<form class="well"  action={concat($module.functions.password.uri,"/",$userID)|ezurl} method="post" name="Password">
 
 <h2>{"Change password for user"|i18n("design/ezwebin/user/password")} {$userAccount.login}</h2>
 

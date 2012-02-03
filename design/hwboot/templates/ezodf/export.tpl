@@ -1,7 +1,7 @@
 <div class="container">
     <div class="hero-unit">
 
-<form class="form-stacked" enctype="multipart/form-data" method="post" action={"/ezodf/export"|ezurl}>
+<form class="well"  enctype="multipart/form-data" method="post" action={"/ezodf/export"|ezurl}>
 
 <div class="page-header">
     <h2>{"OpenOffice.org export"|i18n("design/ezwebin/ezodf/export")}</h2>

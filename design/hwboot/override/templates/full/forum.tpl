@@ -17,7 +17,7 @@
     {if is_unset( $versionview_mode )}
     {if $node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'addtonotification' ) )}
-        <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+        <form class="well"  method="post" action={"content/action/"|ezurl}>
             <input class="btn" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ezwebin/full/forum' )}" />
             <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />

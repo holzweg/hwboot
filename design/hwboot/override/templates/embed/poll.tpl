@@ -4,7 +4,7 @@
         <h2>{$object.name|wash}</h2>
 
        <div class="content-body">
-        <form class="form-stacked" method="post" action={"content/action"|ezurl}>
+        <form class="well"  method="post" action={"content/action"|ezurl}>
         <input type="hidden" name="ContentNodeID" value="{$object.main_node_id}" />
         <input type="hidden" name="ContentObjectID" value="{$object.id}" />
         <input type="hidden" name="ViewMode" value="full" />

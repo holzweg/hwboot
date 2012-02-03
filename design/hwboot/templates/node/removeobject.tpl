@@ -6,7 +6,7 @@
 <div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
 <div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
 
-<form action={concat($module.functions.removeobject.uri)|ezurl} method="post" name="ObjectRemove">
+<form class="well" action={concat($module.functions.removeobject.uri)|ezurl} method="post" name="ObjectRemove">
 
 <div class="warning">
 {if eq( $exceeded_limit, true() )}

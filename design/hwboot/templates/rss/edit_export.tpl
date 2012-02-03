@@ -1,6 +1,6 @@
 
 <div class="hero-unit">
-<form class="form-stacked" action={"rss/edit_export"|ezurl} method="post" name="RSSExport">
+<form class="well"  action={"rss/edit_export"|ezurl} method="post" name="RSSExport">
 
       <div class="page-header">
         <h2>{'Edit <%rss_export_name> [RSS Export]'|i18n( 'design/ezwebin/rss/edit_export',, hash( '%rss_export_name', $rss_export.title ) )|wash}</h1>

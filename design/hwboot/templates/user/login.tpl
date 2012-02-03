@@ -1,7 +1,7 @@
 <div class="container">
     <div class="hero-unit">
             <div class="row">
-                 <form class="form-stacked" method="post" action={"/user/login/"|ezurl} name="loginform">
+                 <form class="well"  method="post" action={"/user/login/"|ezurl} name="loginform">
 
                     <h2>{"Login"|i18n("design/ezwebin/user/login")}</h2>
 

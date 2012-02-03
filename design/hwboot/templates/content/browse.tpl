@@ -16,7 +16,7 @@
         {set $select_type='radio'}
     {/if}
 
-        <form class="form-stacked" name="browse" action={$browse.from_page|ezurl} method="post">
+        <form class="well"  name="browse" action={$browse.from_page|ezurl} method="post">
 
         {if $browse.description_template}
             {include name=Description uri=$browse.description_template browse=$browse main_node=$main_node}

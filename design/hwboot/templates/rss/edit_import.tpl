@@ -1,5 +1,5 @@
 <div class="hero-unit">
-<form class="form-stacked" action={"rss/edit_import"|ezurl} method="post" name="RSSImport">
+<form class="well"  action={"rss/edit_import"|ezurl} method="post" name="RSSImport">
 
 <h2>{'Edit <%rss_import_name> [RSS Import]'|i18n( 'design/ezwebin/rss/edit_import',, hash( '%rss_import_name', $rss_import.name ) )|wash}</h2>
 

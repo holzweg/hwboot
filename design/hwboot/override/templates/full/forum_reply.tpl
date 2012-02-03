@@ -41,7 +41,7 @@
         </p>
 
         {if $node.object.can_edit}
-        <form class="form-stacked" method="post" action={"content/action/"|ezurl}>
+        <form class="well"  method="post" action={"content/action/"|ezurl}>
 
         <br/>
 

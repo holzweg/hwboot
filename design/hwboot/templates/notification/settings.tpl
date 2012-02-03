@@ -2,7 +2,7 @@
 
     <div class="hero-unit">
 
-        <form class="form-stacked" name="notification" method="post" action={"/notification/settings/"|ezurl}>
+        <form class="well"  name="notification" method="post" action={"/notification/settings/"|ezurl}>
 
 
             <h2>{'Notification settings'|i18n( 'design/ezwebin/notification/settings' )}</h2>

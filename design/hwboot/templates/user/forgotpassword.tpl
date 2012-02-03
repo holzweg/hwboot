@@ -22,7 +22,7 @@
       <h2>{"The key is invalid or has been used. "|i18n('design/ezwebin/user/forgotpassword')}</h2>
       </div>
       {else}
-      <form class="form-stacked" method="post" name="forgotpassword" action={"/user/forgotpassword/"|ezurl}>
+      <form class="well"  method="post" name="forgotpassword" action={"/user/forgotpassword/"|ezurl}>
 
       <h2>{"Have you forgotten your password?"|i18n('design/ezwebin/user/forgotpassword')}</h2>
 

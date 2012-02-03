@@ -12,7 +12,7 @@
 
 <div class="hero-unit">
 
-<form class="form-stacked" method="post" action={concat('content/edit/',$object.id,'/',$edit_language,'/',$from_language)|ezurl}>
+<form class="well"  method="post" action={concat('content/edit/',$object.id,'/',$edit_language,'/',$from_language)|ezurl}>
 
 <div class="page-header">
     <h2>{$object.name|wash}</h1>

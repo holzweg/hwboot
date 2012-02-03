@@ -37,7 +37,7 @@
 
 <div class="hero-unit">
 
-<form action={"/content/advancedsearch/"|ezurl} method="get">
+<form class="well" action={"/content/advancedsearch/"|ezurl} method="get">
 <div class="page-header">
     <h2>{'Advanced search'|i18n( 'design/ezwebin/content/advancedsearch' )}</h2>
 </div>

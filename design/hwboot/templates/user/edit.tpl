@@ -1,6 +1,6 @@
 <div class="hero-unit">
 
-    <form class="form-stacked" action={concat($module.functions.edit.uri,"/",$userID)|ezurl} method="post" name="Edit">
+    <form class="well"  action={concat($module.functions.edit.uri,"/",$userID)|ezurl} method="post" name="Edit">
 
 
                       <h2>{"User profile"|i18n("design/ezwebin/user/edit")}</h2>

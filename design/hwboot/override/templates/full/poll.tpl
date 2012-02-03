@@ -12,7 +12,7 @@
         {attribute_view_gui attribute=$node.data_map.description}
         </div>
 
-        <form class="form-stacked" method="post" action={"content/action"|ezurl}>
+        <form class="well"  method="post" action={"content/action"|ezurl}>
         <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
         <input type="hidden" name="ContentObjectID" value="{$node.object.id}" />
         <input type="hidden" name="ViewMode" value="full" />

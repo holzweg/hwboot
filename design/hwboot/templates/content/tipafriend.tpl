@@ -30,7 +30,7 @@
 </div>
 {/section}
 
-<form class="form-stacked" action={"/content/tipafriend/"|ezurl} method="post">
+<form class="well"  action={"/content/tipafriend/"|ezurl} method="post">
 
 <div class="clearfix">
 <label>{"Your name"|i18n("design/ezwebin/content/tipafriend")}</label><div class="labelbreak"></div>

@@ -65,7 +65,7 @@
     {if fetch( 'content', 'access', hash( 'access', 'create',
     'contentobject', $node,
     'contentclass_id', 'comment' ) )}
-    <form class="form-stacked" method="post" action={"content/action"|ezurl}>
+    <form class="well"  method="post" action={"content/action"|ezurl}>
           <input type="hidden" name="ClassIdentifier" value="comment" />
         <input type="hidden" name="NodeID" value="{$node.object.main_node.node_id}" />
         <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />

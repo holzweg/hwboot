@@ -19,7 +19,7 @@
                 </p>
             </div>
 
-            <form class="form-stacked" action={"/user/login"|ezurl} method="post">
+            <form class="well"  action={"/user/login"|ezurl} method="post">
                 <input class="btn" type="submit" value="{'OK'|i18n( 'design/ezwebin/user/activate' )}" />
             </form>
 

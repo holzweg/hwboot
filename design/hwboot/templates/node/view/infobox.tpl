@@ -25,7 +25,7 @@
 
 {if or( $node.object.can_edit, $node.object.can_remove )}
     <div class="controls">
-        <form action={"/content/action"|ezurl} method="post">
+        <form class="well" action={"/content/action"|ezurl} method="post">
         {if $node.object.can_edit}
             <input type="image" name="EditButton" src={"edit-infobox-ico.gif"|ezimage} alt="Edit" />
             <input type="hidden" name="ContentObjectLanguageCode" value="{$node.object.current_language}" />

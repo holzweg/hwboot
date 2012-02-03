@@ -1,5 +1,5 @@
-<div class="topbar">
-    <div class="fill">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
         <div class="container">
             {if eq(ezini( 'NavigationSettings', 'ShowTopMenuBrand', 'hwboot.ini' ), true)}
                 <a class="brand" href={"/"|ezurl}>{ezini('SiteSettings','SiteName')|wash}</a>

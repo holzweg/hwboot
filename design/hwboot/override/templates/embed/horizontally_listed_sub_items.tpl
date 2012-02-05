@@ -24,7 +24,7 @@
 
         {def $i=0}
 
-<ul class="media-grid">
+<ul class="thumbnails">
             {foreach $children as $child}
             {if eq($i, 3)} {break} {/if}
 

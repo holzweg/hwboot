@@ -68,9 +68,7 @@
         </div>
     {/if}
 
-        <div class="media-grid">
-           <a href="#"> <p>{attribute_view_gui attribute=$node.data_map.image image_class=imagelarge}</p></a>
-        </div>
+	   <a href="#" class="thumbnail"><p>{attribute_view_gui attribute=$node.data_map.image image_class=imagelarge}</p></a>
 
         <div class="clearfix">
             {attribute_view_gui attribute=$node.data_map.caption}

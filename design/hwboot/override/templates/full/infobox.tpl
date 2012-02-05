@@ -9,7 +9,7 @@
             <h2>{attribute_view_gui attribute=$node.object.data_map.header}</h2>
         </div>
         
-        <div class="attribute-image media-grid">
+        <div class="thumbnail">
             {attribute_view_gui attribute=$node.object.data_map.image image_class='infoboximage'}
         </div>
         

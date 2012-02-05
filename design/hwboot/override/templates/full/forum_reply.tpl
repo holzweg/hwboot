@@ -23,7 +23,7 @@
             <br />{$owner_map.title.content|wash}
         {/if}</p>
         {if $owner_map.image.has_content}
-        <div class="authorimage media-grid">
+        <div class="thumbnail">
             {attribute_view_gui attribute=$owner_map.image image_class=small}
         </div>
         {/if}

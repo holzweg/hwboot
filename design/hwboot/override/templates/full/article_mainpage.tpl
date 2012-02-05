@@ -20,7 +20,7 @@
 
         {if eq( ezini( 'article', 'ImageInFullView', 'content.ini' ), 'enabled' )}
             {if $node.data_map.image.has_content}
-                <div class="attribute-image media-grid">
+                <div class="thumbnail">
                     {attribute_view_gui attribute=$node.data_map.image image_class=medium}
                     {if $node.data_map.caption.has_content}
                     <div class="caption">

@@ -5,9 +5,7 @@
 
     <h3>{$node.name|wash}</h3>
 
-    <div class="attribute-image media-grid">
-        <p>{attribute_view_gui attribute=$node.data_map.image image_class=listitem href=$node.url_alias|ezurl()}</p>
-    </div>
+	{attribute_view_gui attribute=$node.data_map.image image_class=listitem href=$node.url_alias|ezurl()}
 
     <div class="content-caption">
         {attribute_view_gui attribute=$node.data_map.caption}

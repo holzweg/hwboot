@@ -43,7 +43,6 @@
                 </p>
             </div>
 
-            <div class="media-grid">
                 {def $filters = ezini( 'gallerythumbnail', 'Filters', 'image.ini' )}
 
                     {foreach $filters as $filter}
@@ -58,7 +57,6 @@
                 {node_view_gui view=galleryline content_node=$child}
                 {/foreach}
 
-            </div>
         {/if}
 
         {include name=navigator

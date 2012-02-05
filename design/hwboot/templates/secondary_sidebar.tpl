@@ -1,4 +1,4 @@
-<div id="secondary-sidebar">
+<div id="secondary-sidebar" class="well">
 	{if is_array( $pagedata.extra_menu )}
 		{foreach $pagedata.extra_menu as $extra_menu}
 			{include uri=concat('design:parts/', $extra_menu, '.tpl')}

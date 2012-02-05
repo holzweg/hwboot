@@ -88,7 +88,7 @@
 </div>
 
 <div class="form-actions">
-<input class="btn-primary" type="submit" name="SearchButton" value="{'Search'|i18n('design/ezwebin/content/advancedsearch')}" />
+<input class="btn btn-primary" type="submit" name="SearchButton" value="{'Search'|i18n('design/ezwebin/content/advancedsearch')}" />
 </div>
 
 {if or( $search_text, eq( ezini( 'SearchSettings', 'AllowEmptySearch', 'site.ini'), 'enabled' ) )}

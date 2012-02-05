@@ -1,14 +1,8 @@
 {* Article - Horizontally Listed Subitems view view *}
-<div class="content-view-horizontallylistedsubitems">
-{if gt(currentdate() , $node.object.data_map.to_time.content.timestamp)}
-    <div class="class-event ezagenda_event_old">
-{else}
-    <div class="class-event">
-{/if}
-    <h2>
-        <a href={$node.url_alias|ezurl}>{$node.name|wash()}</a>
-    </h2>
-    <div class="attribute-byline">
+<h2>
+	<a href={$node.url_alias|ezurl}>{$node.name|wash()}</a>
+</h2>
+<div class="attribute-byline">
     <p>
     {if $node.object.data_map.category.has_content}
         <span class="ezagenda_keyword">
@@ -24,6 +18,4 @@
     {/if}
     </span>
     </p>
-    </div>
-  </div>
 </div>

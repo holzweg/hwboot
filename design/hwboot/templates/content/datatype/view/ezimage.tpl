@@ -8,7 +8,7 @@ Input:
                  used as link.
  href          - Optional string, if set it will create a <a> tag
                  around the image with href as the link.
- border_size   - Size of border around image, default is 0
+ border_size   - @unimplemented Size of border around image, default is 0
 *}
 {default image_class=large
          css_class=false()
@@ -36,10 +36,10 @@ Input:
     {/if}
     {switch match=$alignment}
     {case match='left'}
-        <div class="imageleft">
+        <div class="pull-left">
     {/case}
     {case match='right'}
-        <div class="imageright">
+        <div class="pull-right">
     {/case}
     {case/}
     {/switch}
@@ -59,19 +59,20 @@ Input:
         {if $title|not}
             {set $title = $alt_text}
         {/if}
-        {if $border_size|trim|ne('')}
-            {set $inline_style = concat( $inline_style, 'border: ', $border_size, 'px ', $border_style, ' ', $border_color, ';' )}
-        {/if}
-        {if $margin_size|trim|ne('')}
-            {set $inline_style = concat( $inline_style, 'margin: ', $margin_size, 'px;' )}
-        {/if}
+        {* {if $border_size|trim|ne('')} *}
+            {* {set $inline_style = concat( $inline_style, 'border: ', $border_size, 'px ', $border_style, ' ', $border_color, ';' )} *}
+        {* {/if} *}
+        {* {if $margin_size|trim|ne('')} *}
+            {* {set $inline_style = concat( $inline_style, 'margin: ', $margin_size, 'px;' )} *}
+        {* {/if} *}
 		{if and( is_set( $link_class ), $link_class )}
 			{set $link_class = $link_class|append(" thumbnail")}
 		{else}
 			{def $link_class = "thumbnail"}
 		{/if}
-        {if $href}<a href={$href} class="{$link_class}" {if and( is_set( $popover ), $popover )} rel="popover" data-content='{$popover_content|wash()}' data-placement="below" {/if}{if and( is_set( $link_id ), $link_id )} id="{$link_id}"{/if}{if $target} target="{$target}"{/if}{if and( is_set( $link_title ), $link_title )} title="{$link_title|wash}"{/if}>{/if}
-        <img src={$image.url|ezroot} width="{$image.width}" height="{$image.height}" {if $hspace}hspace="{$hspace}"{/if} style="{$inline_style}" alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}" />
+		
+		{if $href}<a href={$href} class="{$link_class}" {if and( is_set( $link_id ), $link_id )} id="{$link_id}"{/if}{if $target} target="{$target}"{/if}{if and( is_set( $link_title ), $link_title )} title="{$link_title|wash}"{/if} {if and( is_set( $popover ), $popover )}rel="popover" data-placement="bottom"{/if}>{/if}
+        <img src={$image.url|ezroot} width="{$image.width}" height="{$image.height}" alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}"  />
         {if $href}</a>{/if}
     {/if}
 

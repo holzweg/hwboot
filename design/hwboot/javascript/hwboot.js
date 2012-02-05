@@ -1,18 +1,14 @@
 $(document).ready(function() {
-    // nothing todo yet :-(...but don't worry, everything's gonna be alright.
 
     // automatic tabs handling
-    $('.tabs').tabs();
-
-    // Setup twipsy
-	$("*[rel=twipsy]").twipsy();
+    // $('.tabs').tabs();
 
     // Setup popover
-    $("*[rel=popover]").popover();
+	$("[rel=popover]").popover();
 
 	// table sort example
 	// ==================
-	$("#sortTableExample").tablesorter( { sortList: [[ 1, 0 ]] } )
+	// $("#sortTableExample").tablesorter( { sortList: [[ 1, 0 ]] } )
 
 	// add on logic
 	// ============

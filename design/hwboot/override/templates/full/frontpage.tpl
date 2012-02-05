@@ -18,8 +18,6 @@
     {/if}
 {/if}
 
-<div class="content-view-full container">
-    <div class="class-frontpage {$frontpagestyle}">
 
     {if $node.object.data_map.billboard.has_content}
         <div class="attribute-billboard">
@@ -39,27 +37,30 @@
 		{set $span_main = 6}
 	{/if}
 
-    <div class="row">
+	<div class="row">
+	{if $node.object.data_map.left_column.content.is_empty|not}
         <div id="primary-sidebar" class="span{$span_left}">
             <!-- Content: START -->
             {attribute_view_gui attribute=$node.object.data_map.left_column}
             <!-- Content: END -->
         </div>
-        <div class="span{$span_main}">
+	{/if}
+		<div class="span{$span_main}">
             <!-- Content: START -->
             {attribute_view_gui attribute=$node.object.data_map.center_column}
             <!-- Content: END -->
-        </div>
+		</div>
+	{if $node.object.data_map.right_column.content.is_empty|not}
         <div id="secondary-sidebar" class="span{$span_right}">
             <!-- Content: START -->
+			<div class="well">
                   {attribute_view_gui attribute=$node.object.data_map.right_column}
+			</div>
             <!-- Content: END -->
         </div>
-    </div>
+	{/if}
+	</div>
 
     <div class="attribute-bottom-column">
         {attribute_view_gui attribute=$node.object.data_map.bottom_column}
     </div>
-
-    </div>
-</div>

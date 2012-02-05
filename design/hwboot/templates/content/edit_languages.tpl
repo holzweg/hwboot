@@ -106,7 +106,7 @@
     {/if}
 {/if}
 
-<div class="actions">
+<div class="form-actions">
     {if $can_edit}
         <input class="btn" type="submit" name="LanguageSelection" value="{'Edit'|i18n('design/ezwebin/content/edit_languages')}" />
     {/if}

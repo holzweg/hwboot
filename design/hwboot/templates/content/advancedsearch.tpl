@@ -42,16 +42,16 @@
     <h2>{'Advanced search'|i18n( 'design/ezwebin/content/advancedsearch' )}</h2>
 </div>
 
-<div class="clearfix">
+<div class="control-group">
 <label>{'Search all the words'|i18n( 'design/ezwebin/content/advancedsearch' )}</label><div class="labelbreak"></div>
 <input class="box" type="text" size="40" name="SearchText" value="{$full_search_text|wash}" />
 </div>
-<div class="clearfix">
+<div class="control-group">
 <label>{'Search the exact phrase'|i18n( 'design/ezwebin/content/advancedsearch' )}</label><div class="labelbreak"></div>
 <input class="box" type="text" size="40" name="PhraseSearchText" value="{$phrase_search_text|wash}" />
 </div>
 
-<div class="clearfix">
+<div class="control-group">
 
 <div class="element">
 
@@ -87,8 +87,8 @@
 <div class="break"></div>
 </div>
 
-<div class="buttonblock">
-<input class="btn" type="submit" name="SearchButton" value="{'Search'|i18n('design/ezwebin/content/advancedsearch')}" />
+<div class="form-actions">
+<input class="btn-primary" type="submit" name="SearchButton" value="{'Search'|i18n('design/ezwebin/content/advancedsearch')}" />
 </div>
 
 {if or( $search_text, eq( ezini( 'SearchSettings', 'AllowEmptySearch', 'site.ini'), 'enabled' ) )}

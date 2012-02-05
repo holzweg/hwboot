@@ -30,29 +30,29 @@
 </div>
 {/section}
 
-<form class="well"  action={"/content/tipafriend/"|ezurl} method="post">
+<form class="well" action={"/content/tipafriend/"|ezurl} method="post">
 
-<div class="clearfix">
+<div class="control-group">
 <label>{"Your name"|i18n("design/ezwebin/content/tipafriend")}</label><div class="labelbreak"></div>
 <input class="box" type="text" size="40" name="YourName" value="{$your_name|wash}" />
 </div>
 
-<div class="clearfix">
+<div class="control-group">
 <label>{"Your email address"|i18n("design/ezwebin/content/tipafriend")}</label><div class="labelbreak"></div>
 <input class="box" type="text" size="40" name="YourEmail" value="{$your_email|wash}" />
 </div>
 
-<div class="clearfix">
+<div class="control-group">
 <label>{"Recipient's email address"|i18n("design/ezwebin/content/tipafriend")}</label><div class="labelbreak"></div>
 <input class="box" type="text" size="40" name="ReceiversEmail" value="{$receivers_email|wash}" />
 </div>
 
-<div class="clearfix">
+<div class="control-group">
 <label>{"Comment"|i18n("design/ezwebin/content/tipafriend")}</label><div class="labelbreak"></div>
 <textarea class="box" cols="40" rows="10" name="Comment">{$comment|wash}</textarea>
 </div>
 
-<div class="actions">
+<div class="form-actions">
 <input class="btn" type="submit" name="SendButton" value="{'Send'|i18n('design/ezwebin/content/tipafriend')}" />
 <input class="btn" type="submit" name="CancelButton" value="{'Cancel'|i18n('design/ezwebin/content/tipafriend')}" />
 </div>

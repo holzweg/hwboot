@@ -1,5 +1,4 @@
-<div class="content"> 
-
+<div class="content">
     {def $children = array()
          $limit = 3
          $offset = 0}
@@ -20,15 +19,13 @@
                                                'sort_by', $object.main_node.sort_array ) ) }
     <h2>{$object.name|wash()}</h2>
 
-   
-
         {def $i=0}
 
 <ul class="thumbnails">
             {foreach $children as $child}
             {if eq($i, 3)} {break} {/if}
 
-               <li>     
+               <li class="span3">     
                     {node_view_gui view=horizontallylistedsubitems content_node=$child}
                  </li>  
                     
@@ -36,6 +33,5 @@
             {/foreach}
 
 </ul>
-
 
 </div>

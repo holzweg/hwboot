@@ -136,12 +136,12 @@
 {/foreach}
 </table>
 {else}
-<div class="clearfix">
+<div class="control-group">
 <p>{'This object does not have any versions.'|i18n( 'design/ezwebin/content/history' )}</p>
 </div>
 {/if}
 
-<div class="clearfix">
+<div class="control-group">
 {include name=navigator
          uri='design:navigator/google.tpl'
          page_uri=concat( '/content/history/', $object.id, '///' )
@@ -150,7 +150,7 @@
          item_limit=$page_limit}
 </div>
 
-<div class="clearfix">
+<div class="control-group">
 
 <div class="actions">
 <input class="btn" type="submit" name="RemoveButton" value="{'Remove selected'|i18n( 'design/ezwebin/content/history' )}" title="{'Remove the selected versions from the object.'|i18n( 'design/ezwebin/content/history' )}" />
@@ -194,7 +194,7 @@
 <div class="break"></div>
 
 
-<div class="clearfix">
+<div class="control-group">
 <div class="left">
 <form class="well"  name="versionsback" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 {if is_set( $redirect_uri )}
@@ -351,7 +351,7 @@
 {/foreach}
 </table>
 {else}
-<div class="clearfix">
+<div class="control-group">
 <p>{'This object does not have any drafts.'|i18n( 'design/ezwebin/content/history' )}</p>
 </div>
 {/if}
@@ -388,8 +388,8 @@ document.write('<div class="context-toolbar"><div class="block"><ul><li><a href=
 </div>
 
 
-<div class="clearfix">
-<div class="left">
+<div class="control-group">
+<div class="pull-left">
 <form class="well" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
 <input class="btn" type="submit" value="{'Back to history'|i18n( 'design/ezwebin/content/history' )}" />
 </form>

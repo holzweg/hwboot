@@ -2,24 +2,24 @@
 
 <div class="hero-unit">
 
-<div class="content-view-full">
+
     <div class="class-poll">
         <div class="poll-result">
 
-    <div class="attribute-header">
-        <h1>{'Results'|i18n( 'design/ezwebin/collectedinfo/poll' )}</h1>
+    <div class="page-header">
+        <h2>{'Results'|i18n( 'design/ezwebin/collectedinfo/poll' )}</h2>
     </div>
 
         {if $error}
 
         {if $error_anonymous_user}
-        <div class="warning">
+        <div class="alert alert-info">
             <h2>{'Please log in to vote on this poll.'|i18n( 'design/ezwebin/collectedinfo/poll' )}</h2>
         </div>
         {/if}
 
         {if $error_existing_data}
-        <div class="warning">
+        <div class="alert alert-info">
             <h2>{'You have already voted for this poll.'|i18n( 'design/ezwebin/collectedinfo/poll' )}</h2>
         </div>
         {/if}
@@ -38,7 +38,7 @@
 
                 <h3>{$contentobject_attribute.content.name}</h3>
 
-                <table class="poll-resultlist">
+                <table class="poll-resultlist table-striped">
                 <tr>
 
                 {foreach $contentobject_attribute.content.option_list as $option}
@@ -55,7 +55,7 @@
                     {def $percentage=cond( $total_count|gt( 0 ), round( div( mul( $item_count, 100 ), $total_count ) ), 0 )
                          $tenth=cond( $total_count|gt( 0 ), round( div( mul( $item_count, 10 ), $total_count ) ), 0 )}
                     <td class="poll-resultbar">
-                        <table class="poll-resultbar">
+                        <table class="poll-resultbar table-striped">
                         <tr>
                             <td class="poll-percentage">
                                 <i>{$percentage}%</i>
@@ -107,6 +107,6 @@
 
         </div>
     </div>
-</div>
+
 
 </div>

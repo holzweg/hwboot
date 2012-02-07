@@ -4,12 +4,6 @@
      $previous_item = false()
      $next_item     = false()}
 
-<div class="hero-unit">
-
-
-            <h2>{$node.name|wash()}</h2>
-
-
     {if is_unset( $versionview_mode )}
         {* Generate next and previous links if parent is gallery *}
         {if $parent.class_identifier|eq( 'gallery' )}
@@ -39,44 +33,33 @@
              {/while}
              {undef $siblings $index $node_id}
         {/if}
-        <div class="clearfix">
-            {if $previous_item}
-               
-                    &laquo;&nbsp;<a href={$previous_item.url_alias|ezurl} title="{$previous_item.name|wash}">{'Previous image'|i18n( 'design/ezwebin/full/image' )}</a>
-               
-                |
-            {else}
-              
-                    &laquo;&nbsp;{'Previous image'|i18n( 'design/ezwebin/full/image' )}
-                
-                |
-            {/if}
+		{* Bootstrap pagination *}
+		<ul class="pager">
+			<li class="previous">
+				{if $previous_item}
+				   
+						<a href={$previous_item.url_alias|ezurl} title="{$previous_item.name|wash}">&larr;&nbsp;{'Previous image'|i18n( 'design/ezwebin/full/image' )}</a>
+				{else}
+				  
+						&larr;&nbsp;{'Previous image'|i18n( 'design/ezwebin/full/image' )}
+				{/if}
+			</li>
+			<li>
+				<a href={$parent.url_alias|ezurl}>{$parent.name|wash}</a>
+			</li>
 
-            <a href={$parent.url_alias|ezurl}>{$parent.name|wash}</a>
-
-            {if $next_item}
-                |
-      
-                    <a href={$next_item.url_alias|ezurl} title="{$next_item.name|wash}">{'Next image'|i18n( 'design/ezwebin/full/image' )}</a>&nbsp;&raquo;
-               
-            {else}
-           |
-               
-                    {'Next image'|i18n( 'design/ezwebin/full/image' )}&nbsp;&raquo;
-               
-            {/if}
-        </div>
+            <li class="next">
+				{if $next_item}
+					<a href={$next_item.url_alias|ezurl} title="{$next_item.name|wash}">{'Next image'|i18n( 'design/ezwebin/full/image' )}&nbsp;&rarr;</a>
+				{else}
+					{'Next image'|i18n( 'design/ezwebin/full/image' )}&nbsp;&rarr;
+				{/if}
+			</li>
+		</ul>
     {/if}
 
-	   <a href="#" class="thumbnail"><p>{attribute_view_gui attribute=$node.data_map.image image_class=imagelarge}</p></a>
+	   <a href="#" class="thumbnail" rel="popover" title="{$node.name|wash()}" data-placement="bottom">{attribute_view_gui attribute=$node.data_map.image image_class=imagelarge}</a>
 
-        <div class="clearfix">
             {attribute_view_gui attribute=$node.data_map.caption}
-        </div>
 
         {include uri='design:parts/image/related_content.tpl'}
-
-
-
-
-</div>

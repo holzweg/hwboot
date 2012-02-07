@@ -1,10 +1,10 @@
-<div class="block">
+<div class="well">
 {$attribute.content.name}
 </div>
 
 {foreach  $attribute.content.multioption_list as $multioptions}
-<div class="block">
-<label>{$multioptions.name}:</label>
+<div class="well">
+<label class="label label-info">{$multioptions.name}:</label>
 <select name="eZOption[{$attribute.id}][]">
     {foreach $multioptions.optionlist as $index => $option}
             {if ne( $option.additional_price, '' )}

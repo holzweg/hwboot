@@ -41,7 +41,9 @@
 	{if $node.object.data_map.left_column.content.is_empty|not}
         <div id="primary-sidebar" class="span{$span_left}">
             <!-- Content: START -->
-            {attribute_view_gui attribute=$node.object.data_map.left_column}
+			<div class="well">
+				{attribute_view_gui attribute=$node.object.data_map.left_column}
+			</div>
             <!-- Content: END -->
         </div>
 	{/if}

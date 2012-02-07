@@ -70,9 +70,13 @@ Input:
 		{else}
 			{def $link_class = "thumbnail"}
 		{/if}
+		{if or( is_set( $link_title )|not, $link_title|trim|eq('') )}
+			{def $link_title = ""}
+			{set $link_title = $title}
+		{/if}
 		
 		{if $href}<a href={$href} class="{$link_class}" {if and( is_set( $link_id ), $link_id )} id="{$link_id}"{/if}{if $target} target="{$target}"{/if}{if and( is_set( $link_title ), $link_title )} title="{$link_title|wash}"{/if} {if and( is_set( $popover ), $popover )}rel="popover" data-placement="bottom"{/if}>{/if}
-        <img src={$image.url|ezroot} width="{$image.width}" height="{$image.height}" alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}"  />
+			<img src={$image.url|ezroot} width="{$image.width}" height="{$image.height}" alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}"  />
         {if $href}</a>{/if}
     {/if}
 

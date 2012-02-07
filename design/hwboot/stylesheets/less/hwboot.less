@@ -2,9 +2,6 @@
 	Header
 -----------------------------------------------------------------------------*/
 
-.jumbotron {
-    min-width: @siteWidth;
-}
 .jumbotron .inner {
     background: url(@{imagedir}grid-18px.png) repeat scroll center top transparent;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) inset;
@@ -75,16 +72,12 @@
 	border-right: none;
 }
 
-#metanav ul a {
-	color: #404040;
-}
+/* #metanav ul:first-child a:before { */
+	/* content: '>> '; */
+/* } */
 
-#metanav ul:first-child a:before {
-	content: '>> ';
-}
-
-#metanav ul a:hover {
-	color: #0165b0;
+#metanav ul i {
+	padding-right: 3px;
 }
 
 /*----------------------------------------------------------------------------
@@ -95,14 +88,18 @@ ul.breadcrumb li a:after {
 }
 
 /*----------------------------------------------------------------------------
-	Main Container
+	Main Container - Hero Unit
 -----------------------------------------------------------------------------*/
-#page{
-	padding-top: 15px;
-}
-
 .hero-unit{
 	padding-top: 10px;
+}
+
+/*----------------------------------------------------------------------------
+	Main Container - Billboard
+-----------------------------------------------------------------------------*/
+div.attribute-billboard {
+	width: @gridRowWidth;
+	margin: 0 auto;
 }
 
 /*----------------------------------------------------------------------------

@@ -35,26 +35,20 @@
         {/if}
 		{* Bootstrap pagination *}
 		<ul class="pager">
-			<li class="previous">
-				{if $previous_item}
-				   
+			{if $previous_item}
+				<li class="previous">
 						<a href={$previous_item.url_alias|ezurl} title="{$previous_item.name|wash}">&larr;&nbsp;{'Previous image'|i18n( 'design/ezwebin/full/image' )}</a>
-				{else}
-				  
-						&larr;&nbsp;{'Previous image'|i18n( 'design/ezwebin/full/image' )}
-				{/if}
-			</li>
+				</li>
+			{/if}
 			<li>
 				<a href={$parent.url_alias|ezurl}>{$parent.name|wash}</a>
 			</li>
 
-            <li class="next">
-				{if $next_item}
+			{if $next_item}
+				<li class="next">
 					<a href={$next_item.url_alias|ezurl} title="{$next_item.name|wash}">{'Next image'|i18n( 'design/ezwebin/full/image' )}&nbsp;&rarr;</a>
-				{else}
-					{'Next image'|i18n( 'design/ezwebin/full/image' )}&nbsp;&rarr;
-				{/if}
-			</li>
+				</li>
+			{/if}
 		</ul>
     {/if}
 

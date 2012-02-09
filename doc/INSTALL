@@ -1,4 +1,4 @@
-== eZPublish settings ==
+== 1. eZPublish settings ==
 
 @hint You might need to change your DefaultAccess to 'ezwebin_site' in settings/override/site.ini.append.php 
 For example, in my standard installation, it was 'eng'. 
@@ -22,12 +22,14 @@ Reference=
 Filters[]
 Filters[]=geometry/fill=140;100
 
-== eZ Less ==
+== 2. eZ Less ==
 
 === Install and activate ezless extension ===
 --> head over to http://ezless.org and follow the instructions under INSTALLATION. That's it, you're set.
 
-== Activate Bootstrap Demo Package (Experimental) ==
+
+
+== (Optional) Activate Bootstrap Demo Package (Experimental) ==
 
 === extension/hwboot/packages/* ===
 Install packages

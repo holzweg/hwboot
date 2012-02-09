@@ -6,6 +6,9 @@ $(document).ready(function() {
 	// Set up le carousel
 	$(".carousel").carousel();
 
+	// Set up les alerts
+	$(".alert").alert();
+
     // automatic tabs handling
     // $('.tabs').tabs();
 

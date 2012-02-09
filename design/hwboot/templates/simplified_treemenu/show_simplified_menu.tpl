@@ -1,3 +1,5 @@
+{* @todo Rewrite this entire holy mess. *}
+
 {section show=eq($:contentStructureTree, false())|not()}
 {let parentNode = $contentStructureTree.parent_node
          children       = $contentStructureTree.children
@@ -52,7 +54,7 @@ class="currentnode"
 {/section}
 {* Text *}
 {* Do not indent this line; otherwise links will contain empty space at the end! *}
-{let defaultItemClickAction=$:parentNode.node.path_identification_string|ezurl(no)}<a class="nodetext" href="{$:defaultItemClickAction}" title="{$:toolTip}">{/let}{section show=$:parentNode.node.is_hidden}<span class="node-name-hidden">{$:parentNode.object.name|wash}</span>{section-else}{section show=$:parentNode.node.is_invisible}<span class="node-name-hiddenbyparent">{$:parentNode.object.name|wash}</span>{section-else}<span class="node-name-normal">{$:parentNode.object.name|wash}</span>{/section}{/section}{section show=$:parentNode.node.is_hidden}<span class="node-hidden"></span></a>{section-else}{section show=$:parentNode.node.is_invisible}<span class="node-hiddenbyparent"></span></a>{section-else}</a>{/section}{/section}</div>{/section}
+{let defaultItemClickAction=$:parentNode.node.path_identification_string|ezurl(no)}<a class="nodetext" href="{$:defaultItemClickAction}" title="{$:toolTip}"><i class="icon-eye-open"></i>&nbsp;{/let}{section show=$:parentNode.node.is_hidden}<span class="node-name-hidden">{$:parentNode.object.name|wash}</span>{section-else}{section show=$:parentNode.node.is_invisible}<span class="node-name-hiddenbyparent">{$:parentNode.object.name|wash}</span>{section-else}<span class="node-name-normal">{$:parentNode.object.name|wash}</span>{/section}{/section}{section show=$:parentNode.node.is_hidden}<span class="node-hidden"></span></a>{section-else}{section show=$:parentNode.node.is_invisible}<span class="node-hiddenbyparent"></span></a>{section-else}</a>{/section}{/section}</div>{/section}
 {* Show children *}
 {set chapter_level=sum($chapter_level,1)}
 {section show=$:haveChildren}

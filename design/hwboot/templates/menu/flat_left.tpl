@@ -72,7 +72,7 @@
     {undef $root_node $left_menu_items $left_menu_items_count $a_class $li_class $current_node_in_path_2 $current_node_in_path_3}
 {else}
 
-    <div class="contentstructure">
+    <div class="simplified-treemenu">
     {def $current_node         = fetch( content, node, hash( node_id, $current_node_id ) )
          $chapter_container    = fetch( content, node, hash( node_id, $current_node.path_array[$left_menu_depth|inc] ) )
          $class_filter         = ezini( 'TreeMenu', 'ShowClasses', 'contentstructuremenu.ini' )

@@ -19,60 +19,42 @@
 
 
 
-<div class="content">
-    <div class="hero-unit">
+<div class="well">
 
-        <div class="page-header">
-            <h2>{$node.name|wash}</h2>
-        </div>
+        <h2>{$node.name|wash}</h2>
         
         {section show=is_unset( $versionview_mode )}
-        <div class="content-navigator">
-            {section show=$previous_topic}
-               
-                    &laquo;&nbsp;<a href={$previous_topic[0].url_alias|ezurl} title="{$previous_topic[0].name|wash}">{'Previous topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a>
-               
-            {section-else}
-              
-                   &laquo;&nbsp;{'Previous topic'|i18n( 'design/ezwebin/full/forum_topic' )}
-               
-            {/section}
+        <ul class="pager">
+                {section show=$previous_topic}
+                   
+                        <li class="previous">
+                            &larr; <a href={$previous_topic[0].url_alias|ezurl} title="{$previous_topic[0].name|wash}">{'Previous topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a>
+                        </li>
+                   
+                {/section}
 
-            {section show=$previous_topic}
-            |
-            {section-else}
-              |
-            {/section}
+                {let forum=$node.parent}
+                    <li>
+                        <a href={$forum.url_alias|ezurl}>{$forum.name|wash}</a>
+                    </li>
+                {/let}
 
-            {let forum=$node.parent}
-              <a href={$forum.url_alias|ezurl}>{$forum.name|wash}</a>
-            {/let}
-
-            {section show=$next_topic}
-               |
-            {section-else}
-             |
-            {/section}
-
-            {section show=$next_topic}
-              
-                    <a href={$next_topic[0].url_alias|ezurl} title="{$next_topic[0].name|wash}">{'Next topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a>&nbsp;&raquo;
-                
-            {section-else}
-             
-                    {'Next topic'|i18n( 'design/ezwebin/full/forum_topic' )}&nbsp;&raquo;
-              
-            {/section}
-        </div>
+                {section show=$next_topic}
+                  
+                        <li class="next">
+                            <a href={$next_topic[0].url_alias|ezurl} title="{$next_topic[0].name|wash}">{'Next topic'|i18n( 'design/ezwebin/full/forum_topic' )}</a> &rarr;
+                        </li>
+                {/section}
+        </ul>
 
         {section show=$node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'use' ) )}
         <form class="well"  method="post" action={"content/action/"|ezurl}>
-            <input class="btn" type="submit" name="NewButton" value="{'New reply'|i18n( 'design/ezwebin/full/forum_topic' )}" />
+            <input class="btn btn-success btn-new" type="submit" name="NewButton" value="{'New reply'|i18n( 'design/ezwebin/full/forum_topic' )}">
             <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />
             {if $notification_access}
-                <input class="btn" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum_topic' )}" />
+                <input class="btn btn-info" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum_topic' )}" />
             {/if}
             <input type="hidden" name="NodeID" value="{$node.node_id}" />
             <input type="hidden" name="ClassIdentifier" value="forum_reply" />
@@ -89,24 +71,22 @@
             <table class="table table-striped table-bordered">
             <tr>
                 <th class="author">
-                    {"Author"|i18n("design/ezwebin/full/forum_topic")}
+                    <i class="icon-user"></i> {"Author"|i18n("design/ezwebin/full/forum_topic")}
                 </th>
                 <th class="message">
-                    {"Message"|i18n("design/ezwebin/full/forum_topic")}
+                    <i class="icon-comment"></i> {"Message"|i18n("design/ezwebin/full/forum_topic")}
                  </th>
             </tr>
             {section show=$view_parameters.offset|lt( 1 )}
-            <tr class="bglight">
+            <tr>
                <td class="author">
                {let owner=$node.object.owner owner_map=$owner.data_map}
-                   <p class="author">{$owner.name|wash}
+                   <p><span class="label">{$owner.name|wash}</span>
                    {section show=is_set( $owner_map.title )}
                        <br/>{$owner_map.title.content|wash}
                    {/section}</p>
                    {section show=$owner_map.image.has_content}
-                   <div class="authorimage">
                       {attribute_view_gui attribute=$owner_map.image image_class=small}
-                   </div>
                    {/section}
 
                    {section show=is_set( $owner_map.location )}
@@ -125,7 +105,7 @@
                   {section show=$node.object.can_edit}
                       <form class="well"  method="post" action={"content/action/"|ezurl}>
                           <input type="hidden" name="ContentObjectID" value="{$node.object.id}" />
-                          <input class="btn" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/full/forum_topic')}" />
+                          <input class="btn btn-warning" type="submit" name="EditButton" value="{'Edit'|i18n('design/ezwebin/full/forum_topic')}" />
                           <input type="hidden" name="ContentObjectLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
                       </form>
                   {/section}
@@ -133,7 +113,7 @@
                       <form class="well"  method="post" action={"content/action/"|ezurl}>
                           <input type="hidden" name="ContentObjectID" value="{$node.object.id}" />
                           <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
-                          <input class="btn" type="submit" name="ActionRemove" value="{'Remove'|i18n( 'design/ezwebin/full/forum_topic' )}" title="{'Remove this item.'|i18n( 'design/ezwebin/full/forum_topic' )}" />                      </form>
+                          <input class="btn btn-danger" type="submit" name="ActionRemove" value="{'Remove'|i18n( 'design/ezwebin/full/forum_topic' )}" title="{'Remove this item.'|i18n( 'design/ezwebin/full/forum_topic' )}" />                      </form>
                   {/section}
 
                </td>
@@ -156,13 +136,13 @@
                                                             'limit', $reply_limit,
                                                             'offset', $reply_offset,
                                                             'sort_by', array( array( published, true() ) ) ) )
-                         sequence=array( bgdark, bglight )}
-                <tr class="{$reply.sequence}">
+                         }
+                <tr>
                     <td class="author">
                     {let owner=$reply.object.owner owner_map=$owner.data_map}
-                        <p class="author">{$owner.name|wash}
+                        <p><span class="label">{$owner.name|wash}</span>
                         {section show=is_set( $owner_map.title )}
-                            <br/>{$owner_map.title.content|wash}
+                            <br/><span class="label">{$owner_map.title.content|wash}</span>
                         {/section}</p>
 
                         {section show=$owner_map.image.has_content}
@@ -234,6 +214,5 @@
          item_limit=$page_limit}
 
     </div>
-</div>
 
 {/let}

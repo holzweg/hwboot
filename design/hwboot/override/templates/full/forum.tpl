@@ -1,12 +1,9 @@
 {def $page_limit = 20
      $topic_count = fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id ) )}
 
-<div class="content">
-    <div class="hero-unit">
+<div class="well">
 
-    <div class="page-header">
-        <h2>{$node.name|wash}</h2>
-    </div>
+    <h2>{$node.name|wash}</h2>
 
     <div class="attribute-short">
        
@@ -18,12 +15,12 @@
     {if $node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'addtonotification' ) )}
         <form class="well"  method="post" action={"content/action/"|ezurl}>
-            <input class="btn" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ezwebin/full/forum' )}" />
+            <input class="btn btn-success" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ezwebin/full/forum' )}" />
             <input type="hidden" name="ContentNodeID" value="{$node.node_id}" />
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />
             <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
             {if $notification_access }
-                <input class="btn" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum' )}" />
+                <input class="btn btn-info" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ezwebin/full/forum' )}" />
             {/if}
             <input type="hidden" name="NodeID" value="{$node.node_id}" />
             <input type="hidden" name="ClassIdentifier" value="forum_topic" />
@@ -121,7 +118,6 @@
 
     </div>
 
-    </div>
 </div>
 {include name=navigator
          uri='design:navigator/google.tpl'

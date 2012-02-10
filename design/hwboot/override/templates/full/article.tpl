@@ -56,21 +56,19 @@
 
     {if is_unset( $versionview_mode )}
     {if $node.data_map.enable_comments.data_int}
-    <h1>{"Comments"|i18n("design/ezwebin/full/article")}</h1>
-    <div class="content-view-children">
+    <h5>{"Comments"|i18n("design/ezwebin/full/article")}</h5>
         {foreach fetch_alias( comments, hash( parent_node_id, $node.node_id ) ) as $comment}
         {node_view_gui view='line' content_node=$comment}
         {/foreach}
-    </div>
 
     {if fetch( 'content', 'access', hash( 'access', 'create',
     'contentobject', $node,
     'contentclass_id', 'comment' ) )}
-    <form class="well"  method="post" action={"content/action"|ezurl}>
+    <form method="post" action={"content/action"|ezurl}>
           <input type="hidden" name="ClassIdentifier" value="comment" />
         <input type="hidden" name="NodeID" value="{$node.object.main_node.node_id}" />
         <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
-        <input class="btn" type="submit" name="NewButton" value="{'New comment'|i18n( 'design/ezwebin/full/article' )}" />
+        <input class="btn btn-success" type="submit" name="NewButton" value="{'New comment'|i18n( 'design/ezwebin/full/article' )}" />
     </form>
     {else}
     {if ezmodule( 'user/register' )}
@@ -86,7 +84,7 @@
     'function', 'tipafriend' ) )}
     {if and( ezmodule( 'content/tipafriend' ), $tipafriend_access )}
     <div class="attribute-tipafriend">
-        <a href={concat( "/content/tipafriend/", $node.node_id )|ezurl} title="{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}"><i class="icon-envelope"></i>&nbsp;{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}</a>
+        <a class="btn" href={concat( "/content/tipafriend/", $node.node_id )|ezurl} title="{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}"><i class="icon-envelope"></i>&nbsp;{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}</a>
     </div>
     {/if}
 

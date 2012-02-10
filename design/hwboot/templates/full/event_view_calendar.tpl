@@ -87,99 +87,84 @@
     {/for}
 {/foreach}
 
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
+<div class="class-event-calendar">
 
-<div class="content-view-full">
- <div class="class-event-calendar event-calendar-calendarview">
+    <div class="attribute-header">
+        <h1>{$event_node.name|wash()}</h1>
+    </div>
 
-<div class="attribute-header">
-    <h1>{$event_node.name|wash()}</h1>
-</div>
+    <ul class="pager">
+        <li class="previous"><a href={$url_back|ezurl} title=" Previous month ">&larr; {"Previous Month"|i18n("design/ezwebin/full/event_view_calendar")}</a></li>
+        <li>{$temp_ts|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</li>
+        <li class="next"><a href={$url_forward|ezurl} title=" Next Month ">{"Next Month"|i18n("design/ezwebin/full/event_view_calendar")} &rarr;</a></li>
+    </ul>
+    <table class="table table-bordered table-striped" summary="Event Calendar">
+    <thead>
+    <tr>
+        <th>{"Mon"|i18n("design/ezwebin/full/event_view_calendar")}</th>
+        <th>{"Tue"|i18n("design/ezwebin/full/event_view_calendar")}</th>
+        <th>{"Wed"|i18n("design/ezwebin/full/event_view_calendar")}</th>
+        <th>{"Thu"|i18n("design/ezwebin/full/event_view_calendar")}</th>
+        <th>{"Fri"|i18n("design/ezwebin/full/event_view_calendar")}</th>
+        <th>{"Sat"|i18n("design/ezwebin/full/event_view_calendar")}</th>
+        <th>{"Sun"|i18n("design/ezwebin/full/event_view_calendar")}</th>
+    </tr>
+    </thead>
+    <tbody>
 
-<div id="ezagenda_calendar_left">
-<div id="ezagenda_calendar_container">
-
-<div class="border-box">
-<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-<div class="border-ml"><div class="border-mr"><div class="border-mc float-break">
-
-<table cellspacing="0" cellpadding="0" border="0" summary="Event Calendar">
-<thead>
-<tr class="calendar_heading">
-    <th class="calendar_heading_prev first_col"><a href={$url_back|ezurl} title=" Previous month ">&#8249;&#8249;</a></th>
-    <th class="calendar_heading_date" colspan="5">{$temp_ts|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</th>
-    <th class="calendar_heading_next last_col"><a href={$url_forward|ezurl} title=" Next Month ">&#8250;&#8250;</a></th>
-</tr>
-<tr class="calendar_heading_days">
-    <th class="first_col">{"Mon"|i18n("design/ezwebin/full/event_view_calendar")}</th>
-    <th>{"Tue"|i18n("design/ezwebin/full/event_view_calendar")}</th>
-    <th>{"Wed"|i18n("design/ezwebin/full/event_view_calendar")}</th>
-    <th>{"Thu"|i18n("design/ezwebin/full/event_view_calendar")}</th>
-    <th>{"Fri"|i18n("design/ezwebin/full/event_view_calendar")}</th>
-    <th>{"Sat"|i18n("design/ezwebin/full/event_view_calendar")}</th>
-    <th class="last_col">{"Sun"|i18n("design/ezwebin/full/event_view_calendar")}</th>
-</tr>
-</thead>
-<tbody>
-
-{def $counter=1 $col_counter=1 $css_col_class='' $col_end=0}
-{while le( $counter, $days )}
-    {set $dayofweek     = makedate( $temp_month, $counter, $temp_year )|datetime( custom, '%w' )
-         $css_col_class = ''
-         $col_end       = or( eq( $dayofweek, 0 ), eq( $counter, $days ) )}
-    {if or( eq( $counter, 1 ), eq( $dayofweek, 1 ) )}
-        <tr class="days{if eq( $counter, 1 )} first_row{elseif lt( $days|sub( $counter ), 7 )} last_row{/if}">
-        {set $css_col_class=' first_col'}
-    {elseif and( $col_end, not( and( eq( $counter, $days ), $span2|gt( 0 ), $span2|ne( 7 ) ) ) )}
-        {set $css_col_class=' last_col'}
-    {/if}
-    {if and( $span1|gt( 1 ), eq( $counter, 1 ) )}
-        {set $col_counter=1 $css_col_class=''}
-        {while ne( $col_counter, $span1 )}
-            <td>&nbsp;</td>
-            {set $col_counter=inc( $col_counter )}
-        {/while}
-    {elseif and( eq($span1, 0 ), eq( $counter, 1 ) )}
-        {set $col_counter=1 $css_col_class=''}
-        {while le( $col_counter, 6 )}
-            <td>&nbsp;</td>
-            {set $col_counter=inc( $col_counter )}
-        {/while}
-    {/if}
-    <td class="{if eq($counter, $temp_today)}ezagenda_selected{/if} {if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}ezagenda_current{/if}{$css_col_class}">
-    {if $day_array|contains(concat(' ', $counter, ',')) }
-        <a href={concat( $event_node.url_alias, "/(day)/", $counter, "/(month)/", $temp_month, "/(year)/", $temp_year)|ezurl}>{$counter}</a>
-    {else}
-        {$counter}
-    {/if}
-    </td>
-    {if and( eq( $counter, $days ), $span2|gt( 0 ), $span2|ne(7))}
-        {set $col_counter=1}
-        {while le( $col_counter, $span2 )}
-            {set $css_col_class=''}
-            {if eq( $col_counter, $span2 )}
-                {set $css_col_class=' last_col'}
-            {/if}
-            <td class="{$css_col_class}">&nbsp;</td>
-            {set $col_counter=inc( $col_counter )}
-        {/while}
-    {/if}
-    {if $col_end}
-        </tr>
-    {/if}
-    {set $counter=inc( $counter )}
-{/while}
-</tbody>
-</table>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>
+    {def $counter=1 $col_counter=1 $css_col_class='' $col_end=0}
+    {while le( $counter, $days )}
+        {set $dayofweek     = makedate( $temp_month, $counter, $temp_year )|datetime( custom, '%w' )
+             $css_col_class = ''
+             $col_end       = or( eq( $dayofweek, 0 ), eq( $counter, $days ) )}
+        {if or( eq( $counter, 1 ), eq( $dayofweek, 1 ) )}
+            <tr class="days{if eq( $counter, 1 )} first_row{elseif lt( $days|sub( $counter ), 7 )} last_row{/if}">
+            {set $css_col_class=' first_col'}
+        {elseif and( $col_end, not( and( eq( $counter, $days ), $span2|gt( 0 ), $span2|ne( 7 ) ) ) )}
+            {set $css_col_class=' last_col'}
+        {/if}
+        {if and( $span1|gt( 1 ), eq( $counter, 1 ) )}
+            {set $col_counter=1 $css_col_class=''}
+            {while ne( $col_counter, $span1 )}
+                <td>&nbsp;</td>
+                {set $col_counter=inc( $col_counter )}
+            {/while}
+        {elseif and( eq($span1, 0 ), eq( $counter, 1 ) )}
+            {set $col_counter=1 $css_col_class=''}
+            {while le( $col_counter, 6 )}
+                <td>&nbsp;</td>
+                {set $col_counter=inc( $col_counter )}
+            {/while}
+        {/if}
+        <td class="{if eq($counter, $temp_today)}ezagenda_selected{/if} {if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}ezagenda_current{/if}{$css_col_class}">
+        {if $day_array|contains(concat(' ', $counter, ',')) }
+            <a href={concat( $event_node.url_alias, "/(day)/", $counter, "/(month)/", $temp_month, "/(year)/", $temp_year)|ezurl}>{$counter}</a>
+        {else}
+            {$counter}
+        {/if}
+        </td>
+        {if and( eq( $counter, $days ), $span2|gt( 0 ), $span2|ne(7))}
+            {set $col_counter=1}
+            {while le( $col_counter, $span2 )}
+                {set $css_col_class=''}
+                {if eq( $col_counter, $span2 )}
+                    {set $css_col_class=' last_col'}
+                {/if}
+                <td class="{$css_col_class}">&nbsp;</td>
+                {set $col_counter=inc( $col_counter )}
+            {/while}
+        {/if}
+        {if $col_end}
+            </tr>
+        {/if}
+        {set $counter=inc( $counter )}
+    {/while}
+    </tbody>
+    </table>
 
 </div>
 
+{* @todo *}
 <div id="ezagenda_calendar_today">
     {if eq($curr_ts|datetime( custom, '%j'),$temp_ts|datetime( custom, '%j'))} 
         <h2>{"Today"|i18n("design/ezwebin/full/event_view_calendar")}:</h2> 
@@ -208,9 +193,8 @@
     </div>
 {/foreach}
 </div>
-</div>
 
-
+{* @todo *}
 <div id="ezagenda_calendar_right">
 <h2>{$temp_ts|datetime( custom, '%F %Y' )|upfirst()}:</h2> 
 {foreach $events as $event}
@@ -261,9 +245,3 @@
 </div>
 
 {undef}
-</div>
-</div>
-
-</div></div></div>
-<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
-</div>

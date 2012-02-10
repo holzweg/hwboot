@@ -12,9 +12,6 @@ JavaScriptList[]=hwboot.js
 
 [StylesheetSettings]
 FrontendCSSFileList[]
-FrontendCSSFileList[]=bootstrap.min.css
-FrontendCSSFileList[]=websitetoolbar.css
-FrontendCSSFileList[]=hwboot.css
-FrontendCSSFileList[]=prettify.css
+FrontendCSSFileList[]=star_rating.css
 
 */ ?>

@@ -6,13 +6,14 @@
         <h2>{$node.data_map.title.content|wash()}</h2>
     </div>
 
-    <div class="alert alert-info">
+    <div class="alert alert-info fade in">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
         {if $node.data_map.author.content.is_empty|not()}
-        <p class="author">
-            {attribute_view_gui attribute=$node.data_map.author}
+        <p>
+            <span class="label label-info">{attribute_view_gui attribute=$node.data_map.author}</span>
         </p>
         {/if}
-        <p class="date">
+        <p>
             {$node.object.published|l10n(shortdatetime)}
         </p>
     </div>
@@ -85,7 +86,7 @@
     'function', 'tipafriend' ) )}
     {if and( ezmodule( 'content/tipafriend' ), $tipafriend_access )}
     <div class="attribute-tipafriend">
-        <p><a href={concat( "/content/tipafriend/", $node.node_id )|ezurl} title="{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}">{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}</a></p>
+        <a href={concat( "/content/tipafriend/", $node.node_id )|ezurl} title="{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}"><i class="icon-envelope"></i>&nbsp;{'Tip a friend'|i18n( 'design/ezwebin/full/article' )}</a>
     </div>
     {/if}
 

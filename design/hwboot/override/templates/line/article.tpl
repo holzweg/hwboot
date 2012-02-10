@@ -1,4 +1,5 @@
 {* Article - Line view *}
+<div class="well">
 
 <h2><a href={$node.url_alias|ezurl}>{$node.data_map.title.content|wash}</a></h2>
 
@@ -13,3 +14,5 @@
 	{attribute_view_gui attribute=$node.data_map.intro}
 </div>
 {/section}
+
+</div>

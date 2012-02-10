@@ -2,11 +2,13 @@
 {set scope=global persistent_variable=hash('left_menu', false(),
                                            'extra_menu', false())}
 
-<div class="content">
+<div class="columns-blog">
+    <div class="row">
+        <div class="span7">
 
-    <div class="columns-blog float-break">
-        <div class="span7 hero-unit" style="float:left">
-           
+
+          {* @kludge keeps the div from collapsing when no content (which shouldn't really happen) *}
+          &nbsp; 
            
 
 {def $page_limit = 10
@@ -65,6 +67,7 @@
     {/if}
 {/if}
 
+        {* @todo bootstrap navigator *}
             {include name=navigator
                      uri='design:navigator/google.tpl'
                      page_uri=$node.url_alias
@@ -75,11 +78,10 @@
         </div>
 
       
-            <div class="span5 hero-unit" style="float:left;margin-left:20px">
+            <div class="span5">
                
                         {include uri='design:parts/blog/extra_info.tpl' used_node=$node}
               
             </div>
-       
-    </div>
+      </div> 
 </div>

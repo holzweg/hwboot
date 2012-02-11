@@ -4,13 +4,11 @@
 
 {foreach $content_attributes_grouped_data_map as $attribute_group => $content_attributes_grouped}
 {if $attribute_group|ne( $attribute_default_category )}
-	<fieldset class="ezcca-collapsible">
+	<fieldset>
 	<legend><a href="JavaScript:void(0);">{$attribute_categorys[$attribute_group]}</a></legend>
-	<div class="ezcca-collapsible-fieldset-content">
 {/if}
 {foreach $content_attributes_grouped as $attribute_identifier => $attribute}
 {def $contentclass_attribute = $attribute.contentclass_attribute}
-<div class="block ezcca-edit-datatype-{$attribute.data_type_string} ezcca-edit-{$attribute_identifier}">
 {* Show view GUI if we can't edit, otherwise: show edit GUI. *}
 {if and( eq( $attribute.can_translate, 0 ), ne( $object.initial_language_code, $attribute.language_code ) )}
     <label>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
@@ -69,45 +67,47 @@
         {/if}
     {/if}
 {/if}
-</div>
 {undef $contentclass_attribute}
 {/foreach}
 {if $attribute_group|ne( $attribute_default_category )}
-    </div>
     </fieldset>
 {/if}
 {/foreach}
-{run-once}
-{* if is_set( $content_attributes_grouped_data_map[1] ) *}
-{ezscript_require(array( 'ezjsc::jquery' ) )}
-<script type="text/javascript">
-<!--
-{literal}
 
-jQuery(function( $ )
-{
-    $('fieldset.ezcca-collapsible legend a').click( function()
-    {
-		var container = $( this.parentNode.parentNode ), inner = container.find('div.ezcca-collapsible-fieldset-content');
-		if ( container.hasClass('ezcca-collapsed') )
-		{
-			container.removeClass('ezcca-collapsed');
-			inner.slideDown( 150 );
-	    }
-		else
-		{
-			inner.slideUp( 150, function(){
-            	$( this.parentNode ).addClass('ezcca-collapsed');
-            });
-        }
-    });
-    // Collapse by default
-    $('fieldset.ezcca-collapsible').addClass('ezcca-collapsed').find('div.ezcca-collapsible-fieldset-content').hide();
-});
+{* @todo Build some collapsing functionality with bootstrap-collapse *}
 
-{/literal}
--->
-</script>
-{* /if *}
-{/run-once}
+{* {run-once} *}
+{* [> if is_set( $content_attributes_grouped_data_map[1] ) <] *}
+{* {ezscript_require(array( 'ezjsc::jquery' ) )} *}
+{* <script type="text/javascript"> *}
+{* <!-- *}
+{* {literal} *}
+
+{* jQuery(function( $ ) *}
+{* { *}
+    {* $('fieldset.ezcca-collapsible legend a').click( function() *}
+    {* { *}
+		{* var container = $( this.parentNode.parentNode ), inner = container.find('div.ezcca-collapsible-fieldset-content'); *}
+		{* if ( container.hasClass('ezcca-collapsed') ) *}
+		{* { *}
+			{* container.removeClass('ezcca-collapsed'); *}
+			{* inner.slideDown( 150 ); *}
+		{* } *}
+		{* else *}
+		{* { *}
+			{* inner.slideUp( 150, function(){ *}
+                {* $( this.parentNode ).addClass('ezcca-collapsed'); *}
+            {* }); *}
+        {* } *}
+    {* }); *}
+    {* // Collapse by default *}
+    {* $('fieldset.ezcca-collapsible').addClass('ezcca-collapsed').find('div.ezcca-collapsible-fieldset-content').hide(); *}
+{* }); *}
+
+{* {/literal} *}
+{* --> *}
+{* </script> *}
+{* [> /if <] *}
+{* {/run-once} *}
+
 {/default}

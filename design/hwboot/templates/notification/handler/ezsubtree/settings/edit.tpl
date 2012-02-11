@@ -7,9 +7,9 @@
 
 {if $subscribed_nodes_count}
 
-<table class="list" width="100%" border="0" cellspacing="0" cellpadding="0">
+<table class="table table-bordered table-striped">
 <tr>
-    <th class="tight">
+    <th>
         <img src={'toggle-button-16x16.gif'|ezimage} alt="{'Invert selection.'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" title="{'Invert selection.'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" onclick="ezjs_toggleCheckboxes( document.notification, 'SelectedRuleIDArray_{$handler.id_string}[]' ); return false;" />
     </th>
     <th>
@@ -25,8 +25,8 @@
 
 {foreach fetch( 'notification', 'subscribed_nodes', hash( 'limit', $number_of_items,
                                                           'offset', $view_parameters.offset ) ) as $rule
-         sequence array( 'bgdark', 'bglight' ) as $style}
-<tr class="{$style}">
+        }
+<tr>
     <td>
           <input type="checkbox" name="SelectedRuleIDArray_{$handler.id_string}[]" value="{$rule.id}" />
     </td>
@@ -57,9 +57,7 @@
          view_parameters=$view_parameters
          item_limit=$number_of_items}
 
-<div class="buttonblock">
 {if $subscribed_nodes_count}
-<input class="btn" type="submit" name="RemoveRule_{$handler.id_string}" value="{'Remove selected'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" /> 
+<input class="btn btn-danger" type="submit" name="RemoveRule_{$handler.id_string}" value="{'Remove selected'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" /> 
 {/if}
-<input class="btn" type="submit" name="NewRule_{$handler.id_string}" value="{'Add items'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" />
-</div>
+<input class="btn btn-success" type="submit" name="NewRule_{$handler.id_string}" value="{'Add items'|i18n( 'design/ezwebin/notification/handler/ezsubtree/settings/edit' )}" />

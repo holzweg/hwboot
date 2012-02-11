@@ -24,5 +24,7 @@
 
 ++ Lots of configurability (see @todo tags for ideas)
 
+++ For this to become a default extension: reorganize entire template structure (:
+
 === Doing a search for @todo in files will tell ya what else is still to be done. === 
 

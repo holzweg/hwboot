@@ -1,10 +1,7 @@
 {def $settings=$handler.settings}
 
-<div>
-    <label><input type="checkbox" name="ReceiveDigest_{$handler.id_string}" {$settings.receive_digest|choose( '', checked)} /> {'Receive all messages combined in one digest'|i18n( 'design/ezwebin/notification/handler/ezgeneraldigest/settings/edit' )}</label>
-</div>
+<label class="checkbox"><input type="checkbox" name="ReceiveDigest_{$handler.id_string}" {$settings.receive_digest|choose( '', checked)} /> {'Receive all messages combined in one digest'|i18n( 'design/ezwebin/notification/handler/ezgeneraldigest/settings/edit' )}</label>
 
-<div>
 <fieldset>
 <legend>{'Receive digests'|i18n( 'design/ezwebin/notification/handler/ezgeneraldigest/settings/edit' )}</legend>
 <table class="table table-striped table-bordered">
@@ -57,4 +54,3 @@
 
 {'If day number is larger than the number of days within the current month, the last day of the current month will be used.'|i18n( 'design/ezwebin/notification/handler/ezgeneraldigest/settings/edit' )}
 </fieldset>
-</div>

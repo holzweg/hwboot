@@ -1,23 +1,23 @@
 {ezscript_require( 'tools/ezjsselection.js' )}
 <table class="table table-striped table-bordered">
 <tr>
-    <th class="tight">
+    <th>
     {section show=eq( $select_type, 'checkbox' )}
         <img src={'toggle-button-16x16.gif'|ezimage} alt="{'Invert selection'|i18n( 'design/ezwebin/content/browse_mode_list' )}" title="{'Invert selection'|i18n( 'design/ezwebin/content/browse_mode_list' )}" onclick="ezjs_toggleCheckboxes( document.browse, '{$select_name}[]' ); return false;" />
     {section-else}
         &nbsp;
     {/section}
     </th>
-    <th class="wide">
+    <th>
     {'Name'|i18n( 'design/ezwebin/content/browse_mode_list' )}
     </th>
-    <th class="tight">
+    <th>
     {'Type'|i18n( 'design/ezwebin/content/browse_mode_list' )}
     </th>
 </tr>
 
-{section var=Nodes loop=$node_array sequence=array( bglight, bgdark )}
-  <tr class="{$Nodes.sequence}">
+{section var=Nodes loop=$node_array}
+  <tr>
     <td>
     {* Note: The tpl code for $ignore_nodes_merge with the eq, unique and count
              is just a replacement for a missing template operator.
@@ -79,7 +79,7 @@
     {/let}
 
     </td>
-    <td class="class">
+    <td>
     {$Nodes.item.object.content_class.name|wash}
     </td>
  </tr>

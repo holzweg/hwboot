@@ -36,7 +36,7 @@
             <p><a class="btn btn-info "href={"/shop/wishlist"|ezurl}><i class="icon-user icon-white"></i> {"My wish list"|i18n("design/ezwebin/user/edit")}</a></p>
             {/if}
 
-            <div class="well">
+            <div class="form-actions">
                 <input class="btn btn-primary" type="submit" name="EditButton" value="{'Edit profile'|i18n('design/ezwebin/user/edit')}" />
                 <input class="btn btn-warning" type="submit" name="ChangePasswordButton" value="{'Change password'|i18n('design/ezwebin/user/edit')}" />
             </div>

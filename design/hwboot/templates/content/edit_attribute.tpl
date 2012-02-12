@@ -12,27 +12,27 @@
 {* Show view GUI if we can't edit, otherwise: show edit GUI. *}
 {if and( eq( $attribute.can_translate, 0 ), ne( $object.initial_language_code, $attribute.language_code ) )}
     <label>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
-        {if $attribute.can_translate|not} <span class="nontranslatable">({'not translatable'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}:
-        {if $contentclass_attribute.description} <span class="classattribute-description">{first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}</span>{/if}
+        {if $attribute.can_translate|not} ({'not translatable'|i18n( 'design/admin/content/edit_attribute' )}){/if}:
+        {if $contentclass_attribute.description} {first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}{/if}
     </label>
     {if $is_translating_content}
-        <div class="original">
         {attribute_view_gui attribute_base=$attribute_base attribute=$attribute view_parameters=$view_parameters}
         <input type="hidden" name="ContentObjectAttribute_id[]" value="{$attribute.id}" />
-        </div>
     {else}
         {attribute_view_gui attribute_base=$attribute_base attribute=$attribute view_parameters=$view_parameters}
         <input type="hidden" name="ContentObjectAttribute_id[]" value="{$attribute.id}" />
     {/if}
 {else}
     {if $is_translating_content}
-        <label{if $attribute.has_validation_error} class="message-error"{/if}>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
-            {if $attribute.is_required} <span class="required">({'required'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}
-            {if $attribute.is_information_collector} <span class="collector">({'information collector'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}:
-            {if $contentclass_attribute.description} <span class="classattribute-description">{first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}</span>{/if}
-        </label>
+        <div class="control-group{if $attribute.has_validation_error} error{/if}">
+            <label>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
+                {if $attribute.is_required} <span class="label label-warning">{'required'|i18n( 'design/admin/content/edit_attribute' )}</span>{/if}
+                {if $attribute.is_information_collector} <span class="label label-info">{'information collector'|i18n( 'design/admin/content/edit_attribute' )}</span>{/if}:
+                {if $contentclass_attribute.description} <span class="label">{first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}</span>{/if}
+            </label>
+        </div>
         <div class="original">
-        {attribute_view_gui attribute_base=$attribute_base attribute=$from_content_attributes_grouped_data_map[$attribute_group][$attribute_identifier] view_parameters=$view_parameters}
+            {attribute_view_gui attribute_base=$attribute_base attribute=$from_content_attributes_grouped_data_map[$attribute_group][$attribute_identifier] view_parameters=$view_parameters}
         </div>
         <div class="translation">
         {if $attribute.display_info.edit.grouped_input}
@@ -48,21 +48,24 @@
     {else}
         {if $attribute.display_info.edit.grouped_input}
             <fieldset>
-            <legend{if $attribute.has_validation_error} class="message-error"{/if}>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
-                {if $attribute.is_required} <span class="required">({'required'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}
-                {if $attribute.is_information_collector} <span class="collector">({'information collector'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}
-                {if $contentclass_attribute.description} <span class="classattribute-description">{first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}</span>{/if}
-            </legend>
-            {attribute_edit_gui attribute_base=$attribute_base attribute=$attribute view_parameters=$view_parameters}
+            <div class="control-group{if $attribute.has_validation_error} error{/if}">
+                <legend>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
+                    {if $attribute.is_information_collector} <span class="collector">({'information collector'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}
+                    {if $contentclass_attribute.description} <span class="classattribute-description">{first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}</span>{/if}
+                </legend>
+            </div>
+                {attribute_edit_gui attribute_base=$attribute_base attribute=$attribute view_parameters=$view_parameters}
             <input type="hidden" name="ContentObjectAttribute_id[]" value="{$attribute.id}" />
             </fieldset>
         {else}
-            <label{if $attribute.has_validation_error} class="message-error"{/if}>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
-                {if $attribute.is_required} <span class="required">({'required'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}
-                {if $attribute.is_information_collector} <span class="collector">({'information collector'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}:
-                {if $contentclass_attribute.description} <span class="classattribute-description">{first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}</span>{/if}
-            </label>
-            {attribute_edit_gui attribute_base=$attribute_base attribute=$attribute view_parameters=$view_parameters}
+            <div class="control-group{if $attribute.has_validation_error} error{/if}">
+                <label>{first_set( $contentclass_attribute.nameList[$content_language], $contentclass_attribute.name )|wash}
+                    {if $attribute.is_required} <span class="label label-warning">{'required'|i18n( 'design/admin/content/edit_attribute' )}</span>{/if}
+                    {if $attribute.is_information_collector} <span class="collector">({'information collector'|i18n( 'design/admin/content/edit_attribute' )})</span>{/if}
+                    {if $contentclass_attribute.description} <span class="classattribute-description">{first_set( $contentclass_attribute.descriptionList[$content_language], $contentclass_attribute.description)|wash}</span>{/if}
+                </label>
+                <div class="controls">{attribute_edit_gui attribute_base=$attribute_base attribute=$attribute view_parameters=$view_parameters}</div>
+            </div>
             <input type="hidden" name="ContentObjectAttribute_id[]" value="{$attribute.id}" />
         {/if}
     {/if}

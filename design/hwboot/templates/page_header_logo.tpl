@@ -1,6 +1,6 @@
 <!-- Masthead (blueprinty thing)
 ================================================== -->
-<header class="jumbotron masthead" id="overview" >
+<header>
   <div class="inner">
 	<div class="container" style="padding-top: {$top_padding}px">
 	  <h1>Bootstrap, from Twitter, running on {ezini('SiteSettings','SiteName')|wash}</h1>

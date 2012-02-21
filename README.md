@@ -14,31 +14,35 @@ How does it work?
 HWBoot works by overriding the ezwebin extension. So, to get you started,
 
 1. Install ezwebin.  
-You can install the extension into your current installation, or simply choose the "Website Interface" package when doing a fresh install.  
+You can install the ezwebin extension into your current installation, or simply choose the "Website Interface" package when doing a fresh install.  
 We are working on ways to ease the installation, in the meantime please bear with us!
 
 2. Install eZ Less  
-Simply follow the instructions at http://www.ezless.org. You can skip editing the templates, that has already been done for you.  
+Simply follow the instructions at [http://www.ezless.org] (http://www.ezless.org) . You can skip editing the templates, that has already been done for you.  
 HWBoot depends on the eZ Less extension to render the bootstrap css through [LESS] (http://www.lesscss.org).
 
 3. Clone this repository into your extension directory
 
 4. Edit your settings/siteaccess/YOUR\_SITEACCESS/site.ini.append.php  
-    [ExtensionSettings]  
-    ActiveAccessExtensions[]=hwboot  
-    [DesignSettings]
-    SiteDesign=hwboot
-    AdditionalSiteDesignList[]
-    AdditionalSiteDesignList[]=ezwebin
-    AdditionalSiteDesignList[]=base
+        ```
+        [ExtensionSettings]  
+        ActiveAccessExtensions[]=hwboot  
+        [DesignSettings]  
+        SiteDesign=hwboot  
+        AdditionalSiteDesignList[]  
+        AdditionalSiteDesignList[]=ezwebin  
+        AdditionalSiteDesignList[]=base  
+        ```
 
 5. And put the following in settings/siteaccess/YOUR\_SITEACCESS/image.ini.append.php  
-    [ImageMagick]
-    Filters[]=geometry/fill=-resize %1x%2^ -gravity center -extent %1x%2
-    [listitem]
-    Reference=
-    Filters[]
-    Filters[]=geometry/fill=140;100
+        ```
+        [ImageMagick]  
+        Filters[]=geometry/fill=-resize %1x%2^ -gravity center -extent %1x%2  
+        [listitem]  
+        Reference=  
+        Filters[]  
+        Filters[]=geometry/fill=140;100
+        ```
 
 6. Kick back, clear the cache and enjoy! (:
 

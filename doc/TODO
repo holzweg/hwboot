@@ -1,5 +1,3 @@
-++ Debug Cache issues! (e.g. christin found when loading a node using pagelayout.tpl we get NULL for values of $span_x)
-
 ++ Clean all (ezwebin) html classes we never use!
 
 ++ Print Layout and Accessibility + Selenium

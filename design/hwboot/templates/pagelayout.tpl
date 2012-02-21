@@ -13,6 +13,38 @@
             {def $extra_cache_key = ''}
         {/if}
 
+        {*** @warning This section needs to happen before the first cache-block declaration. ***} 
+
+        {def $pagedata         = ezpagedata()}
+
+        {* Calculate top padding to accomodate our fixed top bars - this will most often be needed in page_header_logo.tpl*}
+        {* @todo make heights of top nav bar and website toolbar configurable! *}
+        {* @todo whether bars are fixed or not could be made configurable too *}
+        {def	$navbar_height = 40
+                        $toolbar_height = 34
+                        $top_padding = $navbar_height}
+
+        {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
+                {include uri='design:page_toolbar.tpl'}
+                {set $top_padding = sum( $top_padding, $toolbar_height )}	
+        {/if}
+
+        {* @todo make columns configurable! *}
+        {* calculate span widths *}
+        {def $span_left  = 3
+             $span_main  = 9
+             $span_right = 3}
+        {if and($pagedata.left_menu, $pagedata.extra_menu)}
+            {set $span_main = 6}
+        {/if}
+        {if and($pagedata.left_menu|not, $pagedata.extra_menu|not)}
+            {set $span_main = 12}
+        {/if}
+
+        {undef $pagedata}
+
+        {*** Section end ***}
+
         {cache-block keys=array( $module_result.uri, $basket_is_empty, $current_user.contentobject_id, $extra_cache_key )}
 
         {def $pagedata         = ezpagedata()
@@ -28,17 +60,6 @@
 
     <body>
 
-		{* Calculate top padding to accomodate our fixed top bars - this will most often be needed in page_header_logo.tpl*}
-		{* @todo make heights of top nav bar and website toolbar configurable! *}
-		{* @todo whether bars are fixed or not could be made configurable too *}
-		{def	$navbar_height = 40
-				$toolbar_height = 34
-				$top_padding = $navbar_height}
-
-		{if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
-			{include uri='design:page_toolbar.tpl'}
-			{set $top_padding = sum( $top_padding, $toolbar_height )}	
-		{/if}
 
         {*cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )*}
         {if $pagedata.top_menu}
@@ -63,17 +84,6 @@
 
             <div class="row">
 
-				{* @todo make columns configurable! *}
-                {* calculate span widths *}
-                {def $span_left  = 3
-                     $span_main  = 9
-                     $span_right = 3}
-                {if and($pagedata.left_menu, $pagedata.extra_menu)}
-                    {set $span_main = 6}
-                {/if}
-                {if and($pagedata.left_menu|not, $pagedata.extra_menu|not)}
-                    {set $span_main = 12}
-                {/if}
 
                 {if $pagedata.left_menu}
                     <div class="span{$span_left}">

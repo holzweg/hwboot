@@ -7,7 +7,7 @@
  * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  *}
 
-<footer class="footer">
+<footer>
     <div class="container">
         <p class="pull-right"><a class="btn btn-small" href="#"><i class="icon-arrow-up"></i>{'Back to top'|i18n('design/hwboot/footer')}</a></p>
         <p>

@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 {def $collection = cond( $collection_id, fetch( content, collected_info_collection, hash( collection_id, $collection_id ) ),
                           fetch( content, collected_info_collection, hash( contentobject_id, $node.contentobject_id ) ) )}
 

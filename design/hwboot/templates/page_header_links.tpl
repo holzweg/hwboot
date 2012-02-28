@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 {if $pagedesign.data_map.tag_cloud_url.data_text|ne('')}
     {if $pagedesign.data_map.tag_cloud_url.content|eq('')}
         <li id="tagcloud"><a class="btn btn-small" href={concat("/content/view/tagcloud/", $pagedata.root_node)|ezurl} title="{$pagedesign.data_map.tag_cloud_url.data_text|wash}"><i class="icon-map-marker"></i>{$pagedesign.data_map.tag_cloud_url.data_text|wash}</a></li>

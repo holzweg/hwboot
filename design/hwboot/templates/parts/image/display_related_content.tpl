@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 <div class="attribute-relatedcontent">
     <h1>{"Related content"|i18n("design/ezwebin/full/image")}</h1>
     {def $filters = ezini( 'gallerythumbnail', 'Filters', 'image.ini' )}

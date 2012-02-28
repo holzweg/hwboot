@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 {set-block scope=root variable=subject}{"Feedback from %1"|i18n("design/ezwebin/collectedinfomail/feedback",,array($collection.object.name|wash))}{/set-block}
 
 {if and( is_set( $object.data_map.recipient ), $object.data_map.recipient.has_content )}

@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 <h2><a href={$object.main_node.url_alias|ezurl}>{$object.name|wash()}</a></h2>
 
 <div class="alert alert-block alert-info">

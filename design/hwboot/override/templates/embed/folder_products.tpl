@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 <div class="content-view-embed">
     <div class="class-folder"> {def $children=fetch( content, tree, hash( parent_node_id, $object.main_node_id, 
                                                                           limit, 3, 

@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 {let selected_cache_type=ezpreference( 'admin_clearcache_type' )
      caches_list=array( array( 'All', 'All caches'|i18n( 'design/standard/pagelayout' )|wash, false ),
                         array( 'Content', 'Content'|i18n( 'design/standard/pagelayout' )|wash, false ),

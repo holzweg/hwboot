@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 {if $attribute.content.has_discount}
 <span class="old-price">{'Price'|i18n( 'design/ezwebin/view/ezprice' )}: {$attribute.content.inc_vat_price|l10n( currency )}</span> <br />
 <span class="new-price">{'Your price'|i18n( 'design/ezwebin/view/ezprice' )}: {$attribute.content.discount_price_inc_vat|l10n( currency )}</span><br />

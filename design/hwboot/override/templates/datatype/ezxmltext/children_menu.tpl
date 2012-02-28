@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 {* Children menu, a inline menu to use in xml blocks *}
 <div class="object-{if is_set($align)}{$align}{else}left{/if} itemized_sub_items itemized_children_menu">
 <div class="content-view-embed">

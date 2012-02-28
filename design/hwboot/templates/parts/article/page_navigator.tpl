@@ -1,3 +1,12 @@
+{**
+ * HWBoot
+ *
+ * @category    design
+ * @package     hwboot
+ * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
+ * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+ *}
+
 {def $sort_column = 'priority'
      $sort_column_value = eq( $used_node.node_id, $node.node_id)|choose( $node.priority, '0' )
      $previous_log=fetch( content, list, hash( parent_node_id, $used_node.node_id,

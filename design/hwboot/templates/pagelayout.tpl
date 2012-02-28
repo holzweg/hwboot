@@ -24,11 +24,6 @@
                         $toolbar_height = 34
                         $top_padding = $navbar_height}
 
-        {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
-                {include uri='design:page_toolbar.tpl'}
-                {set $top_padding = sum( $top_padding, $toolbar_height )}	
-        {/if}
-
         {* @todo make columns configurable! *}
         {* calculate span widths *}
         {def $span_left  = 3
@@ -60,6 +55,10 @@
 
     <body>
 
+        {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
+                {include uri='design:page_toolbar.tpl'}
+                {set $top_padding = sum( $top_padding, $toolbar_height )}	
+        {/if}
 
         {*cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )*}
         {if $pagedata.top_menu}

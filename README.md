@@ -55,7 +55,7 @@ We currently use version 2.0 and compile our CSS via Less.
 Using the power of [LESS] (http://www.lesscss.org), you can overwrite many things such as colours, column widths and font sizes.  
 &rarr; see design/hwboot/stylesheets/less/variables.less and design/hwboot/stylesheets/less/hwboot.less.
 
-You may want to overwrite these files in your own extension to preserve the upgrade path.  
+You may want to override these files in your own extension to preserve the upgrade path.  
 Additionally, we provide a few configuration options in  
 &rarr; settings/hwboot.ini
 

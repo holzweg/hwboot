@@ -66,3 +66,6 @@ Please feel to contribute by contacting us or simply sending us a pull request.
 
 ### Brought to you by Holzweg e-commerce Solutions, with love. ###
 Note: No pixels were harmed during the development of this extension.
+
+### Contributions ###
+Be the first one!

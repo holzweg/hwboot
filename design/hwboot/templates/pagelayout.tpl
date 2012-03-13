@@ -7,15 +7,6 @@
  * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  *}
 
-{**
- * HWBoot
- *
- * @category    design
- * @package     hwboot
- * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
- * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
- *}
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$site.http_equiv.Content-language|wash}" lang="{$site.http_equiv.Content-language|wash}">
     <head>

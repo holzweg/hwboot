@@ -1,12 +1,3 @@
-{**
- * HWBoot
- *
- * @category    design
- * @package     hwboot
- * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
- * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
- *}
-
 {if and( is_set( $DesignKeys:used.url_alias ), $DesignKeys:used.url_alias|count|ge(1) )}
     {def $avail_translation = language_switcher( $DesignKeys:used.url_alias )}
 {else}

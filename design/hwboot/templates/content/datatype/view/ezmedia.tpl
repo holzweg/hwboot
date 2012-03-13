@@ -1,12 +1,3 @@
-{**
- * HWBoot
- *
- * @category    design
- * @package     hwboot
- * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
- * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
- *}
-
 {if $attribute.content.filename}
 
     {switch name=mediaType match=$attribute.contentclass_attribute.data_text1}

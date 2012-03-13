@@ -1,12 +1,3 @@
-{**
- * HWBoot
- *
- * @category    design
- * @package     hwboot
- * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
- * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
- *}
-
 {* Forum reply - Edit *}
 
 {def $parent_node=fetch( 'content', 'node', hash( node_id, $object.current.main_parent_node_id ) )}

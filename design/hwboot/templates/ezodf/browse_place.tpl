@@ -1,12 +1,3 @@
-{**
- * HWBoot
- *
- * @category    design
- * @package     hwboot
- * @copyright   Copyright (c) 2012 Holzweg e-commerce solutions (http://www.holzweg.com)
- * @license     http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
- *}
-
 <div class="page-header">
     <h2>{'Choose document placement'|i18n('design/ezwebin/ezodf/browse_place')}</h2>
 </div>

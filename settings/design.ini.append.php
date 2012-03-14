@@ -9,6 +9,7 @@ JavaScriptList[]=jquery.tablesorter.min.js
 JavaScriptList[]=bootstrap/bootstrap.min.js
 JavaScriptList[]=prettify.min.js
 JavaScriptList[]=hwboot.js
+FrontendJavaScriptList[]=bootstrap/bootstrap-dropdown.js
 
 [StylesheetSettings]
 FrontendCSSFileList[]

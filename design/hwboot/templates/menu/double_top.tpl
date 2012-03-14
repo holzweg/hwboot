@@ -1,19 +1,11 @@
-<ul class="nav{if and( is_set( $priority ), $priority.0|eq('>=') )} secondary-nav{/if}">
+<ul class="nav">
     {def $root_node = fetch( 'content', 'node', hash( 'node_id', $pagedata.root_node ) )
          $top_menu_class_filter = ezini( 'MenuContentSettings', 'TopIdentifierList', 'menu.ini' )}
-    {if is_set( $priority )|not}
-        {def $fetch_parameters = hash( 'parent_node_id', $root_node.node_id,
+    {def $fetch_parameters = hash( 'parent_node_id', $root_node.node_id,
                                        'sort_by', $root_node.sort_array,
                                        'class_filter_type', 'include',
                                        'attribute_filter', array( array( 'priority', '<', 1000 )),
                                        'class_filter_array', $top_menu_class_filter )}
-    {else}
-        {def $fetch_parameters = hash( 'parent_node_id', $root_node.node_id,
-                                       'sort_by', $root_node.sort_array,
-                                       'class_filter_type', 'include',
-                                       'attribute_filter', array( array( 'priority', $priority.0, $priority.1 )),
-                                       'class_filter_array', $top_menu_class_filter )}
-    {/if}
     {def $top_menu_items = fetch( 'content', 'list', $fetch_parameters )
          $top_menu_items_count = $top_menu_items|count()
          $item_class = array()

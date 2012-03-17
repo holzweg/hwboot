@@ -5,7 +5,7 @@
                         </p>
                         </div>
 
-                    {if is_set( $used_node.object.data_map.description}
+                    {if is_set( $used_node.object.data_map.description)}
                         <div class="attribute-description well">
                             {attribute_view_gui attribute=$used_node.object.data_map.description}
                         </div>

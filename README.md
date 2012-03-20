@@ -64,7 +64,7 @@ We're happy to receive your feedback at technik[at]holzweg.com
 
 Please feel to contribute by contacting us or simply sending us a pull request.
 
-### Brought to you by Holzweg e-commerce Solutions, with love. ###
+### Initially brought to you by Holzweg e-commerce Solutions, with love. ###
 Note: No pixels were harmed during the development of this extension.
 
 ### Contributions by ###

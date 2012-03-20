@@ -55,7 +55,8 @@
 
     <body>
 
-        {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
+        {* Website Toolbar on top, if using a flat top menu *}
+        {if and( $pagedata.website_toolbar, $pagedata.is_edit|not, eq($pagedata.top_menu, 'flat_top') )}
                 {include uri='design:page_toolbar.tpl'}
                 {set $top_padding = sum( $top_padding, $toolbar_height )}	
         {/if}
@@ -67,6 +68,7 @@
         {*/cache-block*}
 
 		{include uri='design:page_header.tpl'}
+
 
         <div id="page" class="container">
             {if and( is_set( $pagedata.persistent_variable.extra_template_list ), $pagedata.persistent_variable.extra_template_list|count() )}

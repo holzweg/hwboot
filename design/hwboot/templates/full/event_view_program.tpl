@@ -87,7 +87,7 @@
 
 <div id="ezagenda_calendar_right">
     {foreach $events as $event}
-    <table class="ezagenda_month_event" cellpadding="0" cellspacing="0"{if gt($curr_ts , $event.object.data_map.to_time.content.timestamp)} class="ezagenda_event_old"{/if} summary="Previw of event">
+    <table class="ezagenda_month_event" cellpadding="0" cellspacing="0"{if gt($curr_ts , $event.object.data_map.to_time.content.timestamp)} class="ezagenda_event_old"{/if} >
     <tr>
     {if $daymode}
     <td  class="ezagenda_month_label"><h2>{$event.object.data_map.from_time.content.timestamp|datetime(custom,"%j %M")}</h2></td>

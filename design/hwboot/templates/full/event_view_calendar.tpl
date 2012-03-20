@@ -98,7 +98,7 @@
         <li>{$temp_ts|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</li>
         <li class="next"><a href={$url_forward|ezurl} title=" Next Month ">{"Next Month"|i18n("design/ezwebin/full/event_view_calendar")} &rarr;</a></li>
     </ul>
-    <table class="table table-bordered table-striped" summary="Event Calendar">
+    <table class="table table-bordered table-striped" >
     <thead>
     <tr>
         <th>{"Mon"|i18n("design/ezwebin/full/event_view_calendar")}</th>
@@ -203,7 +203,7 @@
         <div id="ezagenda_month_hidden" style="display:none;">
     {/if}
     
-    <table class="ezagenda_month_event" cellpadding="0" cellspacing="0"{if gt($curr_ts , $event.object.data_map.to_time.content.timestamp)} class="ezagenda_event_old"{/if} summary="Previw of event">
+    <table class="ezagenda_month_event" cellpadding="0" cellspacing="0"{if gt($curr_ts , $event.object.data_map.to_time.content.timestamp)} class="ezagenda_event_old"{/if} >
     <tr>
     <td class="ezagenda_month_label">
         <h2>

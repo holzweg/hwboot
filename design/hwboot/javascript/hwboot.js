@@ -11,9 +11,6 @@ $(document).ready(function() {
 
     // Set up le popover
 	$("[rel=popover]").popover();
-	
-	// Set up le carousel
-	$(".carousel").carousel();
 
 	// Set up les alerts
 	$(".alert").alert();

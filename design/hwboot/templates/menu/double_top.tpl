@@ -43,12 +43,10 @@
 
             {if eq( $item.class_identifier, 'link')}
                 <li id="node_id_{$item.node_id}"{if $item_class} class="{$item_class|implode(" ")}"{/if}>
-                    <a {if eq( $ui_context, 'browse' )}href={concat("content/browse/", $item.node_id)|ezurl}{else}href={$item.data_map.location.content|ezurl}{if and( is_set( $item.data_map.open_in_new_window ), $item.data_map.open_in_new_window.data_int )} target="_blank"{/if}{/if}{if $pagedata.is_edit} onclick="return false;"{/if} title="{$item.data_map.location.data_text|wash}" class="menu-item-link" rel={$item.url_alias|ezurl}>{if $item.data_map.location.data_text}{$item.data_map.location.data_text|wash()}{else}{$item.name|wash()}{/if}
-                    <b class="caret"></b></a>
+                    <a {if eq( $ui_context, 'browse' )}href={concat("content/browse/", $item.node_id)|ezurl}{else}href={$item.data_map.location.content|ezurl}{if and( is_set( $item.data_map.open_in_new_window ), $item.data_map.open_in_new_window.data_int )} target="_blank"{/if}{/if}{if $pagedata.is_edit} onclick="return false;"{/if} title="{$item.data_map.location.data_text|wash}" class="menu-item-link" rel={$item.url_alias|ezurl}>{if $item.data_map.location.data_text}{$item.data_map.location.data_text|wash()}{else}{$item.name|wash()}{/if}</a>
             {else}
                 <li id="node_id_{$item.node_id}"{if $item_class} class="{$item_class|implode(" ")}"{/if}>
-                    <a {if $level_2_items|count()}class="dropdown-toggle" data-toggle="dropdown"{/if}href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{elseif $level_2_items|count()|eq(0)}{$item.url_alias|ezurl}{else}"#node_id_{$item.node_id}"{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{$item.name|wash()}
-                    {if $level_2_items|count()}<b class="caret">{/if}</b></a>
+                    <a href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{else}{$item.url_alias|ezurl}{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{$item.name|wash()}{if $level_2_items|count()}<b class="caret">{/if}</b></a>
             {/if}
                 {if $level_2_items|count()}
                 <ul class="dropdown-menu">

@@ -58,7 +58,7 @@ header:first-of-type {
 -----------------------------------------------------------------------------*/
 
 .navbar-fixed-top #searchtext{
-    width: 142px; 
+    width: 142px;
 }
 
 /*----------------------------------------------------------------------------
@@ -66,6 +66,10 @@ header:first-of-type {
 -----------------------------------------------------------------------------*/
 
 #metanav {
+
+    border-left:0 none;
+    border-right:0 none;
+    .border-radius(0px);
 
     ul {
         float: left;
@@ -109,7 +113,7 @@ ul.breadcrumb li a:after {
     Main Container - Simplified Tree Menu
 -----------------------------------------------------------------------------*/
 .simplified-treemenu ul {
-    list-style: none;			
+    list-style: none;
 }
 
 /*----------------------------------------------------------------------------
@@ -139,7 +143,7 @@ div.attribute-billboard {
 -----------------------------------------------------------------------------*/
 div.attribute-tipafriend{
     padding: 20px 0;
-} 
+}
 
 /*----------------------------------------------------------------------------
     Main Container - eZ Star Rating
@@ -202,3 +206,55 @@ footer {
     }
 
 }
+
+/*----------------------------------------------------------------------------
+    Icons
+-----------------------------------------------------------------------------*/
+i.icon-language {
+background-position:0 0;
+    background-repeat:no-repeat;
+    height:12px;
+    margin:1px 4px 0 0;
+    width:15px;
+}
+
+/*----------------------------------------------------------------------------
+    Dropdown fix for hover open
+-----------------------------------------------------------------------------*/
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;
+}
+
+ul.nav li.dropdown ul.dropdown-menu {
+    margin-top: 0px;
+}
+
+.navbar .nav .caret {
+    border-top-color:#FFFFFF;
+}
+
+/*----------------------------------------------------------------------------
+    List item changes
+-----------------------------------------------------------------------------*/
+ul.images, ul.indicator {
+    list-style: none;
+    margin-left: 0px;
+}
+
+/*----------------------------------------------------------------------------
+    Carousel
+-----------------------------------------------------------------------------*/
+
+div.carousel-navigation {
+
+    margin-bottom: 18px;
+    text-align: center;
+    padding:8px 4px 4px;
+
+    a.carousel-navigation-item {
+        margin: 0px 4px;
+        display: inline-block;
+    }
+}
+
+

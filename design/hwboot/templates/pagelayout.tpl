@@ -13,7 +13,7 @@
             {def $extra_cache_key = ''}
         {/if}
 
-        {*** @warning This section needs to happen before the first cache-block declaration. ***} 
+        {*** @warning This section needs to happen before the first cache-block declaration. ***}
 
         {def $pagedata         = ezpagedata()}
 
@@ -58,7 +58,7 @@
         {* Website Toolbar on top, if using a flat top menu *}
         {if and( $pagedata.website_toolbar, $pagedata.is_edit|not, eq($pagedata.top_menu, 'flat_top') )}
                 {include uri='design:page_toolbar.tpl'}
-                {set $top_padding = sum( $top_padding, $toolbar_height )}	
+                {set $top_padding = sum( $top_padding, $toolbar_height )}
         {/if}
 
         {*cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )*}
@@ -108,9 +108,9 @@
                 {/if}
 
                 {if $pagedata.extra_menu}
-                    <div class="span{$span_right}">
+                    <aside class="span{$span_right}">
                         {include uri='design:secondary_sidebar.tpl'}
-                    </div>
+                    </aside>
                 {/if}
             </div>
 

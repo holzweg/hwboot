@@ -1,3 +1,5 @@
 <!-- Main area content: START -->
-{$module_result.content}
+<article id="main">
+    {$module_result.content}
+</article>
 <!-- Main area content: END -->

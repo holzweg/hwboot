@@ -1,8 +1,11 @@
 {* Gallery - Full view *}
 
-<div class="hero-unit">
+<div class="content-view-full">
+    <div class="class-gallery">
 
-		<h2>{$node.name|wash()}</h2>
+        <div class="attribute-header">
+            <h1>{$node.name|wash()}</h1>
+        </div>
 
         {if $node.data_map.image.content}
             <div class="attribute-image">
@@ -31,11 +34,6 @@
                                                              'class_filter_type', 'include',
                                                              'class_filter_array', array( 'image', 'flash_player' ),
                                                              'sort_by', $node.sort_array ) )}
-            {* <div class="attribute-link"> *}
-                {* <p> *}
-					{* <a href={$children[0].url_alias|ezurl}>{'View as slideshow'|i18n( 'design/ezwebin/full/gallery' )}</a> *}
-                {* </p> *}
-            {* </div> *}
 
                 {def $filters = ezini( 'gallerythumbnail', 'Filters', 'image.ini' )}
 
@@ -47,30 +45,7 @@
                     {/if}
                     {/foreach}
 
-				<ul class="thumbnails">
-					{foreach $children as $child}
-						<li>
-							{node_view_gui view=galleryline content_node=$child carousel_mode=false()}
-						</li>
-					{/foreach}
-				</ul>
-
-			{* Le Carousel! (: *}
-			<div class="carousel slide" id="gallery-carousel">
-				<div class="carousel-inner">
-					{foreach $children as $i => $child}
-						{if eq($i, 0)}
-							<div class="item active">
-						{else}
-							<div class="item">
-						{/if}
-							{node_view_gui view=galleryline content_node=$child carousel_mode=true()}
-						</div>
-					{/foreach}
-				</div>
-				<a class="carousel-control left" href="#gallery-carousel" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#gallery-carousel" data-slide="next">&rsaquo;</a>
-			</div>
+            {include uri='design:parts/carousel.tpl' id=$node.node_id content_nodes=$children image_class="campaign" text_attribute="intro" show_navigation=true()}
 
         {/if}
 
@@ -81,4 +56,5 @@
                  item_count=$children_count
                  view_parameters=$view_parameters
                  item_limit=$page_limit}
+    </div>
 </div>

@@ -3,9 +3,11 @@
 
 <!-- BLOCK: START -->
 <div id="carousel-{$block.id}" class="block-type-campaign">
-    <div class="attribute-header">
-        <h2>{$block.name|wash()}</h2>
-    </div>
+    {if $block.name|has_content}
+        <div class="attribute-header">
+            <h2>{$block.name|wash()}</h2>
+        </div>
+    {/if}
     {include uri='design:parts/carousel.tpl' id=$block.id content_nodes=$valid_nodes image_class="campaign" text_attribute="intro"}
 </div>
 <!-- BLOCK: END -->

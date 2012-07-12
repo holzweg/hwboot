@@ -110,6 +110,18 @@ ul.breadcrumb li a:after {
 }
 
 /*----------------------------------------------------------------------------
+    Content attributes
+-----------------------------------------------------------------------------*/
+div.attribute-header {
+    margin-bottom: 20px;
+}
+
+div.content-image {
+    width: 200px;
+    float: right;
+}
+
+/*----------------------------------------------------------------------------
     Main Container - Simplified Tree Menu
 -----------------------------------------------------------------------------*/
 .simplified-treemenu ul {
@@ -148,9 +160,23 @@ div.attribute-tipafriend{
 /*----------------------------------------------------------------------------
     Main Container - eZ Star Rating
 -----------------------------------------------------------------------------*/
-div.attribute-star-rating {
-    padding: 10px 0;
+
+.hreview-aggregate .fn {
+    display:none;
 }
+
+ul.ezsr-star-rating {
+    list-style:none outside none;
+    margin:0;
+}
+
+
+
+.attribute-star-rating {
+    margin: 0px 0px 20px 0px;
+    padding: 10px 10px 0px 10px;
+}
+
 
 /*----------------------------------------------------------------------------
     Main Container - Blog
@@ -257,4 +283,6 @@ div.carousel-navigation {
     }
 }
 
-
+.carousel .item > img {
+    width:100%;
+}

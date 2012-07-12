@@ -4,5 +4,7 @@
                                                 'sort_by', array( 'priority', false() ) ) )}
                                                 
 {foreach $infoboxes as $infobox}
-    {node_view_gui content_node=$infobox view='infobox'}
+    <div class="well">
+        {node_view_gui content_node=$infobox view='infobox'}
+    </div>
 {/foreach}

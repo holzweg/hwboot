@@ -8,6 +8,6 @@
 {def $locale = "" }
 {def $directory = "" }
 {foreach $avail_translation as $siteaccess => $lang}
-    <a class="btn btn-small{if $siteaccess|eq($access_type.name)} btn-primary{/if}" href={$lang.url|ezurl}><i class="icon-language" style="background-image: url({concat('/share/icons/flags/', $lang.locale, '.gif')|ezurl(no)});"></i>{$lang.text|wash}</a>
+    <a class="btn btn-small{if $siteaccess|eq($access_type.sub)} btn-primary{/if}" href={$lang.url|ezurl}><i class="icon-language" style="background-image: url({concat('share/icons/flags/', $lang.locale, '.gif')|ezroot(no)});"></i>{$lang.text|wash}</a>
 {/foreach}
 </div>

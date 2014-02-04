@@ -1,9 +1,9 @@
 {* eZ Less dependent implementation *}
-{"bootstrap.less"|ezless_add()}
+{ezini( 'DesignSettings', 'FrontendLessFileList', 'hwboot.ini' )|ezless_add()}
 {ezless()}
 
 {* @todo Implement a fallback to default CSS? *}
-{ezcss_load( array( 
+{ezcss_load( array(
                   ezini( 'StylesheetSettings', 'CSSFileList', 'design.ini' ),
                   ezini( 'StylesheetSettings', 'FrontendCSSFileList', 'design.ini' ) ))}
 
@@ -13,7 +13,7 @@
 {/if}
 
 {if $load_css_file_list}
-  {ezcss_load( array( 
+  {ezcss_load( array(
                       ezini( 'StylesheetSettings', 'CSSFileList', 'design.ini' ),
                       ezini( 'StylesheetSettings', 'FrontendCSSFileList', 'design.ini' ) ))}
 {else}
